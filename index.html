@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>English C1</title>
+<meta name="description" content="Tägliches Englischtraining Richtung C1 — Reading, Use of English, Writing, Speaking.">
+<meta name="theme-color" content="#14171C" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F7F4EE" media="(prefers-color-scheme: light)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="English C1">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Zeitleiste ganz oben: läuft im Session-Modus leer -->
+<div id="timebar" class="timebar" hidden><i></i></div>
+
+<header id="topbar" class="topbar">
+  <button id="backBtn" class="icon-btn" hidden aria-label="Zurück">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <div class="topbar-title">
+    <span id="topKicker" class="kicker"></span>
+    <strong id="topTitle">English&nbsp;C1</strong>
+  </div>
+  <div id="timerWrap" class="timer" hidden>
+    <span id="timerVal">00:00</span>
+    <button id="timerBtn" class="icon-btn" aria-label="Timer anhalten">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="6" width="3.5" height="12" rx="1"/><rect x="13.5" y="6" width="3.5" height="12" rx="1"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="view" class="view"></main>
+
+<nav id="tabs" class="tabs">
+  <button data-tab="today" class="tab is-active">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>Heute</span>
+  </button>
+  <button data-tab="progress" class="tab">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg><span>Fortschritt</span>
+  </button>
+  <button data-tab="vocab" class="tab">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 01-3-3z"/><path d="M5 17h14"/></svg><span>Vokabeln</span>
+  </button>
+  <button data-tab="settings" class="tab">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2.2M12 18.8V21M3 12h2.2M18.8 12H21M5.6 5.6l1.6 1.6M16.8 16.8l1.6 1.6M18.4 5.6l-1.6 1.6M7.2 16.8l-1.6 1.6"/></svg><span>Mehr</span>
+  </button>
+</nav>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
