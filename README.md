@@ -1,7 +1,22 @@
 # English C1 — Trainings-App
 
+**Live: https://c7s9ggb7pf-eng.github.io/english-c1/**
+
 PWA für iPhone und MacBook. Kein Build-Schritt, keine Abhängigkeiten, kein Konto, kein Server —
 der gesamte Fortschritt liegt lokal im Gerät (`localStorage`).
+
+## Veröffentlichen
+
+GitHub Pages liefert direkt aus dem Zweig `master`, Wurzelverzeichnis. Ein `git push`
+veröffentlicht die neue Fassung nach etwa einer Minute.
+
+```bash
+git add -A && git commit -m "Tag N ergänzt" && git push
+```
+
+Das Netlify-Projekt `english-c1.netlify.app` ist angelegt, aber gesperrt, bis das
+Credit-Kontingent am 11.08.2026 zurückgesetzt wird. Danach alternativ:
+`node tools/build.js && netlify deploy --prod --dir=dist`
 
 ## Lokal starten
 
