@@ -94,5 +94,8 @@ tools/make-icons.js     Icon-Generator
 
 ## Daten sichern
 
-„Mehr“ → **Alles als Datei sichern** schreibt den kompletten Zustand als JSON. Vor dem Löschen
+„Mehr” → **Alles als Datei sichern** schreibt den kompletten Zustand als JSON. Vor dem Löschen
 von Browserdaten sinnvoll — sonst ist der Fortschritt weg.
+
+„Mehr” → **Sicherung einlesen** spielt so eine Datei wieder ein und ersetzt den Stand auf diesem
+Gerät. So wandert der Fortschritt auch vom MacBook aufs iPhone und zurück.

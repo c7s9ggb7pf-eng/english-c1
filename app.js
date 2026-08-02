@@ -164,6 +164,8 @@ const Timer = {
    ============================================================ */
 
 let session = null;   // { day, part, index }
+let activeTab = 'today';
+let shownDate = today();   // das Datum, für das die Ansicht gerade gebaut ist
 
 function setTop(kicker, title, back) {
   $('#topKicker').textContent = kicker || '';
@@ -173,6 +175,8 @@ function setTop(kicker, title, back) {
 
 function go(tab) {
   session = null;
+  activeTab = tab;
+  shownDate = today();
   Timer.stop();
   document.body.classList.remove('in-session');
   $$('.tab').forEach(b => b.classList.toggle('is-active', b.dataset.tab === tab));
@@ -218,7 +222,10 @@ function viewToday() {
       ${st ? `<div class="streak"><b>${st}</b> ${st === 1 ? 'Tag' : 'Tage'} in Folge</div>` : ''}
     </div>
 
-    <p class="callout"><strong>Fokus heute.</strong> ${esc(day.focus)}</p>
+    ${behind ? `<p class="callout"><strong>Heute ist ${esc(prettyDate(today()))}.</strong>
+      Dafür liegt noch keine Einheit vor — angezeigt wird die letzte verfügbare.</p>` : ''}
+
+    <p class="callout"><strong>Fokus ${behind ? `Tag ${day.day}` : 'heute'}.</strong> ${esc(day.focus)}</p>
 
     ${sess('morning')}
     ${sess('evening')}
@@ -666,6 +673,8 @@ function viewSettings() {
     Sichere dir die Datei, bevor du den Browserspeicher löschst.</p>
     <div class="actions" style="flex-direction:column">
       <button class="btn ghost wide" id="expBtn">Alles als Datei sichern</button>
+      <button class="btn ghost wide" id="impBtn">Sicherung einlesen</button>
+      <input type="file" id="impFile" accept="application/json,.json" hidden>
       <button class="btn ghost wide" id="resetBtn">Fortschritt zurücksetzen</button>
     </div>`;
 
@@ -678,6 +687,22 @@ function viewSettings() {
   $('#expBtn').onclick = () => {
     dl('english-c1-sicherung.json', JSON.stringify(S, null, 2), 'application/json');
     toast('Gesichert.');
+  };
+  $('#impBtn').onclick = () => $('#impFile').click();
+  $('#impFile').onchange = async e => {
+    const file = e.target.files[0];
+    if (!file) return;
+    e.target.value = '';
+    try {
+      const data = JSON.parse(await file.text());
+      if (!data || typeof data !== 'object' || !data.done || !data.answers) {
+        toast('Das sieht nicht nach einer Sicherung aus.'); return;
+      }
+      if (!confirm('Der aktuelle Stand auf diesem Gerät wird durch die Sicherung ersetzt. Fortfahren?')) return;
+      S = { ...defaults(), ...data };
+      save(); applyTheme(); go('today');
+      toast('Sicherung eingelesen.');
+    } catch { toast('Datei konnte nicht gelesen werden.'); }
   };
   $('#resetBtn').onclick = () => {
     if (!confirm('Alle Antworten, Vokabeln und der Fortschritt werden gelöscht. Fortfahren?')) return;
@@ -751,6 +776,24 @@ $('#timerBtn').onclick = () => Timer.toggle();
 
 applyTheme();
 go('today');
+
+/* Die App bleibt auf dem Home-Bildschirm tagelang offen. Ohne diese Prüfung stünde nach
+   Mitternacht weiter der Vortag da — geprüft wird halbminütlich und immer dann, wenn die App
+   wieder nach vorn geholt wird (im Hintergrund friert iOS die Timer ein). */
+function checkDayChange() {
+  if (today() === shownDate) return;
+  if (session) {                       // mitten in einer Einheit nichts wegreißen
+    toast('Es ist ein neuer Tag. Die App wechselt, sobald diese Einheit abgeschlossen ist.');
+    shownDate = today();
+    return;
+  }
+  go(activeTab);
+}
+
+setInterval(checkDayChange, 30000);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) checkDayChange(); });
+window.addEventListener('focus', checkDayChange);
+window.addEventListener('pageshow', checkDayChange);
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));

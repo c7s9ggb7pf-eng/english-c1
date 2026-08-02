@@ -162,5 +162,133 @@ export const DAYS = [
         }
       ]
     }
+  },
+
+  {
+    day: 2,
+    date: '2026-08-02',
+    phase: 1,
+    focus: 'Inversion sitzt noch nicht · Ja-Nein-Antwort und Beleg müssen zusammenpassen · Themenwortschatz statt Umschreibung',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd2-read',
+          type: 'read',
+          name: 'Reading',
+          minutes: 12,
+          title: 'The Trouble with Advice',
+          kicker: 'Text 2 · Phase 1',
+          intro: 'Gestern hast du bei Frage 4 „Yes“ geantwortet und dann einen Beleg zitiert, der das Gegenteil sagt. Heute steht genau das noch einmal drin — Antwort und Beleg müssen zusammenpassen.',
+          paragraphs: [
+            'Ask ten people for advice and you will get eleven answers. That is not a failure of the people you asked; it is a feature of advice itself. Advice is a report on what worked once, for someone else, under conditions that have since changed. The person giving it remembers the decision but rarely the luck.',
+            'Which is why the useful question is not “what should I do?” but “what were you looking at when you decided?” The first invites a verdict; the second gives you the reasoning, and reasoning travels better than conclusions do. Few people volunteer it. Hardly anyone is asked.',
+            'None of this makes advice worthless. It makes it evidence rather than instruction — one observation, from one angle, to be weighed against the others. Treated that way, even bad advice tells you something: at the very least, it tells you how your problem looks to somebody standing outside it.'
+          ],
+          rule: 'Auf Englisch, ganze Sätze. Höchstens drei Wörter am Stück aus dem Text übernehmen. Ziel für Lesen + Fragen: 10 Minuten, nicht 20.',
+          questions: [
+            { id: 'q1', text: 'Why does the writer say that ten people give you eleven answers? Explain the point behind the joke.', hint: 'Inferenz — es steht nicht wörtlich da.' },
+            { id: 'q2', text: 'Explain “reasoning travels better than conclusions do” in your own words.' },
+            { id: 'q3', text: 'Does the writer recommend asking people what you should do? Answer yes or no, then quote the exact words that prove your answer.', hint: 'Präzisionsfrage. Erst den Beleg suchen, dann yes/no schreiben — nicht umgekehrt.' },
+            { id: 'q4', text: '“Hardly anyone is asked.” Asked what, and by whom? One sentence.', hint: 'Ein Wort entscheidet: hardly ist nicht hard.' },
+            { id: 'q5', text: 'Fünf Ausdrücke aus dem Text für die Vokabelbank — mit eigenem Beispielsatz, nicht mit Übersetzung.' }
+          ]
+        },
+        {
+          id: 'd2-use',
+          type: 'drill',
+          name: 'Use of English',
+          minutes: 10,
+          kicker: 'Zweiter Durchgang — gestern 2 von 10 richtig',
+          rules: [
+            { title: 'Inversion: das Hilfsverb springt vor das Subjekt', body: 'Gestern: <i>„Little she doesn’t know …“</i> und <i>„Not until I read the text I understood him.“</i> — In beiden fehlt die Umstellung. Nach dem negativen Adverb kommt <b>Hilfsverb + Subjekt + Grundform</b>, wie in einer Frage. Und: kein zweites „not“, das Negative steckt schon im Adverb.', example: 'Little <b>did she know</b> … · Not until I read it again <b>did I understand</b> it.' },
+            { title: 'would rather + Subjekt + Vergangenheitsform', body: 'Gestern: <i>„I would rather prefer that you do not come.“</i> — <b>rather</b> und <b>prefer</b> sind dasselbe Wort zweimal, und nach <i>I’d rather you</i> steht die Vergangenheitsform.', example: 'I’d rather you <b>didn’t</b> come today.' },
+            { title: 'wish: zwei Zeiten, zwei Bedeutungen', body: 'Bedauern über Vergangenes → <b>had</b> + Partizip. Wunsch über die Gegenwart → einfache Vergangenheit. Gestern: <i>„I whish I already know it.“</i> — Schreibung <b>wish</b>, und die Zeit fehlte.', example: 'I wish I <b>had known</b> that. (damals) · I wish I <b>had</b> more time. (jetzt)' },
+            { title: 'Passiv der Meinung — is said to <i>be</i> / to <i>have</i>', body: 'Gestern: <i>„It is said to that the company had stuck …“</i> — Nach <b>to</b> muss ein Verb kommen. Subjekt ist die Sache selbst, nicht „it“.', example: 'The company <b>is said to be</b> in trouble. · He <b>is said to have left</b> in 2019.' },
+            { title: 'Feste Wendungen — Aktiv, nicht Passiv', body: 'Gestern: <i>„The result was fallen short“</i> (fall short ist aktiv) und <i>„His answer pushed me aback“</i> (das Verb ist <b>take</b>). <i>agree</i> braucht ein Gegenüber: agree <b>with</b> sb.', example: 'The result <b>fell short of</b> expectations. · I was <b>taken aback</b>. · I <b>agree with</b> you.' }
+          ],
+          instruction: 'Vollständige Sätze ausschreiben, aus dem Kopf, ohne oben nachzuschlagen. Erst nach allen zehn die Lösungen aufdecken.',
+          items: [
+            { id: 'j1',  prompt: 'Mir wäre lieber, du sprichst das nicht in der Sitzung an.',       key: 'would rather', solution: 'I’d rather you didn’t raise that in the meeting.' },
+            { id: 'j2',  prompt: 'Damals ahnte ich nicht, wie viel davon abhing.',                  key: 'Little …',     solution: 'Little did I know how much depended on it.' },
+            { id: 'j3',  prompt: 'Erst als sie nachfragte, verstand ich das Problem.',              key: 'Not until …',  solution: 'Not until she asked did I understand the problem.' },
+            { id: 'j4',  prompt: 'Noch nie hat er zugegeben, dass er sich geirrt hat.',             key: 'Never …',      solution: 'Never has he admitted that he was wrong.' },
+            { id: 'j5',  prompt: 'Ich wünschte, ich hätte den Vertrag genauer gelesen.',            key: 'wish (damals)', solution: 'I wish I had read the contract more carefully.' },
+            { id: 'j6',  prompt: 'Ich wünschte, ich hätte jetzt mehr Zeit dafür.',                  key: 'wish (jetzt)', solution: 'I wish I had more time for it.' },
+            { id: 'j7',  prompt: 'Man geht davon aus, dass das Unternehmen expandiert.',            key: 'is believed to', solution: 'The company is believed to be expanding.' },
+            { id: 'j8',  prompt: 'Man sagt, er habe die Firma 2019 verlassen.',                     key: 'is said to have', solution: 'He is said to have left the company in 2019.' },
+            { id: 'j9',  prompt: 'Die Zahlen blieben deutlich hinter dem Plan zurück.',             key: 'fall short of', solution: 'The figures fell well short of the plan.' },
+            { id: 'j10', prompt: 'Ihre Antwort hat mich überrumpelt, aber ich stimme ihr zu.',      key: 'aback · agree', solution: 'I was taken aback by her answer, but I agree with her.' }
+          ]
+        },
+        {
+          id: 'd2-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Whose advice do you actually take — and what makes someone worth listening to?',
+          ruleTitle: 'Heute neu: Themenwortschatz statt Umschreibung.',
+          ruleBody: 'Gestern hast du dreimal „setting“ gesagt, wo das Wort mindset, attitude oder norm heißt, und der Rest war Alltagswortschatz. Das Reparieren („what I mean is“) hat schon funktioniert — das behältst du bei. Neu: mindestens fünf dieser Ausdrücke müssen vorkommen.',
+          phrases: [
+            'track record — a record of past results',
+            'judgement (not: good feeling)',
+            'with hindsight — looking back',
+            'to weigh sth up — to consider carefully',
+            'to second-guess sb — to doubt their decision afterwards',
+            'bias — a systematic tilt in how someone sees things',
+            'mindset / attitude / norm — instead of “setting”'
+          ],
+          after: 'Danach dieselben 90 Sekunden ein zweites Mal, mit der Korrektur vor dir. Zähle im ersten Durchgang deine „yeah“ und „um“ — im zweiten sollen es weniger als fünf sein.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd2-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Grad der Zustimmung — und ein echtes Gegenargument',
+          prompt: '“The best advice comes from people who have failed at the same thing.” To what extent do you agree?',
+          min: 140, max: 160,
+          checklist: [
+            'Die Aufgabenstellung nicht abschreiben — gestern war dein erster Satz die Frage. Beginne mit deiner These.',
+            '„To what extent“ verlangt ein Maß: largely · to a limited extent · only where …',
+            'Ein echtes Gegenargument, das gegen dich spricht, dann deine Entkräftung.',
+            'Mindestens 140 Wörter — gestern waren es zu wenige.',
+            'Schreibung prüfen: taught · believes · business · development · different · statement'
+          ]
+        },
+        {
+          id: 'd2-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Deine acht falschen Sätze von gestern, aus dem Kopf neu geschrieben — ohne im Morgen-Drill nachzusehen. Danach die Wörter, die falsch geschrieben waren.',
+          fields: [
+            { id: 'p1', label: '„Little she doesn’t know that the company was even sold.“ → korrekt' },
+            { id: 'p2', label: '„Not until I first red the text I understood him.“ → korrekt' },
+            { id: 'p3', label: '„Nerver heard a worser explanation like that“ → korrekt, mit Never am Anfang' },
+            { id: 'p4', label: '„I would rather prefer that you do not come apart.“ → korrekt' },
+            { id: 'p5', label: '„I whish I already know it.“ → korrekt (Bedauern über die Vergangenheit)' },
+            { id: 'p6', label: '„It is said to that the company had stuck in difficuties.“ → korrekt' },
+            { id: 'p7', label: '„The result was fallen short of the expectations.“ + „His answer pushed me aback.“ → beide korrekt' },
+            { id: 'p8', label: 'Je zweimal korrekt schreiben: wish · taught · believes · difficulties · worse · never' }
+          ]
+        },
+        {
+          id: 'd2-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (z. B. to weigh sth against, at the very least, to volunteer information). Gestern ist die Bank leer geblieben — heute nicht.'
+        }
+      ]
+    }
   }
 ];
