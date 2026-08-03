@@ -290,5 +290,129 @@ export const DAYS = [
         }
       ]
     }
+  },
+
+  {
+    day: 3,
+    date: '2026-08-03',
+    phase: 1,
+    focus: 'Umformulieren statt Zitieren · deutsche Interferenzen (would im if-Satz, agree to/with) · Füllwörter senken',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd3-read',
+          type: 'read',
+          name: 'Reading',
+          minutes: 12,
+          title: 'Deciding Not to Decide',
+          kicker: 'Text 3 · Phase 1',
+          intro: 'Dichter als die beiden Texte davor. Zwei Fragen verlangen ausdrücklich, dass du ein Wort des Textes nicht benutzt — Umformulieren ist heute die Hauptübung, nicht die Nebensache.',
+          paragraphs: [
+            'Delay has a bad name. We treat the person who decides quickly as decisive and the one who waits as weak, when in fact waiting is itself a decision — one with costs and benefits like any other. The question is never whether to delay, but what the delay is buying you.',
+            'Sometimes it buys information. A choice made in March on the basis of March’s evidence may look reckless by June, and the manager who held off was not indecisive but patient. Sometimes, though, delay buys nothing at all: the evidence will not improve, and waiting merely postpones the discomfort of choosing. Few of us can tell the two apart while we are in the middle of it. That is the honest difficulty, and no amount of confidence dissolves it.',
+            'One test is worth applying. Ask what would have to be true for you to decide, and when you expect to know it. If you cannot answer either half, you are not gathering information. You are avoiding a decision, and calling it judgement.'
+          ],
+          rule: 'Auf Englisch, ganze Sätze. Höchstens drei Wörter am Stück aus dem Text. Ziel für Lesen + Fragen: 10 Minuten.',
+          questions: [
+            { id: 'q1', text: 'The writer describes two kinds of waiting. What is the difference between them? Answer without using the words “delay” or “information”.', hint: 'Umformulieren — die Sperre ist der eigentliche Sinn der Aufgabe.' },
+            { id: 'q2', text: 'Explain “no amount of confidence dissolves it” in your own words.' },
+            { id: 'q3', text: 'Does the writer think that waiting is a sign of weakness? Answer yes or no, then quote the exact words that justify your answer.', hint: 'Präzisionsfrage. Die Wörter „as weak“ stehen im Text — aber wessen Sicht geben sie wieder? Erst Beleg, dann yes/no.' },
+            { id: 'q4', text: '“Few of us can tell the two apart.” Which two things? And does “few” mean many people or not many? One sentence.', hint: 'Ein Wort entscheidet über den ganzen Satz.' },
+            { id: 'q5', text: 'The writer proposes a test at the end. State it in two steps, in your own words.' },
+            { id: 'q6', text: 'Fünf Ausdrücke aus dem Text für die Vokabelbank — mit eigenem Beispielsatz, nicht mit Übersetzung.' }
+          ]
+        },
+        {
+          id: 'd3-use',
+          type: 'drill',
+          name: 'Use of English',
+          minutes: 10,
+          kicker: 'Deutsche Interferenzen und die festen Wendungen',
+          rules: [
+            { title: 'Konditional Typ 2 — kein <i>would</i> im if-Satz', body: 'Im Deutschen steht „würde“ in beiden Hälften, im Englischen nur in der Hauptsatz-Hälfte. <i>If I would have time</i> ist der häufigste deutsche Fehler überhaupt.', example: '<b>If I had</b> more time, I <b>would</b> do it differently. · <b>If it were</b> up to me …' },
+            { title: 'agree <i>with</i> jemandem · agree <i>to</i> etwas', body: 'Menschen: <b>with</b>. Vorschläge, Pläne, Bedingungen: <b>to</b>. Und: eine Entwicklung ist gut <b>for</b> jemanden, nicht <i>to</i>.', example: 'I <b>agree with</b> you. · She <b>agreed to</b> the plan. · a good development <b>for</b> the company' },
+            { title: 'Vier feste Wendungen, die dir in der Einstufung gefehlt haben', body: 'Nicht herleiten, nur abrufen. Alle vier kommen im heutigen Drill vor.', example: '<b>under the pretext of</b> · <b>a tendency to</b> · <b>for all its flaws</b> · <b>strange as it may seem</b>' },
+            { title: 'Inversion, dritte Runde: <i>Not only …</i>', body: 'Dieselbe Mechanik wie <i>Little did I know</i> — nach dem vorangestellten negativen Ausdruck kommt Hilfsverb vor Subjekt. Der zweite Teil braucht <b>but … also</b>.', example: '<b>Not only was</b> the report late, <b>but</b> it was <b>also</b> incomplete.' },
+            { title: 'would rather über Vergangenes', body: 'Gegenwart: <i>I’d rather you didn’t</i>. Vergangenheit dagegen mit <b>had</b> + Partizip — parallel zu <i>wish</i>.', example: 'I’d rather you <b>had asked</b> me first. · I wish you <b>had asked</b> me first.' }
+          ],
+          instruction: 'Vollständige Sätze, aus dem Kopf, ohne oben nachzusehen. Erst nach allen zehn die Lösungen aufdecken.',
+          items: [
+            { id: 'k1',  prompt: 'Wenn ich mehr Zeit hätte, würde ich das anders angehen.',            key: 'If … had',        solution: 'If I had more time, I would approach it differently.' },
+            { id: 'k2',  prompt: 'Sie stimmte dem Plan zu, obwohl sie mir nicht zustimmte.',           key: 'agree to · with', solution: 'She agreed to the plan, although she didn’t agree with me.' },
+            { id: 'k3',  prompt: 'Unter dem Vorwand, helfen zu wollen, sah er sich die Zahlen an.',    key: 'pretext',         solution: 'Under the pretext of helping, he looked at the figures.' },
+            { id: 'k4',  prompt: 'Er neigt dazu, Probleme zu spät anzusprechen.',                      key: 'tendency',        solution: 'He has a tendency to raise problems too late.' },
+            { id: 'k5',  prompt: 'Bei allen Schwächen ist das System immer noch das beste, das wir haben.', key: 'For all …',  solution: 'For all its flaws, the system is still the best we have.' },
+            { id: 'k6',  prompt: 'So merkwürdig es klingen mag, das Warten war die bessere Entscheidung.', key: 'Strange as …', solution: 'Strange as it may seem, waiting was the better decision.' },
+            { id: 'k7',  prompt: 'Nicht nur kam der Bericht zu spät, er war auch unvollständig.',      key: 'Not only …',      solution: 'Not only was the report late, but it was also incomplete.' },
+            { id: 'k8',  prompt: 'Man nimmt an, dass die Entscheidung längst gefallen ist.',           key: 'is thought to',   solution: 'The decision is thought to have already been made.' },
+            { id: 'k9',  prompt: 'Ich wünschte, wir hätten früher entschieden.',                       key: 'wish',            solution: 'I wish we had decided earlier.' },
+            { id: 'k10', prompt: 'Mir wäre lieber gewesen, du hättest mich vorher gefragt.',           key: 'would rather',    solution: 'I’d rather you had asked me first.' }
+          ]
+        },
+        {
+          id: 'd3-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Think of a decision you put off. Was the waiting worth it — and how would you know?',
+          ruleTitle: 'Heute neu: Füllwörter durch Pausen ersetzen.',
+          ruleBody: 'In der Einstufung war jede zweite Satzfuge ein „yeah“ oder „um“. Eine stille Pause klingt auf C1 souverän, ein Füllwort klingt unsicher — der Unterschied ist nur Gewohnheit. Reparieren und Themenwortschatz bleiben, dazu kommen diese Überleitungen; benutze mindestens drei.',
+          phrases: [
+            'There are two sides to this. First … Second …',
+            'Let me take a concrete example.',
+            'The honest answer is that I don’t know yet — but what I’d look at is …',
+            'That said, …',
+            'to hold off (on sth) · to put sth off · to weigh sth up · with hindsight'
+          ],
+          after: 'Zähle im ersten Durchgang deine „yeah“ und „um“ mit. Zweiter Durchgang: dieselben 90 Sekunden, aber unter fünf Füllwörtern. An jeder Stelle, an der ein „um“ käme, machst du stattdessen eine Pause und atmest.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd3-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Beide Sichtweisen — und zehn Prozent länger als gestern',
+          prompt: 'Some people believe important decisions should be made quickly; others think they should be delayed for as long as possible. Discuss both views and give your own opinion.',
+          min: 160, max: 180,
+          checklist: [
+            'Erster Satz: deine These oder die Spannung zwischen beiden Sichten — nie die abgeschriebene Aufgabe.',
+            '„Discuss both views“ heißt: beide bekommen einen eigenen Absatz, nicht einen Nebensatz.',
+            'Hedging statt Absolutheit: tend to · in most cases · arguably · rarely.',
+            '160–180 Wörter. Die Zählung unten läuft mit.',
+            'Schreibung prüfen: different · development · business · statement · academic · generally · decision'
+          ]
+        },
+        {
+          id: 'd3-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Die falschen Sätze von heute Morgen neu — aus dem Kopf, nicht abgeschrieben.',
+          fields: [
+            { id: 'r1', label: 'Falscher Drill-Satz 1 → neu, mit der Regel dahinter in drei Wörtern' },
+            { id: 'r2', label: 'Falscher Drill-Satz 2 → neu, mit der Regel dahinter' },
+            { id: 'r3', label: 'Falscher Drill-Satz 3 → neu, mit der Regel dahinter' },
+            { id: 'r4', label: 'Die Reading-Frage, bei der du am unsichersten warst — Antwort neu, in eigenen Worten, ohne ein einziges Zitat' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd3-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (to hold off · to postpone sth · to tell two things apart · no amount of … · to be worth applying). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
   }
 ];
