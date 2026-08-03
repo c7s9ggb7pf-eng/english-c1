@@ -414,5 +414,130 @@ export const DAYS = [
         }
       ]
     }
+  },
+
+  {
+    day: 4,
+    date: '2026-08-04',
+    phase: 1,
+    focus: 'Sammelrunde ohne bestätigtes Ergebnis · Grad der Zustimmung im Schreiben · Reparieren, Themenwortschatz und Pausen zusammen',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd4-read',
+          type: 'read',
+          name: 'Reading',
+          minutes: 12,
+          title: 'The Reputation Tax',
+          kicker: 'Text 4 · Phase 1',
+          intro: 'Von Tag 3 liegt keine Sicherung vor — deshalb heute keine neuen Fehlerzitate, sondern eine erste Sammelrunde: alles aus den Tagen 1 bis 3 kommt zusammen vor, bestätigt ist noch nichts. Ziel für Text + Fragen: 9 statt 10 Minuten.',
+          paragraphs: [
+            'Organisations that say they reward risk-taking rarely mean it the way employees assume. What they reward is risk that pays off; what they penalise, often without saying so, is the failure itself, not the decision behind it. A single visible setback is remembered longer, and weighed more heavily, than several unremarked successes. The result is an asymmetry that no policy document mentions and every employee eventually learns.',
+            'The stigma, when it appears, rarely attaches to the mistake as such. It attaches to what the person does next, whether they explain, defend, or simply go quiet. Someone who names a failure early and sets out what they would do differently is, in most organisations, treated more favourably than someone whose project succeeded but who cannot say why. This is not because failure is admired; the explanation is evidence of judgement, and judgement is what was actually being tested.',
+            'None of this makes resilience the same as toughness. Toughness absorbs a blow and carries on unchanged; resilience uses the blow to revise something. The test is not whether someone can survive a setback without visible damage, plenty of people manage that by simply refusing to look at it. The real test is what changes in their next decision, and whether they can say, precisely, what that change was.'
+          ],
+          rule: 'Auf Englisch, ganze Sätze. Höchstens drei Wörter am Stück aus dem Text. Ziel für Lesen + Fragen: 9 Minuten.',
+          questions: [
+            { id: 'q1', text: 'The writer distinguishes between what organisations claim to reward and what they actually penalise. What is the difference?', hint: 'Inferenz — die Formulierung „often without saying so“ ist der Hinweis.' },
+            { id: 'q2', text: 'Explain “an asymmetry that no policy document mentions” in your own words.' },
+            { id: 'q3', text: 'Does the writer think the stigma attaches to the mistake itself? Answer yes or no, then quote the exact words that justify your answer.', hint: 'Präzisionsfrage. Erst den Beleg suchen, dann yes/no festlegen.' },
+            { id: 'q4', text: '“Toughness absorbs a blow and carries on unchanged.” How does the writer say resilience differs from this? One sentence, without using the word “unchanged”.' },
+            { id: 'q5', text: 'What, according to the writer, is the real test of resilience?' },
+            { id: 'q6', text: 'Fünf Ausdrücke aus dem Text für die Vokabelbank — mit eigenem Beispielsatz, nicht mit Übersetzung.' }
+          ]
+        },
+        {
+          id: 'd4-use',
+          type: 'drill',
+          name: 'Use of English',
+          minutes: 10,
+          kicker: 'Sammelrunde — alle bisherigen Punkte in einer Runde, nichts ist bislang bestätigt',
+          rules: [
+            { title: 'Passiv der Meinung — Erweiterung: is known to <i>have</i> + Partizip', body: 'Wie <i>is said to</i> und <i>is believed to</i>, aber für gesichertes Wissen statt Gerücht. Subjekt bleibt die Sache oder Person selbst, nie „it“.', example: 'People know he made the decision alone. → He <b>is known to have</b> made the decision alone.' },
+            { title: 'Inversion — vier Auslöser im Überblick', body: '<i>Little</i>, <i>Never</i>, <i>Not until</i>, <i>Not only</i> — nach jedem steht Hilfsverb vor Subjekt, wie in einer Frage. Nach <i>Not only</i> zusätzlich <b>but … also</b> im zweiten Teil.', example: '<b>Never had</b> the team seen such a schedule. · <b>Not only did</b> he miss the deadline, <b>but</b> he <b>also</b> said nothing.' },
+            { title: 'Konditional Typ 2 — kein <i>would</i> im if-Satz', body: 'Deutsches „würde“ steht in beiden Hälften, Englisch nur in der Hauptsatz-Hälfte.', example: '<b>If</b> the result <b>were</b> different, nobody <b>would</b> question the method.' },
+            { title: 'agree <i>to</i> / agree <i>with</i> / a development <i>for</i>', body: 'Menschen: <b>with</b>. Pläne, Bedingungen: <b>to</b>. Eine Entwicklung ist gut <b>for</b> jemanden.', example: 'She <b>agreed to</b> the terms, although her colleagues didn’t <b>agree with</b> her.' },
+            { title: 'Feste Wendungen — Sammelrunde', body: 'Alle bislang geübten Wendungen in einer Runde: <b>fall short of</b> · <b>taken aback</b> · <b>under the pretext of</b> · <b>a tendency to</b> · <b>for all its flaws</b> · <b>strange as it may seem</b>.', example: '<b>For all its flaws</b>, the plan was the only option, <b>strange as it may seem</b>.' }
+          ],
+          instruction: 'Vollständige Sätze, aus dem Kopf, ohne oben nachzusehen. Erst nach allen zehn die Lösungen aufdecken.',
+          items: [
+            { id: 'd4i1',  prompt: 'Man geht davon aus, dass die Firma den Auftrag verloren hat.',                          key: 'is thought to have', solution: 'The company is thought to have lost the contract.' },
+            { id: 'd4i2',  prompt: 'Es ist bekannt, dass sie die Entscheidung allein getroffen hat.',                       key: 'is known to have',   solution: 'She is known to have made the decision alone.' },
+            { id: 'd4i3',  prompt: 'Noch nie hatte das Team einen so knappen Zeitplan gesehen.',                            key: 'Never …',            solution: 'Never had the team seen such a tight schedule.' },
+            { id: 'd4i4',  prompt: 'Nicht nur verpasste er die Frist, er informierte auch niemanden.',                      key: 'Not only …',         solution: 'Not only did he miss the deadline, but he also told no one.' },
+            { id: 'd4i5',  prompt: 'Wenn das Ergebnis anders wäre, würde niemand die Methode infrage stellen.',             key: 'If … were',          solution: 'If the result were different, nobody would question the method.' },
+            { id: 'd4i6',  prompt: 'Wenn er mehr Erfahrung hätte, würde man ihm die Aufgabe übertragen.',                   key: 'If … had',           solution: 'If he had more experience, they would give him the task.' },
+            { id: 'd4i7',  prompt: 'Sie stimmte den neuen Bedingungen zu, obwohl die Kollegen ihr nicht zustimmten.',       key: 'agree to · with',    solution: 'She agreed to the new terms, although her colleagues didn’t agree with her.' },
+            { id: 'd4i8',  prompt: 'Der Umzug war eine gute Entwicklung für das gesamte Team.',                             key: 'development for',    solution: 'The move was a good development for the whole team.' },
+            { id: 'd4i9',  prompt: 'Bei allen Schwächen blieb der Plan die einzige realistische Option, so merkwürdig es auch klingen mag.', key: 'For all … · Strange as …', solution: 'For all its flaws, the plan remained the only realistic option, strange as it may seem.' },
+            { id: 'd4i10', prompt: 'Unter dem Vorwand, Zeit zu sparen, überging er die Prüfung — und die Ergebnisse blieben deutlich hinter den Erwartungen zurück.', key: 'pretext · fall short of', solution: 'Under the pretext of saving time, he skipped the review, and the results fell well short of expectations.' }
+          ]
+        },
+        {
+          id: 'd4-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Describe a time you had to defend a decision that didn’t work out. What would you do differently now?',
+          ruleTitle: 'Heute alle drei Punkte zusammen: reparieren, Themenwortschatz, Pausen statt Füllwörter.',
+          ruleBody: 'Keine einzelne neue Regel heute — die drei aus den letzten Tagen laufen gleichzeitig. Nimm mindestens vier dieser Themenwörter, benutze mindestens eine Reparatur-Wendung, und zähle deine Füllwörter im ersten Durchgang mit.',
+          phrases: [
+            'setback · failure · stigma · risk-taking · resilience',
+            'to bounce back (from sth)',
+            'to take sth in your stride',
+            'or rather … · what I mean is …',
+            'There are two sides to this. First … Second …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden: unter fünf Füllwörtern, und mindestens vier Themenwörter müssen tatsächlich vorkommen, nicht nur vorbereitet gewesen sein.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd4-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Grad der Zustimmung — der letzte offene Punkt beim Schreiben',
+          prompt: '“Organisations that punish failure end up with employees who take no risks at all.” To what extent do you agree?',
+          min: 160, max: 180,
+          checklist: [
+            'Erster Satz: deine These — nie die Aufgabenstellung abschreiben.',
+            '„To what extent“ verlangt ein Maß: largely · only in part · rarely — nicht nur „I agree“ oder „I disagree“.',
+            'Ein echtes Gegenargument behandeln (dass Regeln auch vor echtem Leichtsinn schützen), dann entkräften.',
+            'Hedging statt Absolutheit: tend to · in most cases · arguably.',
+            '160–180 Wörter. Die Zählung unten läuft mit.',
+            'Schreibung prüfen: different · development · business · statement · academic · generally · decision · resilience'
+          ]
+        },
+        {
+          id: 'd4-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Die falschen Sätze von heute Morgen neu — aus dem Kopf, nicht abgeschrieben.',
+          fields: [
+            { id: 'r1', label: 'Falscher Drill-Satz 1 → neu, mit der Regel dahinter in drei Wörtern' },
+            { id: 'r2', label: 'Falscher Drill-Satz 2 → neu, mit der Regel dahinter' },
+            { id: 'r3', label: 'Falscher Drill-Satz 3 → neu, mit der Regel dahinter' },
+            { id: 'r4', label: 'Die Reading-Frage, bei der du am unsichersten warst — Antwort neu, in eigenen Worten, ohne ein einziges Zitat' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd4-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (stigma · setback · resilience · asymmetry · to attach to sth). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
   }
 ];
