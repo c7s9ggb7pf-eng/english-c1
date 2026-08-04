@@ -539,5 +539,130 @@ export const DAYS = [
         }
       ]
     }
+  },
+
+  {
+    day: 5,
+    date: '2026-08-05',
+    phase: 1,
+    focus: 'Lesetempo Richtung 8 Minuten · wish + Past Perfect gezielt korrigiert · Position halten und ein Gegenargument benennen',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd5-read',
+          type: 'read',
+          name: 'Reading',
+          minutes: 12,
+          title: 'The Sound of Certainty',
+          kicker: 'Text 5 · Phase 1',
+          intro: 'Von Tag 2 bis Tag 4 liegt weiterhin keine Sicherung vor — die einzige bestätigte Fehlerquelle bleibt Tag 1. Dort saß „If … were" schon richtig, aber der wish-Satz (i3, „I whish I already know it") ist offen und kommt heute doppelt vor. Ziel für Text + Fragen: 8 statt 9 Minuten.',
+          paragraphs: [
+            'Confidence is often mistaken for competence, and nowhere is the confusion more costly than in expert advice. A large study of financial forecasters found that the analysts whose predictions were wildest were also the ones most often invited back for comment; certainty, not accuracy, decided who got asked again. Viewers rated the confident forecasters as more knowledgeable even when a simple coin toss would have outperformed their calls. What the audience rewarded was not the forecast being right but the forecaster sounding sure.',
+            'This pattern is not confined to finance. In hiring panels, the candidate who answers without pausing is frequently marked higher than one who visibly weighs the question, regardless of which answer later proves correct. The pause is read as doubt, and doubt is read as weakness, even though a brief pause is often the surest sign that someone is actually thinking rather than reciting a stored fact.',
+            'None of this means confidence is worthless. A surgeon who hesitates mid-procedure is not thereby more careful. The distinction that matters is between confidence earned through calibration, tracking one’s own past accuracy and adjusting accordingly, and confidence that is simply a personality trait, unrelated to whether the person has ever been checked against outcomes. Only the first kind should influence how much weight a listener gives to what is said.'
+          ],
+          rule: 'Auf Englisch, ganze Sätze. Höchstens drei Wörter am Stück aus dem Text. Ziel für Lesen + Fragen: 8 Minuten.',
+          questions: [
+            { id: 'q1', text: 'According to the writer, what did the audience actually reward in the forecasters — being right, or something else? Answer precisely.', hint: 'Präzisionsfrage. Der letzte Satz des ersten Absatzes trennt beides ausdrücklich.' },
+            { id: 'q2', text: 'Explain “certainty, not accuracy, decided who got asked again” in your own words.' },
+            { id: 'q3', text: 'Does the writer think a pause in an interview is a sign of weakness? Answer yes or no, then quote the exact words that justify your answer.', hint: 'Präzisionsfalle — die naheliegende Antwort ist die falsche.' },
+            { id: 'q4', text: 'What, according to the writer, is surprising about the hiring-panel finding?' },
+            { id: 'q5', text: 'How does the writer distinguish confidence earned through calibration from confidence as a personality trait? One sentence, without using the word “calibration”.' },
+            { id: 'q6', text: 'Fünf Ausdrücke aus dem Text für die Vokabelbank — mit eigenem Beispielsatz, nicht mit Übersetzung.' }
+          ]
+        },
+        {
+          id: 'd5-use',
+          type: 'drill',
+          name: 'Use of English',
+          minutes: 10,
+          kicker: 'wish + Past Perfect im Fokus, alles andere aus der Sammelrunde bleibt aktiv',
+          rules: [
+            { title: 'wish + Past Perfect für Vergangenheitsbedauern', body: 'Nach <i>wish</i> steht für Bedauern über Vergangenes das Past Perfect, nie das einfache Perfekt oder Präsens. Tag 1 lief hier noch falsch (<i>„I whish I already know it"</i>).', example: 'I <b>wish I had asked</b> earlier. · She <b>wishes she had told</b> him the truth.' },
+            { title: 'Inversion — weiter aus der Sammelrunde', body: '<i>Little</i> und <i>Not until</i> bleiben aktiv, mit Hilfsverb vor Subjekt.', example: '<b>Little did</b> he know that the decision had already been made. · <b>Not until</b> I saw the figures <b>did</b> I understand the problem.' },
+            { title: 'Konditional Typ 2 — kein <i>would</i> im if-Satz', body: 'Weiterhin die häufigste deutsche Interferenz: „würde" darf nur in der Hauptsatz-Hälfte stehen.', example: '<b>If</b> I <b>had</b> more time, I <b>would</b> read the text again.' },
+            { title: 'Passiv der Meinung — is thought to have', body: 'Subjekt bleibt die Person oder Sache selbst.', example: 'The company <b>is thought to have</b> underestimated the market.' },
+            { title: 'agree <i>to</i> / agree <i>with</i> / a development <i>for</i> · feste Wendungen', body: 'Weiterhin unbestätigt aus der Sammelrunde: <b>fall short of</b> · <b>a tendency to</b> · <b>for all its flaws</b> · <b>strange as it may seem</b>.', example: 'He <b>agreed to</b> the proposal, but his colleagues didn’t <b>agree with</b> him.' }
+          ],
+          instruction: 'Vollständige Sätze, aus dem Kopf, ohne oben nachzusehen. Erst nach allen zehn die Lösungen aufdecken.',
+          items: [
+            { id: 'd5i1',  prompt: 'Ich wünschte, ich hätte früher gefragt.',                                                    key: 'wish + had',         solution: 'I wish I had asked earlier.' },
+            { id: 'd5i2',  prompt: 'Ich wünschte, sie hätte mir die Wahrheit gesagt.',                                          key: 'wish + had',         solution: 'I wish she had told me the truth.' },
+            { id: 'd5i3',  prompt: 'Kaum wusste er, dass die Entscheidung schon gefallen war.',                                 key: 'Little …',           solution: 'Little did he know that the decision had already been made.' },
+            { id: 'd5i4',  prompt: 'Erst als ich die Zahlen sah, verstand ich das Problem.',                                    key: 'Not until …',        solution: 'Not until I saw the figures did I understand the problem.' },
+            { id: 'd5i5',  prompt: 'Wenn ich mehr Zeit hätte, würde ich den Text noch einmal lesen.',                           key: 'If … had',           solution: 'If I had more time, I would read the text again.' },
+            { id: 'd5i6',  prompt: 'Man geht davon aus, dass die Firma den Markt unterschätzt hat.',                            key: 'is thought to have', solution: 'The company is thought to have underestimated the market.' },
+            { id: 'd5i7',  prompt: 'Er stimmte dem Vorschlag zu, aber seine Kollegen stimmten ihm nicht zu.',                   key: 'agree to · with',    solution: 'He agreed to the proposal, but his colleagues didn’t agree with him.' },
+            { id: 'd5i8',  prompt: 'Der neue Standort war eine positive Entwicklung für die gesamte Region.',                   key: 'development for',    solution: 'The new location was a positive development for the whole region.' },
+            { id: 'd5i9',  prompt: 'Trotz aller Mängel hielt das Team an dem Plan fest, so seltsam es auch klingen mag.',       key: 'For all … · Strange as …', solution: 'For all its flaws, the team stuck to the plan, strange as it may seem.' },
+            { id: 'd5i10', prompt: 'Die Ergebnisse blieben hinter den Erwartungen zurück, was auf eine Tendenz zur Selbstüberschätzung hindeutet.', key: 'fall short of · a tendency to', solution: 'The results fell short of expectations, which points to a tendency to overestimate.' }
+          ]
+        },
+        {
+          id: 'd5-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Describe a situation where you had to sound confident even though you weren’t sure you were right. Was that the right approach?',
+          ruleTitle: 'Neu: Position halten und ein Gegenargument ausdrücklich benennen, bevor du reparierst.',
+          ruleBody: 'Sag zuerst klar, wofür du stehst. Nenne dann ausdrücklich einen Einwand dagegen („Some would say that … / One could object that …"), bevor du ihn entkräftest. Reparieren, Themenwortschatz und Pausen statt Füllwörter laufen weiter mit.',
+          phrases: [
+            'overconfidence · calibration · expertise · credibility · judgement',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …',
+            'On the other hand, …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden: der Einwand muss tatsächlich benannt werden, nicht nur die eigene Position wiederholt, und unter fünf Füllwörtern bleiben.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd5-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Grad der Zustimmung und ein echtes Gegenargument — weiter im Fokus',
+          prompt: '“Confident people are trusted more than they deserve to be.” To what extent do you agree?',
+          min: 160, max: 180,
+          checklist: [
+            'Erster Satz: deine These — nie die Aufgabenstellung abschreiben.',
+            '„To what extent" verlangt ein Maß: largely · only in part · rarely — nicht nur „I agree" oder „I disagree".',
+            'Ein echtes Gegenargument behandeln (dass Zuversicht auch nötig ist, um überhaupt zu handeln), dann entkräften.',
+            'Hedging statt Absolutheit: tend to · in most cases · arguably.',
+            '160–180 Wörter. Die Zählung unten läuft mit.',
+            'Schreibung prüfen: different · development · business · statement · academic · generally · decision · judgement'
+          ]
+        },
+        {
+          id: 'd5-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Die falschen Sätze von heute Morgen neu — aus dem Kopf, nicht abgeschrieben.',
+          fields: [
+            { id: 'r1', label: 'Falscher Drill-Satz 1 → neu, mit der Regel dahinter in drei Wörtern' },
+            { id: 'r2', label: 'Falscher Drill-Satz 2 → neu, mit der Regel dahinter' },
+            { id: 'r3', label: 'Falscher Drill-Satz 3 → neu, mit der Regel dahinter' },
+            { id: 'r4', label: 'Die Reading-Frage, bei der du am unsichersten warst — Antwort neu, in eigenen Worten, ohne ein einziges Zitat' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd5-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (calibration · forecaster · a coin toss · to weigh a question · a stored fact). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
   }
 ];
