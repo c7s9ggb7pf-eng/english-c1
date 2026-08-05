@@ -664,5 +664,130 @@ export const DAYS = [
         }
       ]
     }
+  },
+
+  {
+    day: 6,
+    date: '2026-08-06',
+    phase: 1,
+    focus: 'Wortgenauigkeit gezielt geprüft (discrete vs. discreet) · wish + Past Perfect und Inversion bleiben in der Sammelrunde · Gegenargument benennen und zusätzlich hedgen',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd6-read',
+          type: 'read',
+          name: 'Reading',
+          minutes: 12,
+          title: 'The Cost of Choosing',
+          kicker: 'Text 6 · Phase 1',
+          intro: 'Von Tag 2 bis Tag 5 liegt weiterhin keine Sicherung vor — bestätigt ist nach wie vor nur, was aus Tag 1 vorliegt. Heute kommt ein Punkt aus dem Fehlerprofil dazu, der bisher nur nebenbei mitlief: Wortgenauigkeit. Ziel für Text + Fragen bleibt bei 8 Minuten.',
+          paragraphs: [
+            'Decision fatigue is often described as a drop in willpower, though the more accurate account is one of resource depletion: with each choice a person makes, the quality of the next one tends to decline, regardless of how important either choice actually was. Judges reviewing parole applications, in one widely cited study, granted release far more often early in the morning than late in the afternoon — a pattern that had nothing to do with the merits of the individual cases and everything to do with when the case happened to be heard. Decisions, in other words, are not discrete events that reset the mind between one and the next; they draw on a single, shared reserve that carries over.',
+            'The practical remedy is not simply to decide less, since some decisions cannot be delegated or delayed without a cost of their own. It is to notice which decisions are actually consequential, and to protect the reserve needed for those by making the rest automatic. A fixed routine is not a lack of imagination; it is a deliberate refusal to spend a finite resource on a question that does not deserve it.',
+            'This has an uncomfortable implication for anyone who prides themselves on flexibility. The person who insists on deciding everything afresh, every day, is not thereby more careful. They are running down the very capacity that careful decisions require, and arriving at the ones that matter with less of it left.'
+          ],
+          rule: 'Auf Englisch, ganze Sätze. Höchstens drei Wörter am Stück aus dem Text. Ziel für Lesen + Fragen: 8 Minuten.',
+          questions: [
+            { id: 'q1', text: 'The writer says decisions are not “discrete” events. What does “discrete” mean here, and which similar-looking English word, with a different meaning, could it easily be confused with?', hint: 'Wortgenauigkeit — dasselbe Muster wie gives away/gives way in der Einstufung.' },
+            { id: 'q2', text: 'Explain “everything to do with when the case happened to be heard” in your own words.' },
+            { id: 'q3', text: 'Does the writer recommend making fewer decisions overall? Answer yes or no, then quote the exact words that justify your answer.', hint: 'Präzisionsfalle — die naheliegende Antwort ist zu einfach.' },
+            { id: 'q4', text: '“A fixed routine is not a lack of imagination.” What does the writer say it actually is instead? One sentence, in your own words.' },
+            { id: 'q5', text: 'What is the “uncomfortable implication” for someone who prides themselves on flexibility?' },
+            { id: 'q6', text: 'Fünf Ausdrücke aus dem Text für die Vokabelbank — mit eigenem Beispielsatz, nicht mit Übersetzung.' }
+          ]
+        },
+        {
+          id: 'd6-use',
+          type: 'drill',
+          name: 'Use of English',
+          minutes: 10,
+          kicker: 'wish + Past Perfect und Inversion weiter unbestätigt — Sammelrunde geht weiter',
+          rules: [
+            { title: 'wish + Past Perfect für Vergangenheitsbedauern', body: 'Weiterhin ohne Rückmeldung aus Tag 5 — deshalb heute erneut, mit neuem Inhalt.', example: 'I wish I <b>had taken</b> a break. · We <b>wish</b> we <b>had decided</b> sooner.' },
+            { title: 'Inversion — <i>Never</i> und <i>Not only … but also</i>', body: 'Nach dem vorangestellten negativen Ausdruck: Hilfsverb vor Subjekt, wie in einer Frage. Nach <i>Not only</i> folgt im zweiten Teil <b>but … also</b>.', example: '<b>Never has</b> he decided so quickly. · <b>Not only was</b> the meeting too long, <b>but</b> it was <b>also</b> unnecessary.' },
+            { title: 'Konditional Typ 2 — kein <i>would</i> im if-Satz', body: 'Weiterhin die häufigste deutsche Interferenz.', example: '<b>If</b> I <b>made</b> fewer decisions, I <b>would</b> think more clearly.' },
+            { title: 'Passiv der Meinung — <i>is thought to</i> / <i>is known to have</i>', body: 'Subjekt bleibt die Person oder Sache selbst, nie „it“.', example: 'Judges <b>are thought to</b> rule more leniently in the morning. · He <b>is known to have</b> introduced the routine himself.' },
+            { title: 'Feste Wendungen — Sammelrunde', body: '<b>fall short of</b> · <b>taken aback</b> · <b>under the pretext of</b> · <b>a tendency to</b> · <b>for all its flaws</b> · <b>strange as it may seem</b>.', example: '<b>For all its flaws</b>, the routine remained the most reliable option, <b>strange as it may seem</b>.' }
+          ],
+          instruction: 'Vollständige Sätze, aus dem Kopf, ohne oben nachzusehen. Erst nach allen zehn die Lösungen aufdecken.',
+          items: [
+            { id: 'd6i1',  prompt: 'Ich wünschte, ich hätte gestern mehr Pausen gemacht.',                                       key: 'wish + had',           solution: 'I wish I had taken more breaks yesterday.' },
+            { id: 'd6i2',  prompt: 'Ich wünschte, wir hätten die Entscheidung früher getroffen.',                                key: 'wish + had',           solution: 'I wish we had made the decision earlier.' },
+            { id: 'd6i3',  prompt: 'Noch nie hat er eine Entscheidung so schnell getroffen.',                                   key: 'Never …',              solution: 'Never has he made a decision so quickly.' },
+            { id: 'd6i4',  prompt: 'Nicht nur war die Sitzung zu lang, sie war auch überflüssig.',                              key: 'Not only …',           solution: 'Not only was the meeting too long, but it was also unnecessary.' },
+            { id: 'd6i5',  prompt: 'Wenn ich weniger Entscheidungen träfe, würde ich klarer denken.',                           key: 'If … made',            solution: 'If I made fewer decisions, I would think more clearly.' },
+            { id: 'd6i6',  prompt: 'Wäre die Reihenfolge anders, würde das Ergebnis anders aussehen.',                          key: 'If … were',            solution: 'If the order were different, the result would look different.' },
+            { id: 'd6i7',  prompt: 'Man geht davon aus, dass Richter am Morgen milder urteilen.',                               key: 'are thought to',       solution: 'Judges are thought to rule more leniently in the morning.' },
+            { id: 'd6i8',  prompt: 'Es ist bekannt, dass er die Routine bewusst eingeführt hat.',                               key: 'is known to have',     solution: 'He is known to have introduced the routine deliberately.' },
+            { id: 'd6i9',  prompt: 'Trotz aller Mängel blieb die Routine die verlässlichste Option, so seltsam es klingen mag.', key: 'For all … · Strange as …', solution: 'For all its flaws, the routine remained the most reliable option, strange as it may seem.' },
+            { id: 'd6i10', prompt: 'Unter dem Vorwand, Zeit zu sparen, überging er die Prüfung, was auf eine Tendenz zur Bequemlichkeit hindeutet.', key: 'pretext · a tendency to', solution: 'Under the pretext of saving time, he skipped the review, which points to a tendency towards complacency.' }
+          ]
+        },
+        {
+          id: 'd6-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Does having a fixed daily routine make you more effective, or does it limit you? Give your own view.',
+          ruleTitle: 'Weiterhin: Position halten, Gegenargument benennen — jetzt zusätzlich hedgen statt absolut zu formulieren.',
+          ruleBody: 'Sag zuerst klar, wofür du stehst, dann den Einwand dagegen. Neu: formuliere deine eigene Position mindestens zweimal mit einem Hedge-Wort statt absolut („I always“, „everyone“). Reparieren, Themenwortschatz und Pausen statt Füllwörter laufen weiter mit.',
+          phrases: [
+            'decision fatigue · depletion · reserve · deliberate · consequential',
+            'tend to · arguably · in most cases',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden: mindestens zwei Hedge-Wörter müssen tatsächlich vorkommen, der Einwand muss benannt werden, und unter fünf Füllwörtern bleiben.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd6-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Grad der Zustimmung, Gegenargument und Hedging — alles zusammen',
+          prompt: '“People who follow a fixed daily routine make better decisions than those who decide everything as it comes.” To what extent do you agree?',
+          min: 160, max: 180,
+          checklist: [
+            'Erster Satz: deine These — nie die Aufgabenstellung abschreiben.',
+            '„To what extent“ verlangt ein Maß: largely · only in part · rarely — nicht nur „I agree“ oder „I disagree“.',
+            'Ein echtes Gegenargument behandeln (dass Routine auch bequem machen oder wichtige Ausnahmen übersehen kann), dann entkräften.',
+            'Hedging statt Absolutheit: tend to · in most cases · arguably.',
+            '160–180 Wörter. Die Zählung unten läuft mit.',
+            'Schreibung prüfen: different · development · business · statement · academic · generally · decision · consequential'
+          ]
+        },
+        {
+          id: 'd6-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Die falschen Sätze von heute Morgen neu — aus dem Kopf, nicht abgeschrieben.',
+          fields: [
+            { id: 'r1', label: 'Falscher Drill-Satz 1 → neu, mit der Regel dahinter in drei Wörtern' },
+            { id: 'r2', label: 'Falscher Drill-Satz 2 → neu, mit der Regel dahinter' },
+            { id: 'r3', label: 'Falscher Drill-Satz 3 → neu, mit der Regel dahinter' },
+            { id: 'r4', label: 'Die Reading-Frage, bei der du am unsichersten warst — Antwort neu, in eigenen Worten, ohne ein einziges Zitat' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd6-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (decision fatigue · depletion · consequential · to carry over from sth · to pride oneself on sth). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
   }
 ];
