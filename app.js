@@ -1,4 +1,4 @@
-import { PLAN, BASELINE, ERRORS, DAYS } from './content.js';
+import { PLAN, BASELINE, ERRORS, DAYS, REVIEW_LEVEL, REVIEW_ERRORS, REVIEWS } from './content.js';
 
 /* ============================================================
    Zustand
@@ -527,7 +527,7 @@ function exportSession(day, part) {
 
 function viewProgress() {
   setTop('', 'Fortschritt', false);
-  const last = S.levels[S.levels.length - 1];
+  const rl = REVIEW_LEVEL || { date: BASELINE.date, overall: BASELINE.overall, skills: BASELINE.skills };
   const t = today();
 
   const cells = DAYS.length ? Array.from({ length: PLAN.totalDays }, (_, i) => {
@@ -544,6 +544,7 @@ function viewProgress() {
   }).join('') : '';
 
   const groups = [...new Set(ERRORS.map(e => e.group))];
+  const reviews = [...REVIEWS].sort((a, b) => b.day - a.day);
 
   $('#view').innerHTML = `
     <h1>Fortschritt</h1>
@@ -552,25 +553,39 @@ function viewProgress() {
     <h3>Level</h3>
     <table class="leveltable">
       <tr><th>Fertigkeit</th><th>Einstufung</th><th>Aktuell</th></tr>
-      <tr><td>Reading</td><td class="lv">${BASELINE.skills.reading}</td><td class="lv">${esc(last.reading)}</td></tr>
-      <tr><td>Use of English</td><td class="lv">${BASELINE.skills.use}</td><td class="lv">${esc(last.use)}</td></tr>
-      <tr><td>Writing</td><td class="lv">${BASELINE.skills.writing}</td><td class="lv">${esc(last.writing)}</td></tr>
-      <tr><td>Speaking</td><td class="lv">${BASELINE.skills.speaking}</td><td class="lv">${esc(last.speaking)}</td></tr>
-      <tr><td><b>Gesamt</b></td><td class="lv">${BASELINE.overall}</td><td class="lv">${esc(last.overall)}</td></tr>
+      <tr><td>Reading</td><td class="lv">${BASELINE.skills.reading}</td><td class="lv">${esc(rl.skills.reading)}</td></tr>
+      <tr><td>Use of English</td><td class="lv">${BASELINE.skills.use}</td><td class="lv">${esc(rl.skills.use)}</td></tr>
+      <tr><td>Writing</td><td class="lv">${BASELINE.skills.writing}</td><td class="lv">${esc(rl.skills.writing)}</td></tr>
+      <tr><td>Speaking</td><td class="lv">${BASELINE.skills.speaking}</td><td class="lv">${esc(rl.skills.speaking)}</td></tr>
+      <tr><td><b>Gesamt</b></td><td class="lv">${BASELINE.overall}</td><td class="lv">${esc(rl.overall)}</td></tr>
     </table>
+    <p style="font-size:13px;color:var(--ink-dim)">Stand der Auswertung: ${prettyDate(rl.date)}</p>
 
     <h2>Ferienphase</h2>
     <div class="grid-days">${cells}</div>
     <p style="font-size:13px;color:var(--ink-dim)">Halb gefüllt = eine Einheit · voll = beide Einheiten</p>
 
+    <h2>Rückmeldung je Tag</h2>
+    <p class="callout">Auswertung der eingelesenen Sicherungen — dieselbe Rückmeldung wie in
+    <strong>FORTSCHRITT.md</strong>. Erscheint erst, wenn eine Sicherung eingelesen wurde.</p>
+    <div class="reviews">
+      ${reviews.length ? reviews.map((r, idx) => `
+        <details class="review" ${idx === 0 ? 'open' : ''}>
+          <summary><span>Tag ${r.day} · ${prettyDate(r.date)}</span></summary>
+          <div class="review-body">
+            ${r.blocks.map(b => `<div class="review-skill"><b>${esc(b.label)}.</b> ${b.text}</div>`).join('')}
+          </div>
+        </details>`).join('') : '<p style="color:var(--ink-dim)">Noch keine Auswertung.</p>'}
+    </div>
+
     <h2>Fehlerprofil</h2>
     <p class="callout">Ein Punkt gilt als erledigt, wenn er an <strong>drei verschiedenen Tagen</strong>
-    fehlerfrei produziert wurde. Tippen zählt hoch.</p>
+    fehlerfrei produziert wurde — aus der Auswertung der Sicherungen oder durch eigenes Antippen.</p>
     ${groups.map(g => `
       <div class="errgroup">${esc(g)}</div>
       <ul class="errlist">
         ${ERRORS.filter(e => e.group === g).map(e => {
-          const n = S.errors[e.id] || 0;
+          const n = Math.max(REVIEW_ERRORS[e.id] || 0, S.errors[e.id] || 0);
           return `<li class="erritem ${n >= 3 ? 'done' : ''}" data-err="${esc(e.id)}">
             <span class="box">${n >= 3 ? '✓' : n || ''}</span><span>${esc(e.text)}</span></li>`;
         }).join('')}

@@ -39,7 +39,89 @@ export const ERRORS = [
   { id: 'degree',    group: 'Schreiben', text: 'Grad der Zustimmung benennen' },
   { id: 'repair',    group: 'Sprechen',  text: 'Reparieren statt neu anfangen' },
   { id: 'topicvoc',  group: 'Sprechen',  text: 'Themenwortschatz statt Umschreibung' },
+  { id: 'noCopy',    group: 'Schreiben', text: 'Aufgabenstellung nicht abschreiben — mit der These beginnen' },
   { id: 'filler',    group: 'Sprechen',  text: 'Füllwortdichte senken' }
+];
+
+/* Aktueller Gesamtstand aus der letzten Auswertung der Sicherungsdateien (siehe REVIEWS unten). */
+export const REVIEW_LEVEL = {
+  date: '2026-08-07',
+  overall: 'B1+',
+  skills: { reading: 'B1+', use: 'B1+', writing: 'B1+/B2−', speaking: 'B1+/B2−' }
+};
+
+/* An wie vielen verschiedenen Tagen ein Fehlerprofil-Punkt beim Auswerten der Sicherungen
+   fehlerfrei war. Läuft neben dem Antippen in der App — der höhere der beiden Werte zählt. */
+export const REVIEW_ERRORS = {
+  precision: 0, inference: 0, paraphr: 0, speed: 0,
+  wrather: 1, inversion: 2, wish: 4, saidto: 0, cond2: 5,
+  preps: 0,
+  spelling: 0, length: 5, counter: 2, degree: 2, noCopy: 5,
+  repair: 2, topicvoc: 0, filler: 0
+};
+
+/* Auswertung jeder Sicherung, Tag für Tag — dieselbe Rückmeldung wie in FORTSCHRITT.md.
+   Wird ergänzt, sobald eine neue Sicherung ausgewertet wird. */
+export const REVIEWS = [
+  {
+    day: 1, date: '2026-08-01',
+    blocks: [
+      { label: 'Use of English', text: '<b>2 von 10 richtig.</b> Richtig nur <i>If … were</i> (i9) und, verkürzt, <i>agree</i> (i8, es fehlte <i>with you</i>). Die drei Inversionssätze (i2, i5, i10) hatten alle dieselbe Ursache: das Hilfsverb blieb hinter dem Subjekt. <i>would rather</i> doppelt gemoppelt (<i>would rather prefer</i>), <i>wish</i> ohne Zeitform, <i>is said to</i> ohne folgendes Verb, <i>fall short</i> fälschlich im Passiv, <i>take aback</i> als <i>push aback</i>.' },
+      { label: 'Reading', text: 'q1 und q3 inhaltlich getroffen. q2 verfehlt — <i>price risk</i> wurde als „efficiency“ gelesen. q4 ist der Kernfehler: Antwort „Yes“, Beleg <i>„Failure teaches nothing on its own“</i> — der Beleg widerlegt die Antwort. Beleg zuerst suchen, dann ja/nein festlegen.' },
+      { label: 'Writing', text: '168 Wörter, aber Struktur unter Niveau. Erster Satz war die abgeschriebene Aufgabenstellung. „On one hand“ ohne „on the other“ — die Gegenposition fehlt vollständig. Schreibung: <i>tought, neurones, handle with failure, handy with</i>.' },
+      { label: 'Speaking', text: '<i>what I mean is</i> wurde benutzt — der erste Punkt aus dem Fehlerprofil bewegt sich. Dagegen: „setting“ dreimal für mindset/norm, hohe Füllwortdichte (yeah, um), kein Themenwortschatz.' }
+    ]
+  },
+  {
+    day: 2, date: '2026-08-02',
+    blocks: [
+      { label: 'Use of English', text: '<b>1 von 10</b>, mit denselben Fehlern wie gestern. Nur j3 (<i>Not until … did</i>) saß sauber. Der Rest wiederholt fast wortgleich die Fehler von Tag 1, obwohl die Korrekturhinweise direkt über den Sätzen standen: „pushed me aback“ statt <i>taken aback</i> (j10), „was fallen short“ wird zu „were fallen short“ (j9), „is believed to that“ wiederholt exakt das Muster von „is said to that“ (j7), <i>would rather</i> und <i>prefer</i> stehen wieder doppelt (j1).' },
+      { label: 'Reading', text: 'Die Ja-Nein-Falle von gestern schlägt erneut zu: q3 fragt, ob der Autor rät „was soll ich tun“ zu fragen — die Antwort ist eindeutig nein, hier steht „Definitely yes“ ohne passenden Beleg. q4 tappt genau in die angekündigte Falle: „hardly anyone is asked“ wird als „jeder wird gefragt“ gelesen — das genaue Gegenteil.' },
+      { label: 'Writing', text: '144 Wörter, mit eigener These. Zum ersten Mal beginnt der Text nicht mit der abgeschriebenen Aufgabe, sondern mit „My opinion is that …“ — das sitzt. Ein echtes Gegenargument fehlt aber weiterhin. Rechtschreibung: <i>there</i> statt <i>their</i>, <i>ideal</i> statt <i>idea</i>.' },
+      { label: 'Repair', text: 'Nur 3 von 8 Feldern ausgefüllt, der Rest mit „Ich weiss es nicht mehr“ abgehakt — der falsche Satz von gestern (p5) wird unverändert wieder hingeschrieben, nicht korrigiert.' },
+      { label: 'Speaking', text: '<i>track record</i>, <i>mindset</i> und <i>with hindsight</i> kommen vor — drei von fünf geforderten Themenwörtern. <i>weigh sth up</i> wird als „wait“ verschriftlicht — eine eigene Verwechslung.' }
+    ]
+  },
+  {
+    day: 3, date: '2026-08-03',
+    blocks: [
+      { label: 'Use of English', text: '<b>3 von 10 sicher</b>, dazu ein Fast-Treffer. k1, k9, k10 sitzen. k6 ist inhaltlich richtig, nur mit <i>sounds</i> statt <i>may seem</i>. Der eigentliche Punkt des Tages, Inversion nach <i>Not only</i>, schlägt fehl: „Not only the report was too late“ bleibt in normaler Wortstellung stehen (k7).' },
+      { label: 'Reading', text: 'Die Umformulieren-Aufgabe (q1) bricht mitten im Satz ab. Die Ja-Nein-Falle (q3) trifft zufällig das richtige „no“, aber mit einem Zitat, das nicht die Antwort stützt. Positiv: q4 („few“ bedeutet nicht viele) wird zum ersten Mal richtig erkannt.' },
+      { label: 'Writing', text: 'Deutlich länger, beide Sichtweisen behandelt — zum ersten Mal zwei Absätze für zwei Positionen, plus ein eigenes Beispiel aus der Wirtschaft. Weiterhin deutsche Interferenz: „I ask me the questions“ statt „I ask myself“.' },
+      { label: 'Repair', text: 'Wieder nur die Rechtschreib-Paare (r5) bearbeitet, r1–r4 mit „I don’t know“ abgehakt — zweiter Tag in Folge.' },
+      { label: 'Speaking', text: '„Let me take a concrete example“ wird korrekt verwendet. Die Füllwortdichte bleibt hoch.' }
+    ]
+  },
+  {
+    day: 4, date: '2026-08-04',
+    blocks: [
+      { label: 'Reading', text: '<b>Schwächster Tag der Woche.</b> Mehrere Antworten liegen am Thema vorbei (q1, q2, q4, q5). Die Ja-Nein-Falle (q3) schlägt erneut fehl: „Yes“ wird mit einem Zitat belegt, das eindeutig „No“ stützt — derselbe Widerspruch wie in der Einstufung.' },
+      { label: 'Use of English', text: '3 von 10 sicher, dazu ein deutlicher Fortschritt bei Inversion. d4i3 (<i>Never had the team seen …</i>) sitzt sauber — die erste vollständig korrekte <i>Never</i>-Inversion seit der Einstufung. Bei d4i4 (<i>Not only</i>) steht die Inversion richtig am Satzanfang, aber danach folgt „did he lost“ statt „did he lose“.' },
+      { label: 'Writing', text: 'Gegenargument diesmal wirklich vorhanden: „On the other side I think that too much failure is a mistake“ ist ein echter Einwand. Der erste Satz bleibt grammatisch instabil („The behaviour or punish failure“).' },
+      { label: 'Repair', text: 'Alle vier freien Felder mit „I do not know them“ — drittes Mal in Folge ausgelassen.' },
+      { label: 'Speaking', text: '<i>resilience</i> und <i>failure</i> fallen, „or rather“ repariert einen Satz korrekt — aber nur zwei von vier geforderten Themenwörtern.' }
+    ]
+  },
+  {
+    day: 5, date: '2026-08-05',
+    blocks: [
+      { label: 'Use of English', text: '<b>Stärkster Drill-Tag bisher, 4 von 10 sicher</b> plus zwei Fast-Treffer. d5i1, d5i2, d5i5, d5i8 sitzen. d5i10 zeigt zum ersten Mal <i>fall short of</i> aktiv und richtig. Neu und jetzt dreimal belegt: nach einem Inversions-Hilfsverb bleibt das Hauptverb in der Vergangenheitsform stehen statt in der Grundform — „did he knew“, „did I knew“ statt <i>did he know / did I understand</i>.' },
+      { label: 'Reading', text: 'Schwächer als der Rest der Woche. q1 und q2 liegen am Thema vorbei, q4 fehlt ganz. q5 ist wörtlich aus dem Text abgeschrieben, nicht umformuliert. Die Ja-Nein-Falle (q3) schlägt zum vierten Mal fehl.' },
+      { label: 'Writing', text: 'Erster expliziter Zustimmungsgrad: „I partly agree to the statement“ eröffnet den Text. Ironischerweise direkt dahinter der genau geübte Fehler: <i>agree to</i> statt <i>agree with</i>.' },
+      { label: 'Repair', text: 'Vierter Tag in Folge ohne echten Versuch bei r1–r4.' },
+      { label: 'Speaking', text: '<i>overconfidence</i> und <i>expertise</i> fallen, die vorgegebene Einwand-Formel wird nicht wörtlich verwendet.' }
+    ]
+  },
+  {
+    day: 6, date: '2026-08-06',
+    blocks: [
+      { label: 'Reading', text: 'Die Wortgenauigkeits-Frage zu <i>discrete</i> verfehlt das Thema komplett. <b>Positiv:</b> die Ja-Nein-Falle (q3) sitzt zum ersten Mal vollständig — „No“, belegt mit dem richtigen Satz. Nach vier Fehlversuchen der erste klare Treffer.' },
+      { label: 'Use of English', text: '4 von 10 sicher. d6i1, d6i2 (<i>wish</i>), d6i3 (<i>Never</i>) und d6i6 sitzen. d6i4 zeigt wieder dieselbe Lücke wie an Tag 3: nach <i>Not only</i> bleibt die normale Wortstellung stehen.' },
+      { label: 'Writing', text: '„I agree only in part“ wiederholt den Zustimmungsgrad von gestern. Im selben Text aber wieder der Klassiker aus der Einstufung: „If this client would come earlier“ — im Drill seit Tagen richtig, überträgt sich noch nicht ins freie Schreiben.' },
+      { label: 'Repair', text: 'Fünfter Tag in Folge ohne Versuch bei den freien Feldern.' },
+      { label: 'Speaking', text: '<i>tend to</i> und „Some would say that“ kommen beide vor — zum ersten Mal wird die Hedging-Vorgabe vollständig erfüllt.' }
+    ]
+  }
 ];
 
 export const DAYS = [
