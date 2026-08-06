@@ -789,5 +789,129 @@ export const DAYS = [
         }
       ]
     }
+  },
+
+  {
+    day: 7,
+    date: '2026-08-07',
+    phase: 1,
+    focus: 'Wortgenauigkeit an einer neuen Falle (enormity) · wish + Past Perfect, Inversion und Konditional Typ 2 bleiben in der Sammelrunde, dazu agree with und development for · Themenwortschatz aktiv im Speaking',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd7-read',
+          type: 'read',
+          name: 'Reading',
+          minutes: 12,
+          title: 'The Trap of Sunk Costs',
+          kicker: 'Text 7 · Phase 1',
+          intro: 'Für Tag 2 bis Tag 6 liegt weiterhin keine Sicherung vor — bestätigt ist nach wie vor nur, was aus Tag 1 vorliegt, deshalb bleibt die Grammatik-Sammelrunde unverändert offen. Neu heute: eine Wortgenauigkeits-Falle, die anders funktioniert als discrete/discreet — ein Wort, das harmlos aussieht, aber eine unerwartete Bedeutung trägt. Ziel für Text + Fragen bleibt bei 8 Minuten.',
+          paragraphs: [
+            'Economists have a simple rule for good decisions: only future costs and benefits should count, and money or time already spent is irrelevant to what should happen next. In practice, almost nobody follows it. A theatre-goer who has paid for a ticket will sit through a play they are visibly not enjoying, reasoning that leaving would waste the money already spent — as though staying could somehow bring it back. The same pattern shows up in far weightier decisions: a company that continues to fund a failing project because of what has already gone into it, or a government that persists with a policy after the evidence has turned against it, out of reluctance to admit that the original choice was wrong.',
+            'Behavioural economists call this the sunk cost fallacy, and its enormity lies not in any single bad decision but in how reliably it compounds one mistake into several. Cutting losses early is, for most people, harder than doubling down, since it requires admitting that a previous judgement was mistaken rather than simply unlucky. The rational response, uncomfortable as it is, treats every decision as if it were being made for the first time, with no regard for what has already been paid, and no obligation to defend a choice that no longer serves its purpose.'
+          ],
+          rule: 'Auf Englisch, ganze Sätze. Höchstens drei Wörter am Stück aus dem Text. Ziel für Lesen + Fragen: 8 Minuten.',
+          questions: [
+            { id: 'q1', text: 'The writer refers to the fallacy’s “enormity”. What does “enormity” mean here, and what meaning do many readers wrongly assume it has instead (think of the word “enormous”)?', hint: 'Neue Wortgenauigkeits-Falle — ein Wort, das harmloser klingt, als es ist.' },
+            { id: 'q2', text: 'Explain in your own words why the writer compares a theatre-goer who stays in a play to a government that persists with a failing policy.' },
+            { id: 'q3', text: 'Does the writer say that admitting a past mistake is easy? Answer yes or no, then quote the exact words that justify your answer.', hint: 'Präzisionsfalle — die naheliegende Antwort ist zu einfach.' },
+            { id: 'q4', text: '“The rational response … treats every decision as if it were being made for the first time.” What does this mean in practice? One sentence, in your own words.' },
+            { id: 'q5', text: 'What connection does the writer draw between admitting that a past judgement was wrong and why people find that hard to do?' },
+            { id: 'q6', text: 'Fünf Ausdrücke aus dem Text für die Vokabelbank — mit eigenem Beispielsatz, nicht mit Übersetzung.' }
+          ]
+        },
+        {
+          id: 'd7-use',
+          type: 'drill',
+          name: 'Use of English',
+          minutes: 10,
+          kicker: 'wish + Past Perfect, Inversion und Konditional Typ 2 weiter unbestätigt — dazu heute agree with und development for, aus dem Fehlerprofil bisher nur einmal berührt',
+          rules: [
+            { title: 'wish + Past Perfect für Vergangenheitsbedauern', body: 'Weiterhin ohne Rückmeldung seit Tag 1 — deshalb erneut, mit neuem Inhalt.', example: 'I <b>wish</b> I <b>had stopped</b> earlier. · We <b>wish</b> they <b>had accepted</b> the loss.' },
+            { title: 'Inversion — <i>Never</i> und <i>Not only … but also</i>', body: 'Nach dem vorangestellten negativen Ausdruck: Hilfsverb vor Subjekt, wie in einer Frage.', example: '<b>Never had</b> the team wasted so much time. · <b>Not only did</b> they ignore the signs, <b>but</b> they <b>also</b> invested more.' },
+            { title: 'Konditional Typ 2 — kein <i>would</i> im if-Satz', body: 'Weiterhin die häufigste deutsche Interferenz — auch wenn das Verb im if-Satz selbst schon eine Konditionalform im Deutschen trägt.', example: '<b>If</b> the price <b>were</b> stable, I <b>would</b> agree. · <b>If</b> the company <b>reported</b> more transparently, investors <b>would</b> react faster.' },
+            { title: 'Passiv der Meinung — <i>is thought to</i> / <i>is known to have</i>', body: 'Subjekt bleibt die Person oder Sache selbst, nie „it“.', example: 'Investors <b>are thought to</b> decide emotionally. · He <b>is known to have</b> kept investing despite the losses.' },
+            { title: 'agree <u>with</u> (nicht <i>to</i>) · development <u>for</u> sb (nicht <i>to</i>)', body: 'Zwei feste Präpositionen aus dem Fehlerprofil, die seit der Einstufung noch nicht gezielt geprüft wurden.', example: 'I completely <b>agree with</b> you on this point. · The <b>development for</b> the employees was positive.' }
+          ],
+          instruction: 'Vollständige Sätze, aus dem Kopf, ohne oben nachzusehen. Erst nach allen zehn die Lösungen aufdecken.',
+          items: [
+            { id: 'd7i1',  prompt: 'Ich wünschte, ich hätte früher aufgehört zu investieren.',                        key: 'wish + had',             solution: 'I wish I had stopped investing earlier.' },
+            { id: 'd7i2',  prompt: 'Ich wünschte, sie hätten den Verlust akzeptiert.',                                key: 'wish + had',             solution: 'I wish they had accepted the loss.' },
+            { id: 'd7i3',  prompt: 'Noch nie hatte das Team so viel Zeit verschwendet.',                              key: 'Never …',                solution: 'Never had the team wasted so much time.' },
+            { id: 'd7i4',  prompt: 'Nicht nur ignorierten sie die Warnzeichen, sie investierten auch mehr.',          key: 'Not only …',             solution: 'Not only did they ignore the warning signs, but they also invested more.' },
+            { id: 'd7i5',  prompt: 'Wenn der Preis stabil wäre, würde ich zustimmen.',                                key: 'If … were',              solution: 'If the price were stable, I would agree.' },
+            { id: 'd7i6',  prompt: 'Wenn die Firma transparenter berichten würde, würden Anleger schneller reagieren.', key: 'If … reported',        solution: 'If the company reported more transparently, investors would react faster.' },
+            { id: 'd7i7',  prompt: 'Man geht davon aus, dass Anleger emotional entscheiden.',                         key: 'are thought to',         solution: 'Investors are thought to decide emotionally.' },
+            { id: 'd7i8',  prompt: 'Es ist bekannt, dass er trotz der Verluste weiter investiert hat.',               key: 'is known to have',       solution: 'He is known to have kept investing despite the losses.' },
+            { id: 'd7i9',  prompt: 'Ich stimme dir bei diesem Punkt völlig zu.',                                      key: 'agree with',             solution: 'I completely agree with you on this point.' },
+            { id: 'd7i10', prompt: 'Die Entwicklung für die Angestellten war positiv.',                               key: 'development for',        solution: 'The development for the employees was positive.' }
+          ]
+        },
+        {
+          id: 'd7-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Do people become more careful after a failure, or does one setback push them to take bigger risks to make up for it? Give your own view.',
+          ruleTitle: 'Themenwortschatz jetzt aktiv Pflicht: failure, setback, stigma, risk-taking, resilience.',
+          ruleBody: 'Mindestens zwei dieser Wörter müssen tatsächlich fallen, nicht umschrieben. Position halten, Gegenargument benennen, weiterhin mit Hedge-Wörtern statt absolut formulieren, Abbrüche mit „or rather / what I mean is" reparieren statt neu anfangen.',
+          phrases: [
+            'failure · setback · stigma · risk-taking · resilience',
+            'tend to · arguably · in most cases',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden: mindestens zwei Themenwörter und mindestens ein Hedge-Wort müssen tatsächlich vorkommen, der Einwand muss benannt werden, und unter fünf Füllwörtern bleiben.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd7-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Grad der Zustimmung, Gegenargument und Hedging — jetzt am Thema Risiko und Scheitern',
+          prompt: '“A culture that stigmatises failure discourages the risk-taking that progress depends on.” To what extent do you agree?',
+          min: 160, max: 180,
+          checklist: [
+            'Erster Satz: deine These — nie die Aufgabenstellung abschreiben.',
+            '„To what extent" verlangt ein Maß: largely · only in part · rarely — nicht nur „I agree" oder „I disagree".',
+            'Ein echtes Gegenargument behandeln (dass manche Risiken auch schlicht unnötig oder schlecht durchdacht sind), dann entkräften.',
+            'Hedging statt Absolutheit: tend to · in most cases · arguably.',
+            '160–180 Wörter. Die Zählung unten läuft mit.',
+            'Schreibung prüfen: different · development · business · statement · academic · generally · consequential · necessary'
+          ]
+        },
+        {
+          id: 'd7-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Die falschen Sätze von heute Morgen neu — aus dem Kopf, nicht abgeschrieben.',
+          fields: [
+            { id: 'r1', label: 'Falscher Drill-Satz 1 → neu, mit der Regel dahinter in drei Wörtern' },
+            { id: 'r2', label: 'Falscher Drill-Satz 2 → neu, mit der Regel dahinter' },
+            { id: 'r3', label: 'Falscher Drill-Satz 3 → neu, mit der Regel dahinter' },
+            { id: 'r4', label: 'Die Reading-Frage, bei der du am unsichersten warst — Antwort neu, in eigenen Worten, ohne ein einziges Zitat' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd7-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (sunk cost · to write off · marginal · to cut one’s losses · enormity im Sinn von Schwere, nicht Größe). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
   }
 ];
