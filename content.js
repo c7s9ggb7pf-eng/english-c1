@@ -54,10 +54,10 @@ export const REVIEW_LEVEL = {
    fehlerfrei war. Läuft neben dem Antippen in der App — der höhere der beiden Werte zählt. */
 export const REVIEW_ERRORS = {
   precision: 0, inference: 0, paraphr: 0, speed: 0,
-  wrather: 1, inversion: 2, wish: 4, saidto: 0, cond2: 5,
+  wrather: 1, inversion: 3, wish: 4, saidto: 0, cond2: 5,
   preps: 0,
   spelling: 0, length: 5, counter: 2, degree: 2, noCopy: 5,
-  repair: 2, topicvoc: 0, filler: 0
+  repair: 2, topicvoc: 1, filler: 0
 };
 
 /* Auswertung jeder Sicherung, Tag für Tag — dieselbe Rückmeldung wie in FORTSCHRITT.md.
@@ -120,6 +120,14 @@ export const REVIEWS = [
       { label: 'Writing', text: '„I agree only in part“ wiederholt den Zustimmungsgrad von gestern. Im selben Text aber wieder der Klassiker aus der Einstufung: „If this client would come earlier“ — im Drill seit Tagen richtig, überträgt sich noch nicht ins freie Schreiben.' },
       { label: 'Repair', text: 'Fünfter Tag in Folge ohne Versuch bei den freien Feldern.' },
       { label: 'Speaking', text: '<i>tend to</i> und „Some would say that“ kommen beide vor — zum ersten Mal wird die Hedging-Vorgabe vollständig erfüllt.' }
+    ]
+  },
+  {
+    day: 7, date: '2026-08-07',
+    blocks: [
+      { label: 'Use of English', text: '<b>Bester Drill-Tag bisher, 6 von 10 sicher.</b> d7i5 und d7i10 exakt, d7i3 (<i>Never had the team wasted…</i>) bestätigt die Never-Inversion erneut. d7i4 ist der Durchbruch: „Not only had they ignored the warnings, they also invested more“ stellt zum ersten Mal das Hilfsverb korrekt vor das Subjekt — nur das <i>but</i> fehlt, nach vier Fehlversuchen der erste Treffer. d7i8 zeigt <i>is known to have</i> sauber, während d7i7 den altbekannten Fehler wiederholt: „It is thought that investors are decided emotional“ statt <i>Investors are thought to decide emotionally</i>. d7i9 trifft <i>agree with</i> zum ersten Mal.' },
+      { label: 'Reading', text: 'Die neue Wortgenauigkeits-Falle (q1, <i>enormity</i>) wird komplett verfehlt — die Antwort geht gar nicht auf das Wort ein. Die Ja-Nein-Falle (q3) sitzt zum zweiten Mal in Folge. q4 inhaltlich richtig, aber „we should made decisions“ statt <i>should make</i>. q5 verfehlt die eigentliche Frage und rutscht zurück in die q2-Erklärung.' },
+      { label: 'Speaking', text: 'Vier von fünf Themenwörtern fallen tatsächlich (<i>fails, setback, stigma, risk taking, resilience</i>) — das bisher vollständigste Ergebnis. <i>tend to</i> als Hedge-Wort vorhanden, Füllwortdichte bleibt hoch.' }
     ]
   }
 ];
@@ -992,6 +1000,130 @@ export const DAYS = [
           name: 'Vokabelbank',
           minutes: 5,
           instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (sunk cost · to write off · marginal · to cut one’s losses · enormity im Sinn von Schwere, nicht Größe). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
+  },
+
+  {
+    day: 8,
+    date: '2026-08-08',
+    phase: 1,
+    focus: 'enormity in neuer Einkleidung, dazu die Grenze zwischen is thought to + Grundform und is known to have + Partizip · Not only … but also mit dem fehlenden but · agree with zum zweiten Mal, dazu vier bisher unbearbeitete feste Wendungen',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd8-read',
+          type: 'read',
+          name: 'Reading',
+          minutes: 12,
+          title: 'The Limits of Expert Judgement',
+          kicker: 'Text 8 · Phase 1',
+          intro: 'Die Wortgenauigkeits-Falle von gestern (enormity) wurde komplett übergangen — die Antwort ging nicht auf das Wort ein, sondern erzählte einen anderen Satz nach. Heute kommt dasselbe Wort in einem neuen Text und einer neuen Frage zurück: Erst das Wort isolieren, dann erklären, dann erst die naheliegende Fehldeutung benennen. Ziel für Text + Fragen bleibt bei 8 Minuten.',
+          paragraphs: [
+            'Organisations tend to assume that expertise reliably produces good judgement, yet the evidence points the other way almost as often as not. What experience reliably improves is not accuracy but confidence, and the two are easy to mistake for one another because a fluent, quickly delivered answer feels more trustworthy than a hesitant one, regardless of whether it is correct. Doctors who have practised for twenty years are, on average, no better at diagnosing rare conditions than doctors five years into their training; what changes with experience is mainly the speed and certainty with which the wrong answer gets delivered.',
+            'None of this means that expertise is worthless, only that its value lies in a narrower place than most people assume. In domains with fast, unambiguous feedback, such as chess or weather forecasting, judgement genuinely does improve with practice. In domains where feedback is slow, rare, or easily explained away, such as long-range forecasting or personnel selection, it does not. The enormity of a single misdiagnosed case may go unnoticed for years, precisely because the feedback that would expose it rarely arrives in time to be traced back to the original decision. Recognising which kind of domain one is operating in is, arguably, a more valuable skill than any accumulated expertise itself.'
+          ],
+          rule: 'Auf Englisch, ganze Sätze. Höchstens drei Wörter am Stück aus dem Text. Ziel für Lesen + Fragen: 8 Minuten.',
+          questions: [
+            { id: 'q1', text: 'The writer refers to “the enormity of a single misdiagnosed case”. Isolate the word first: what does “enormity” mean in this sentence, and what meaning would a reader get wrong by connecting it to “enormous”?', hint: 'Dieselbe Falle wie gestern, neuer Satz — diesmal das Wort zuerst isolieren, dann erklären.' },
+            { id: 'q2', text: 'Explain in your own words why the writer says the value of expertise “lies in a narrower place than most people assume”.' },
+            { id: 'q3', text: 'Does the writer say that experienced doctors are more accurate than less experienced ones? Answer yes or no, then quote the exact words that justify your answer.', hint: 'Präzisionsfalle — „on average, no better” ist etwas anderes als „schlechter”.' },
+            { id: 'q4', text: '“What changes with experience is mainly the speed and certainty with which the wrong answer gets delivered.” What does this mean in practice? One sentence, in your own words.' },
+            { id: 'q5', text: 'What connection does the writer draw between the type of feedback a domain provides and how much expert judgement improves with practice in that domain?' },
+            { id: 'q6', text: 'Fünf Ausdrücke aus dem Text für die Vokabelbank — mit eigenem Beispielsatz, nicht mit Übersetzung.' }
+          ]
+        },
+        {
+          id: 'd8-use',
+          type: 'drill',
+          name: 'Use of English',
+          minutes: 10,
+          kicker: 'Not only … but also jetzt mit dem but · is thought to vs. is known to have im direkten Kontrast · agree with zum zweiten Mal · vier noch nie bearbeitete feste Wendungen',
+          rules: [
+            { title: 'would rather + Subjekt + Vergangenheitsform', body: 'Bisher nur an einem Tag richtig — weiter offen.', example: 'I<b>’d rather</b> you <b>checked</b> the figures beforehand. · I<b>’d rather</b> she <b>called</b> first.' },
+            { title: 'Inversion — <i>Not only … but also</i> MIT dem <i>but</i>', body: 'Gestern saß zum ersten Mal das Hilfsverb vor dem Subjekt — nur das <i>but</i> vor dem zweiten Teil fehlte. Heute beides zusammen.', example: '<b>Not only did</b> she miss the deadline, <b>but</b> she <b>also</b> ignored the feedback.' },
+            { title: 'Passiv der Meinung — <i>is thought to</i> + Grundform (nicht „that”-Satz)', body: 'Gestern falsch: „It is thought that investors are decided emotional”. Richtig: Subjekt bleibt die Person/Sache, direkt gefolgt von <i>to</i> + Verb.', example: 'The board <b>is thought to</b> decide too cautiously.' },
+            { title: 'Passiv der Meinung — <i>is known to have</i> + Partizip', body: 'Diese Variante saß gestern zum ersten Mal sauber — heute bestätigen.', example: 'She <b>is known to have</b> postponed the deadline several times.' },
+            { title: 'agree <u>with</u> (Person) · fall short <u>of</u> · take sb <u>aback</u> · a tendency <u>to</u> + Grundform · under the pretext <u>of</u> · for all its flaws', body: 'Sechs feste Wendungen aus dem Fehlerprofil — <i>agree with</i> saß gestern zum ersten Mal, die anderen fünf sind noch offen oder nie bearbeitet.', example: 'I completely <b>agree with</b> my colleague on this point. · The results <b>fell</b> well <b>short of</b> expectations. · The criticism <b>took</b> her completely <b>aback</b>. · He <b>has a tendency to</b> underestimate problems. · He left <b>under the pretext of</b> taking a call. · <b>For all its flaws</b>, the plan remains the most realistic option.' }
+          ],
+          instruction: 'Vollständige Sätze, aus dem Kopf, ohne oben nachzusehen. Erst nach allen zehn die Lösungen aufdecken.',
+          items: [
+            { id: 'd8i1',  prompt: 'Ich würde es vorziehen, wenn du die Zahlen vorher prüfst.',                       key: 'would rather + past',    solution: 'I’d rather you checked the figures beforehand.' },
+            { id: 'd8i2',  prompt: 'Nicht nur verpasste sie die Frist, sie ignorierte auch die Rückmeldung.',        key: 'Not only … but',         solution: 'Not only did she miss the deadline, but she also ignored the feedback.' },
+            { id: 'd8i3',  prompt: 'Man geht davon aus, dass der Vorstand zu vorsichtig entscheidet.',               key: 'is thought to',          solution: 'The board is thought to decide too cautiously.' },
+            { id: 'd8i4',  prompt: 'Es ist bekannt, dass sie die Frist mehrmals verschoben hat.',                    key: 'is known to have',       solution: 'She is known to have postponed the deadline several times.' },
+            { id: 'd8i5',  prompt: 'Ich stimme meinem Kollegen bei diesem Punkt völlig zu.',                         key: 'agree with',             solution: 'I completely agree with my colleague on this point.' },
+            { id: 'd8i6',  prompt: 'Die Ergebnisse blieben deutlich hinter den Erwartungen zurück.',                 key: 'fall short of',          solution: 'The results fell well short of expectations.' },
+            { id: 'd8i7',  prompt: 'Die Kritik überrumpelte sie völlig.',                                            key: 'take sb aback',          solution: 'The criticism took her completely aback.' },
+            { id: 'd8i8',  prompt: 'Er neigt dazu, Probleme zu unterschätzen.',                                      key: 'a tendency to',          solution: 'He has a tendency to underestimate problems.' },
+            { id: 'd8i9',  prompt: 'Er verließ das Meeting unter dem Vorwand, einen Anruf entgegenzunehmen.',        key: 'under the pretext of',   solution: 'He left the meeting under the pretext of taking a call.' },
+            { id: 'd8i10', prompt: 'Bei all seinen Schwächen bleibt der Plan die realistischste Option.',            key: 'for all its flaws',      solution: 'For all its flaws, the plan remains the most realistic option.' }
+          ]
+        },
+        {
+          id: 'd8-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Is it more dangerous to trust an overconfident expert, or to distrust every expert equally? Give your own view.',
+          ruleTitle: 'Themenwortschatz weiterhin Pflicht: expertise, confidence, judgement, feedback, overconfidence.',
+          ruleBody: 'Mindestens zwei dieser Wörter müssen tatsächlich fallen, nicht umschrieben. Position halten, Gegenargument benennen, mit Hedge-Wörtern statt absolut formulieren, Abbrüche mit „or rather / what I mean is” reparieren statt neu anfangen — das ist der einzige Punkt aus dem Fehlerprofil, der noch nie eindeutig als erfüllt galt.',
+          phrases: [
+            'expertise · confidence · judgement · feedback · overconfidence',
+            'tend to · arguably · in most cases',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden: mindestens zwei Themenwörter und mindestens ein Hedge-Wort müssen tatsächlich vorkommen, der Einwand muss benannt werden, und unter fünf Füllwörtern bleiben.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd8-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Grad der Zustimmung — dritter sauberer Tag gesucht · Gegenposition weiterhin Pflicht',
+          prompt: '“Organisations should trust data over experienced judgement whenever the two disagree.” To what extent do you agree?',
+          min: 160, max: 180,
+          checklist: [
+            'Erster Satz: deine These — nie die Aufgabenstellung abschreiben.',
+            '„To what extent" verlangt ein Maß: largely · only in part · rarely — nicht nur „I agree" oder „I disagree".',
+            'Ein echtes Gegenargument behandeln (dass Daten selbst auch fehlerhaft oder unvollständig sein können), dann entkräften.',
+            'Hedging statt Absolutheit: tend to · in most cases · arguably.',
+            '160–180 Wörter. Die Zählung unten läuft mit.',
+            'Schreibung prüfen: different · development · business · statement · academic · generally · judgement · necessary'
+          ]
+        },
+        {
+          id: 'd8-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Die falschen Sätze von heute Morgen neu — aus dem Kopf, nicht abgeschrieben.',
+          fields: [
+            { id: 'r1', label: 'Falscher Drill-Satz 1 → neu, mit der Regel dahinter in drei Wörtern' },
+            { id: 'r2', label: 'Falscher Drill-Satz 2 → neu, mit der Regel dahinter' },
+            { id: 'r3', label: 'Falscher Drill-Satz 3 → neu, mit der Regel dahinter' },
+            { id: 'r4', label: 'Die Reading-Frage, bei der du am unsichersten warst — Antwort neu, in eigenen Worten, ohne ein einziges Zitat' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd8-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (expertise · feedback loop · to misdiagnose · accumulated · arguably). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
         }
       ]
     }
