@@ -127,6 +127,8 @@ export const REVIEWS = [
     blocks: [
       { label: 'Use of English', text: '<b>Bester Drill-Tag bisher, 6 von 10 sicher.</b> d7i5 und d7i10 exakt, d7i3 (<i>Never had the team wasted…</i>) bestätigt die Never-Inversion erneut. d7i4 ist der Durchbruch: „Not only had they ignored the warnings, they also invested more“ stellt zum ersten Mal das Hilfsverb korrekt vor das Subjekt — nur das <i>but</i> fehlt, nach vier Fehlversuchen der erste Treffer. d7i8 zeigt <i>is known to have</i> sauber, während d7i7 den altbekannten Fehler wiederholt: „It is thought that investors are decided emotional“ statt <i>Investors are thought to decide emotionally</i>. d7i9 trifft <i>agree with</i> zum ersten Mal.' },
       { label: 'Reading', text: 'Die neue Wortgenauigkeits-Falle (q1, <i>enormity</i>) wird komplett verfehlt — die Antwort geht gar nicht auf das Wort ein. Die Ja-Nein-Falle (q3) sitzt zum zweiten Mal in Folge. q4 inhaltlich richtig, aber „we should made decisions“ statt <i>should make</i>. q5 verfehlt die eigentliche Frage und rutscht zurück in die q2-Erklärung.' },
+      { label: 'Writing', text: '<b>215 Wörter, deutlich über dem Zielrahmen — und der alte Fehler ist zurück.</b> Der erste Satz ist wieder die umformulierte Aufgabenstellung („Our today’s topic is a culture that stigmatises failure…“), obwohl das seit Tag 2 als erledigt galt. Der Zustimmungsgrad widerspricht sich selbst — der Text beginnt mit „I largely disagree“ und endet mit „so I partly agree“, ohne dass sich die Position dazwischen wirklich ändert. Ein echtes Gegenargument fehlt weiterhin; „they could also cost your whole identity and fortune“ bleibt eine Randbemerkung statt einer behandelten Gegenposition. Deutsche Interferenz: „we all are going to habe failures“ — das deutsche <i>habe</i> statt <i>have</i>. Dazu „a bit to negative“ statt <i>too negative</i> und „one of the most pressure“ statt einer korrekten Steigerung.' },
+      { label: 'Repair', text: 'Sechster Tag in Folge ohne echten Versuch bei den freien Feldern (r1–r4, alle mit „I don’t know it.“ abgehakt). Die Rechtschreib-Paare (r5) sitzen weiterhin zuverlässig: <i>different, development, business, statement, academic, generally</i> je zweimal korrekt.' },
       { label: 'Speaking', text: 'Vier von fünf Themenwörtern fallen tatsächlich (<i>fails, setback, stigma, risk taking, resilience</i>) — das bisher vollständigste Ergebnis. <i>tend to</i> als Hedge-Wort vorhanden, Füllwortdichte bleibt hoch.' }
     ]
   }
@@ -1124,6 +1126,130 @@ export const DAYS = [
           name: 'Vokabelbank',
           minutes: 5,
           instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (expertise · feedback loop · to misdiagnose · accumulated · arguably). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
+  },
+  {
+    day: 9,
+    date: '2026-08-09',
+    phase: 1,
+    focus: 'Sammelrunde zum Ende der Fundament-Phase: is thought to + Grundform bleibt die größte offene Lücke · taken aback und a tendency to noch nie sauber · Aufgabenstellung nicht abschreiben nach dem Rückfall von Tag 7 erneut prüfen · Grad der Zustimmung ohne Selbstwiderspruch',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd9-read',
+          type: 'read',
+          name: 'Reading',
+          minutes: 12,
+          title: 'The Trouble with Agreement',
+          kicker: 'Text 9 · Phase 1 · letzter Tag der Fundament-Phase',
+          intro: 'Neue Wortgenauigkeits-Falle: ein Wort, das mit „in-“ beginnt und deshalb wie eine Verneinung aussieht, aber keine ist — dieselbe Familie wie invisible oder incorrect, nur dass die Bedeutung hier nicht negiert. Ziel für Text + Fragen bleibt bei 8 Minuten.',
+          paragraphs: [
+            'Groups are often assumed to make better decisions than individuals, since more perspectives should catch more errors. Yet research on decision-making suggests the opposite is just as common: once a group has settled into agreement, dissenting views tend to disappear before they can be tested, precisely when they would be most invaluable. A single sceptic willing to interrupt the flow of agreement provides something that cannot be replaced by adding more members who already share the majority’s view — a different starting point.',
+            'The danger lies less in the group being uninformed than in it being unanimous too quickly. When a committee reaches consensus within minutes, that speed is more often a sign of deference than of clarity: junior members defer to senior ones, and senior ones defer to whoever spoke first. The eventual decision is thought to reflect the balance of evidence, when in fact it may reflect nothing more than the order in which people spoke.',
+            'None of this means dissent should be manufactured for its own sake. A colleague who objects to everything is no more useful than one who objects to nothing. What a functioning group needs is not more disagreement but disagreement that arrives early enough, from someone secure enough in their position, to be heard before the consensus has hardened around a different answer.'
+          ],
+          rule: 'Auf Englisch, ganze Sätze. Höchstens drei Wörter am Stück aus dem Text. Ziel für Lesen + Fragen: 8 Minuten.',
+          questions: [
+            { id: 'q1', text: 'The writer says a dissenting view is most “invaluable” right before it disappears. What does “invaluable” mean here, and what meaning would a reader wrongly assume by reading “in-” as a negation, the way it works in “invisible” or “incorrect”?', hint: 'Neue Wortgenauigkeits-Falle — dieselbe Vorsilbe wie bei „incorrect”, aber keine Verneinung.' },
+            { id: 'q2', text: 'Explain in your own words why the writer says that a fast, unanimous committee decision is more a sign of deference than of clarity.' },
+            { id: 'q3', text: 'Does the writer say that disagreement should be encouraged for its own sake, regardless of the reason? Answer yes or no, then quote the exact words that justify your answer.', hint: 'Präzisionsfalle — der Text unterscheidet zwischen Dissens an sich und Dissens zur richtigen Zeit.' },
+            { id: 'q4', text: '“The eventual decision is thought to reflect the balance of evidence, when in fact it may reflect nothing more than the order in which people spoke.” What does this mean in practice? One sentence, in your own words.' },
+            { id: 'q5', text: 'What connection does the writer draw between how early a dissenting view arrives and whether it can still change a group’s decision?' },
+            { id: 'q6', text: 'Fünf Ausdrücke aus dem Text für die Vokabelbank — mit eigenem Beispielsatz, nicht mit Übersetzung.' }
+          ]
+        },
+        {
+          id: 'd9-use',
+          type: 'drill',
+          name: 'Use of English',
+          minutes: 10,
+          kicker: 'Sammelrunde zum Phasenende: is thought to gleich zweimal, dazu is known to have, Not only … but also, would rather, Konditional Typ 2, taken aback, a tendency to, strange as it may seem/for all its flaws und agree with/development for in einer Runde',
+          rules: [
+            { title: 'Passiv der Meinung — <i>is thought to</i> + Grundform, weiterhin die größte offene Lücke', body: 'An sieben Tagen nicht sauber getroffen — immer wieder <i>is thought to</i> + „that”-Satz statt + Verb. Heute zweimal hintereinander, damit sich die Struktur festsetzt.', example: 'The board <b>is thought to</b> react too slowly. · The company <b>is thought to</b> underestimate the risks.' },
+            { title: 'Passiv der Meinung — <i>is known to have</i> + Partizip', body: 'Saß an Tag 7 zum ersten Mal sauber — heute bestätigen.', example: 'The committee <b>is known to have</b> postponed the decision several times.' },
+            { title: 'Inversion — <i>Not only … but also</i> MIT dem <i>but</i> · <i>would rather</i> + Vergangenheitsform', body: 'Der Durchbruch von Tag 7 (Hilfsverb vor dem Subjekt) heute mit dem fehlenden <i>but</i> komplett. <i>would rather</i> bisher nur an einem Tag richtig.', example: '<b>Not only did</b> the board ignore the warning, <b>but</b> it <b>also</b> invested more money. · I<b>’d rather</b> the report <b>came</b> earlier.' },
+            { title: 'Konditional Typ 2 — kein <i>would</i> im if-Satz', body: 'Im Drill seit fünf Tagen sicher, überträgt sich aber noch nicht ins freie Schreiben (Tag 6: „If this client would come earlier”). Heute noch einmal im Drill festigen.', example: '<b>If</b> the data <b>were</b> more reliable, the management <b>would</b> decide faster.' },
+            { title: 'Feste Wendungen — noch nie sauber: <i>taken aback</i>, <i>a tendency to</i> · fast erledigt: <i>strange as it may seem</i>, <i>for all its flaws</i> · agree <u>with</u>, development <u>for</u>', body: 'Beide ersten Wendungen sind seit der Einstufung an keinem Tag richtig gestanden — heute mit neuem Inhalt, damit es nicht am auswendig gelernten Satz liegt.', example: 'The whole team <b>was taken aback</b> by the decision. · Experienced experts <b>have a tendency to</b> overestimate their own judgement. · <b>For all its flaws</b>, intuition, <b>strange as it may seem</b>, is often faster than analysis. · I completely <b>agree with</b> my colleague that the <b>development for</b> the team was positive.' }
+          ],
+          instruction: 'Vollständige Sätze, aus dem Kopf, ohne oben nachzusehen. Erst nach allen zehn die Lösungen aufdecken.',
+          items: [
+            { id: 'd9i1',  prompt: 'Man geht davon aus, dass die Geschäftsführung zu langsam reagiert.',                          key: 'is thought to',          solution: 'The management is thought to react too slowly.' },
+            { id: 'd9i2',  prompt: 'Es wird angenommen, dass das Unternehmen die Risiken unterschätzt.',                         key: 'is thought to',          solution: 'The company is thought to underestimate the risks.' },
+            { id: 'd9i3',  prompt: 'Es ist bekannt, dass der Ausschuss die Entscheidung mehrmals verschoben hat.',                key: 'is known to have',       solution: 'The committee is known to have postponed the decision several times.' },
+            { id: 'd9i4',  prompt: 'Nicht nur ignorierte der Vorstand die Warnung, sondern er investierte auch mehr Geld.',       key: 'Not only … but',         solution: 'Not only did the board ignore the warning, but it also invested more money.' },
+            { id: 'd9i5',  prompt: 'Ich würde es vorziehen, wenn der Bericht früher käme.',                                       key: 'would rather + past',    solution: 'I’d rather the report came earlier.' },
+            { id: 'd9i6',  prompt: 'Wenn die Daten zuverlässiger wären, würde die Geschäftsführung schneller entscheiden.',        key: 'If … were',              solution: 'If the data were more reliable, the management would decide faster.' },
+            { id: 'd9i7',  prompt: 'Die Entscheidung überrumpelte das gesamte Team.',                                             key: 'taken aback',            solution: 'The whole team was taken aback by the decision.' },
+            { id: 'd9i8',  prompt: 'Erfahrene Experten neigen dazu, ihre eigene Urteilskraft zu überschätzen.',                   key: 'a tendency to',          solution: 'Experienced experts have a tendency to overestimate their own judgement.' },
+            { id: 'd9i9',  prompt: 'Bei all ihren Schwächen ist die Intuition, so seltsam es klingen mag, oft schneller als die Analyse.', key: 'For all … · Strange as …', solution: 'For all its flaws, intuition, strange as it may seem, is often faster than analysis.' },
+            { id: 'd9i10', prompt: 'Ich stimme meiner Kollegin völlig zu, dass die Entwicklung für das Team positiv war.',        key: 'agree with · development for', solution: 'I completely agree with my colleague that the development for the team was positive.' }
+          ]
+        },
+        {
+          id: 'd9-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Is it more dangerous to challenge a group consensus, or to go along with it even when you have doubts? Give your own view.',
+          ruleTitle: 'Neuer Themenwortschatz: consensus, groupthink, dissent, conformity, deference.',
+          ruleBody: 'Mindestens zwei dieser Wörter müssen tatsächlich fallen, nicht umschrieben. Position halten, Gegenargument benennen, mit Hedge-Wörtern statt absolut formulieren. Reparieren statt neu anfangen (or rather / what I mean is) ist der einzige Fehlerprofil-Punkt aus dem Sprechen, der noch nie eindeutig als erfüllt galt — heute der letzte Tag der Fundament-Phase, um ihn zu belegen.',
+          phrases: [
+            'consensus · groupthink · dissent · conformity · deference',
+            'tend to · arguably · in most cases',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden: mindestens zwei Themenwörter und mindestens ein Hedge-Wort müssen tatsächlich vorkommen, der Einwand muss benannt werden, und unter fünf Füllwörtern bleiben.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd9-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Letzter Schreibblock der Fundament-Phase: erster Satz nicht die Aufgabenstellung (Rückfall von Tag 7) · Grad der Zustimmung ohne Selbstwiderspruch · echtes Gegenargument · 160–180 Wörter, nicht mehr',
+          prompt: '“People should trust their own judgement more than the opinion of the majority.” To what extent do you agree?',
+          min: 160, max: 180,
+          checklist: [
+            'Erster Satz: deine These, in eigenen Worten — nicht die Aufgabenstellung umformuliert wiederholen (das ist am 07.08. abends passiert).',
+            'Ein Maß nennen (largely · only in part · rarely) — und diese Position im Text konsequent durchhalten, nicht am Ende ins Gegenteil kippen.',
+            'Ein echtes Gegenargument behandeln (dass eigenes Urteil auch von blinden Flecken oder mangelnder Information verzerrt sein kann), dann entkräften.',
+            'Hedging statt Absolutheit: tend to · in most cases · arguably.',
+            '160–180 Wörter — diesmal auch die Obergrenze einhalten, nicht nur die untere.',
+            'Schreibung prüfen: different · development · business · statement · academic · generally · judgement · necessary'
+          ]
+        },
+        {
+          id: 'd9-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Die falschen Sätze von heute Morgen neu — aus dem Kopf, nicht abgeschrieben.',
+          fields: [
+            { id: 'r1', label: 'Falscher Drill-Satz 1 → neu, mit der Regel dahinter in drei Wörtern' },
+            { id: 'r2', label: 'Falscher Drill-Satz 2 → neu, mit der Regel dahinter' },
+            { id: 'r3', label: 'Falscher Drill-Satz 3 → neu, mit der Regel dahinter' },
+            { id: 'r4', label: 'Die Reading-Frage, bei der du am unsichersten warst — Antwort neu, in eigenen Worten, ohne ein einziges Zitat' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd9-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (invaluable · to defer to · to harden around · dissenting · secure in one’s position). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
         }
       ]
     }
