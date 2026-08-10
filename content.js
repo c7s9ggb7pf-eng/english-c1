@@ -45,19 +45,19 @@ export const ERRORS = [
 
 /* Aktueller Gesamtstand aus der letzten Auswertung der Sicherungsdateien (siehe REVIEWS unten). */
 export const REVIEW_LEVEL = {
-  date: '2026-08-07',
+  date: '2026-08-09',
   overall: 'B1+',
-  skills: { reading: 'B1+', use: 'B1+', writing: 'B1+/B2−', speaking: 'B1+/B2−' }
+  skills: { reading: 'B1+', use: 'B1+/B2−', writing: 'B1+/B2−', speaking: 'B1+/B2−' }
 };
 
 /* An wie vielen verschiedenen Tagen ein Fehlerprofil-Punkt beim Auswerten der Sicherungen
    fehlerfrei war. Läuft neben dem Antippen in der App — der höhere der beiden Werte zählt. */
 export const REVIEW_ERRORS = {
   precision: 0, inference: 0, paraphr: 0, speed: 0,
-  wrather: 1, inversion: 3, wish: 4, saidto: 0, cond2: 5,
+  wrather: 2, inversion: 3, wish: 4, saidto: 1, cond2: 5,
   preps: 0,
-  spelling: 0, length: 5, counter: 2, degree: 2, noCopy: 5,
-  repair: 2, topicvoc: 1, filler: 0
+  spelling: 0, length: 5, counter: 3, degree: 2, noCopy: 5,
+  repair: 3, topicvoc: 2, filler: 0
 };
 
 /* Auswertung jeder Sicherung, Tag für Tag — dieselbe Rückmeldung wie in FORTSCHRITT.md.
@@ -130,6 +130,26 @@ export const REVIEWS = [
       { label: 'Writing', text: '<b>215 Wörter, deutlich über dem Zielrahmen — und der alte Fehler ist zurück.</b> Der erste Satz ist wieder die umformulierte Aufgabenstellung („Our today’s topic is a culture that stigmatises failure…“), obwohl das seit Tag 2 als erledigt galt. Der Zustimmungsgrad widerspricht sich selbst — der Text beginnt mit „I largely disagree“ und endet mit „so I partly agree“, ohne dass sich die Position dazwischen wirklich ändert. Ein echtes Gegenargument fehlt weiterhin; „they could also cost your whole identity and fortune“ bleibt eine Randbemerkung statt einer behandelten Gegenposition. Deutsche Interferenz: „we all are going to habe failures“ — das deutsche <i>habe</i> statt <i>have</i>. Dazu „a bit to negative“ statt <i>too negative</i> und „one of the most pressure“ statt einer korrekten Steigerung.' },
       { label: 'Repair', text: 'Sechster Tag in Folge ohne echten Versuch bei den freien Feldern (r1–r4, alle mit „I don’t know it.“ abgehakt). Die Rechtschreib-Paare (r5) sitzen weiterhin zuverlässig: <i>different, development, business, statement, academic, generally</i> je zweimal korrekt.' },
       { label: 'Speaking', text: 'Vier von fünf Themenwörtern fallen tatsächlich (<i>fails, setback, stigma, risk taking, resilience</i>) — das bisher vollständigste Ergebnis. <i>tend to</i> als Hedge-Wort vorhanden, Füllwortdichte bleibt hoch.' }
+    ]
+  },
+  {
+    day: 8, date: '2026-08-08',
+    blocks: [
+      { label: 'Use of English', text: '<b>5 von 10 sicher, dazu ein Fast-Treffer — bisher konstantester Drill-Tag.</b> d8i3 ist der Durchbruch der Woche: „The board is thought to decide not so careful“ — zum ersten Mal steht <i>is thought to</i> direkt vor der Grundform, nach sieben Tagen ohne Treffer (nur „careful“ statt „carefully“ bleibt als Adjektiv/Adverb-Fehler). d8i9 ist der erste saubere Treffer für <i>under the pretext of</i> überhaupt. d8i1 (<i>would rather</i>), d8i6 (<i>fall short of</i>) und d8i8 (<i>a tendency to</i>) sitzen ebenfalls. Falsch: d8i2 (<i>Not only</i>-Inversion komplett zusammengebrochen, ein Rückschritt gegenüber Tag 7), d8i4 (<i>is known to have</i> wird zu „is known that…“), d8i5 (<i>agree to</i> statt <i>agree with</i>, trotz Tag-7-Erfolg), d8i7 (<i>aback</i> wird zu „back“).' },
+      { label: 'Reading', text: 'Die <i>enormity</i>-Falle aus Tag 7 kommt in neuem Text zurück (q1) — diesmal ein Versuch, aber die Antwort vermischt <i>enormity</i> mit <i>enormous</i> statt sie zu trennen. <b>Die Ja-Nein-Falle (q3) sitzt zum dritten Mal in Folge</b> (nach Tag 6, 7) — „No“, mit vollständigem Zitat, damit über drei Tage sicher beherrscht. q4 verfehlt weiterhin die Aussage, q5 und q6 unbeantwortet.' },
+      { label: 'Writing', text: '171 Wörter, im Zielrahmen. Nach dem NRW-Raster limitiert <b>Sprachrichtigkeit</b>: „datas“ als Plural eines unzählbaren Substantivs viermal wiederholt, dazu „there“ statt „their“. Ein echtes Gegenargument (Fehleranfälligkeit von KI-Systemen) ist vorhanden — vierter Beleg für „Gegenposition behandeln“. Der erste Satz ist aber wieder fast wörtlich die Aufgabenstellung — zweiter Rückfall nach Tag 7 bei einem formal erledigten Punkt.' },
+      { label: 'Repair', text: 'Siebter Tag in Folge ohne echten Versuch bei r1–r4. r5 weiterhin zuverlässig.' },
+      { label: 'Speaking', text: 'Position wird klar gehalten und geht auf beide Seiten der Frage ein, bevor eine eigene Schlussfolgerung kommt — gutes Zeichen für Reaktionsfähigkeit im Unterrichtsgespräch. Zwei von fünf Themenwörtern (<i>expertise, confidence</i>) erfüllen das Minimum. Kein <i>or rather / what I mean is</i>, Füllwortdichte weiterhin hoch.' }
+    ]
+  },
+  {
+    day: 9, date: '2026-08-09',
+    blocks: [
+      { label: 'Use of English', text: '<b>5 von 10 sicher, dazu ein bemerkenswerter Fast-Treffer.</b> d9i1 und d9i2 (beide <i>is thought to</i> + Grundform) sitzen fehlerfrei — zwei saubere Belege in derselben Runde, der erste vollständig fehlerfreie Tag für diesen Punkt seit sieben Tagen ohne Treffer. d9i8 (<i>a tendency to</i>, zweiter Tag in Folge) und d9i10 sitzen exakt — Letzteres verbindet <i>agree with</i> und <i>development for</i> im selben Satz. d9i7 ist ein bemerkenswerter Fast-Treffer: <i>taken aback</i> steht zum ersten Mal überhaupt richtig da, nur die Präposition „from“ statt „by“ bleibt offen. Falsch: d9i3 und d9i4 (leer gelassen), d9i5 (<i>would rather prefer</i> — derselbe Doppelfehler wie Tag 1/2, Rückfall trotz Tag 8), d9i9 (<i>strange as its may sound</i> statt <i>may seem</i>, derselbe hartnäckige Fehler wie Tag 3, 5, 6).' },
+      { label: 'Reading', text: '<b>Schwächster Lesetag seit Tag 4.</b> Nur q1 wird versucht: die neue Falle <i>invaluable</i> wird als Verwechslungsgefahr erkannt, aber selbst falsch aufgelöst („underperformance“ statt „von unschätzbarem Wert“). q2 bis q5 bleiben komplett unbeantwortet mit derselben Formel „ohne Übersetzung nicht verständlich“ — passt zum knappen 10-Minuten-Abstand zwischen den Blöcken, spricht für eine durchgehastete Einheit.' },
+      { label: 'Writing', text: '160 Wörter, knapp im Zielrahmen. Nach dem NRW-Raster erneut <b>Sprachrichtigkeit</b> limitierend, diesmal deutsche Interferenz: „our“ statt „their“, „more as“ statt „more than“ (mehr als). Positiv: der erste Satz ist diesmal eine eigene These, keine abgeschriebene Aufgabenstellung — Erholung nach dem Rückfall von Tag 8. Ein echtes, differenziertes Gegenargument ist vorhanden — fünfter Beleg für „Gegenposition behandeln“, damit an mindestens drei Tagen sicher belegt. Der Grad der Zustimmung fehlt aber ganz.' },
+      { label: 'Repair', text: 'Achter Tag in Folge ohne echten Versuch bei r1–r4. r5 weiterhin zuverlässig.' },
+      { label: 'Speaking', text: 'Die Position wird gehalten, aber der Beitrag ist auffällig repetitiv — derselbe Gedanke wird dreimal fast wortgleich wiederholt statt weiterentwickelt. Keines der fünf Themenwörter (<i>consensus, groupthink, dissent, conformity, deference</i>) kommt korrekt vor — <i>consensus</i> wird zweimal versucht, aber missverständlich transkribiert, was auf eine Aussprache-Unsicherheit hindeutet. Positiv: „Or rather, don’t agree to them…“ nutzt die Reparatur-Formel zur Präzisierung — dritter belegter Fall nach Tag 1 und 4, „Reparieren statt neu anfangen“ damit erfüllt.' }
     ]
   }
 ];
@@ -1250,6 +1270,129 @@ export const DAYS = [
           name: 'Vokabelbank',
           minutes: 5,
           instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (invaluable · to defer to · to harden around · dissenting · secure in one’s position). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
+  },
+  {
+    day: 10,
+    date: '2026-08-10',
+    phase: 2,
+    focus: 'Start Phase 2 — dichtere Texte mit Argument und Gegenargument · is thought to auf den dritten sauberen Tag, is known to have und Not only … but also nach dem Rückfall reparieren · taken aback mit der richtigen Präposition · Essays jetzt 200–250 Wörter mit Konzession · Speaking erstmals mit vorgegebener Gegenposition',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd10-read',
+          type: 'read',
+          name: 'Reading',
+          minutes: 12,
+          title: 'Who Is Responsible for the Algorithm?',
+          kicker: 'Text 10 · Phase 2 · erster Tag mit dichterer Argument-Gegenargument-Struktur',
+          intro: 'Phase 2 beginnt: die Texte werden dichter, und jeder Text baut jetzt ein Argument gegen ein Gegenargument. Neue Wortgenauigkeits-Falle: ein Wort, das nach etwas Besonderem oder Positivem klingt, aber tatsächlich „scheinbar richtig, in Wahrheit aber trügerisch“ bedeutet. Ziel für Text + Fragen bleibt bei 8 Minuten, trotz der Länge.',
+          paragraphs: [
+            'Algorithmic curation is routinely blamed for entrenching political polarisation, and there is no shortage of evidence that recommendation systems reward content capable of provoking outrage more reliably than content that merely informs. Yet the argument that dismantling such systems altogether would restore a more balanced public discourse is, on closer inspection, rather specious: platforms did not invent tribal loyalty, selective exposure, or the human preference for information that confirms rather than challenges existing beliefs, all of which predate the internet by generations. What algorithms have done is not create these tendencies but scale them, compressing feedback loops that once took years into a matter of hours.',
+            'This distinction matters because it reframes where responsibility, and therefore regulation, should be directed. A platform redesigned to suppress outrage-driven engagement might slow the amplification of polarising content without addressing why users sought it out in the first place. Conversely, media literacy initiatives that ignore the architecture of recommendation systems risk placing the entire burden of restraint on individuals navigating an environment engineered to erode it. Neither intervention alone is sufficient; the two are complementary rather than substitutable, a conclusion that ought to be uncontroversial yet is rarely reflected in policy debates.'
+          ],
+          rule: 'Auf Englisch, ganze Sätze. Höchstens drei Wörter am Stück aus dem Text. Ziel für Lesen + Fragen: 8 Minuten.',
+          questions: [
+            { id: 'q1', text: 'The writer calls a common argument about dismantling algorithmic curation “rather specious”. What does “specious” mean here, and what meaning would a reader wrongly assume if they read it as a compliment (something like “special” or “sophisticated”)?', hint: 'Neue Wortgenauigkeits-Falle — klingt positiv, ist aber eine Abwertung des Arguments, nicht des Sprechers.' },
+            { id: 'q2', text: 'Explain in your own words why the writer says algorithms did not “create” polarising tendencies but merely “scale” them.' },
+            { id: 'q3', text: 'Does the writer argue that regulating platforms alone would solve the problem of polarisation? Answer yes or no, then quote the exact words that justify your answer.', hint: 'Präzisionsfalle — der Text sagt „komplementär“, nicht „entweder–oder“.' },
+            { id: 'q4', text: '“The two are complementary rather than substitutable.” What does this mean in practice, applied to platform regulation and media literacy? One sentence, in your own words.' },
+            { id: 'q5', text: 'What connection does the writer draw between how a problem is explained (individual behaviour vs. platform design) and which kind of intervention is proposed to fix it?' },
+            { id: 'q6', text: 'Fünf Ausdrücke aus dem Text für die Vokabelbank — mit eigenem Beispielsatz, nicht mit Übersetzung.' }
+          ]
+        },
+        {
+          id: 'd10-use',
+          type: 'drill',
+          name: 'Use of English',
+          minutes: 10,
+          kicker: 'Phase-2-Auftakt: is thought to auf den dritten sauberen Tag · is known to have und Not only … but also nach dem Rückfall von Tag 8 reparieren · taken aback mit der richtigen Präposition · vier Wendungen auf ihren jeweils entscheidenden Tag',
+          rules: [
+            { title: 'Passiv der Meinung — <i>is thought to</i> + Grundform, dritter sauberer Tag gesucht', body: 'An Tag 9 zum ersten Mal zwei fehlerfreie Sätze in einer Runde. Noch ein sauberer Tag bis zum Erledigt-Kriterium.', example: 'The editorial team <b>is thought to</b> overlook important details.' },
+            { title: 'Passiv der Meinung — <i>is known to have</i> + Partizip, nach dem Rückfall von Tag 8 reparieren', body: 'An Tag 7 sauber, an Tag 8 wieder falsche Struktur („is known that …“). Heute erneut mit Grundmuster.', example: 'The platform <b>is known to have</b> altered its algorithm several times without notice.' },
+            { title: 'Inversion — <i>Not only … but also</i> MIT dem <i>but</i>, nach dem Zusammenbruch von Tag 8 reparieren', body: 'Tag 7: Hilfsverb korrekt vor dem Subjekt. Tag 8: keine Inversion mehr. Heute den Tag-7-Stand wiederherstellen.', example: '<b>Not only did</b> the platform delay its response, <b>but</b> it <b>also</b> denied the allegations.' },
+            { title: '<i>would rather</i> + Vergangenheitsform, dritter sauberer Tag gesucht', body: 'Tag 8 sauber, Tag 9 wieder die alte Doppelung (<i>would rather prefer</i>). Heute ohne <i>prefer</i> danach.', example: 'I<b>’d rather</b> the editorial team <b>disclosed</b> the source beforehand.' },
+            { title: '<i>taken aback</i> <u>by</u> (nicht <i>from</i>) · a tendency <u>to</u> · agree <u>with</u> + development <u>for</u> · strange as it may <u>seem</u> (nicht <i>sound</i>) · under the pretext <u>of</u> · fall short <u>of</u>', body: 'An Tag 9 stand <i>taken aback</i> zum ersten Mal richtig, nur die Präposition war falsch (<i>from</i> statt <i>by</i>) — heute gezielt korrigieren. Die anderen fünf Wendungen jeweils auf ihrem entscheidenden Tag: <i>a tendency to</i> und <i>agree with</i> brauchen den dritten sauberen Beleg, <i>strange as it may seem</i> hakt seit drei Tagen an genau derselben Stelle (<i>seem</i> nach dem Modalverb, nicht <i>sound</i>), <i>under the pretext of</i> und <i>fall short of</i> je den nächsten sauberen Tag.', example: 'The users were completely <b>taken aback by</b> the sudden change. · Recommendation algorithms <b>have a tendency to</b> favour outrage-driven content. · I completely <b>agree with</b> the critic that the <b>development for</b> users has been worrying. <b>Strange as it may seem</b>, stricter regulation could actually calm the debate. · The company suspended the account <b>under the pretext of</b> enforcing its guidelines. · The measure <b>fell</b> well <b>short of</b> the critics’ expectations.' }
+          ],
+          instruction: 'Vollständige Sätze, aus dem Kopf, ohne oben nachzusehen. Erst nach allen zehn die Lösungen aufdecken.',
+          items: [
+            { id: 'd10i1',  prompt: 'Man geht davon aus, dass die Redaktion wichtige Details übersieht.',                              key: 'is thought to',          solution: 'The editorial team is thought to overlook important details.' },
+            { id: 'd10i2',  prompt: 'Es ist bekannt, dass die Plattform ihren Algorithmus mehrmals stillschweigend geändert hat.',       key: 'is known to have',       solution: 'The platform is known to have altered its algorithm several times without notice.' },
+            { id: 'd10i3',  prompt: 'Nicht nur verzögerte die Plattform die Antwort, sie leugnete auch die Vorwürfe.',                   key: 'Not only … but',         solution: 'Not only did the platform delay its response, but it also denied the allegations.' },
+            { id: 'd10i4',  prompt: 'Ich würde es vorziehen, wenn die Redaktion die Quelle vorher offenlegte.',                          key: 'would rather + past',    solution: 'I’d rather the editorial team disclosed the source beforehand.' },
+            { id: 'd10i5',  prompt: 'Die Nutzer waren von der plötzlichen Änderung völlig überrumpelt.',                                key: 'taken aback by',         solution: 'The users were completely taken aback by the sudden change.' },
+            { id: 'd10i6',  prompt: 'Empfehlungsalgorithmen neigen dazu, empörende Inhalte zu bevorzugen.',                             key: 'a tendency to',          solution: 'Recommendation algorithms have a tendency to favour outrage-driven content.' },
+            { id: 'd10i7',  prompt: 'Ich stimme der Kritikerin völlig zu, dass die Entwicklung für die Nutzer besorgniserregend war.',    key: 'agree with · development for', solution: 'I completely agree with the critic that the development for users has been worrying.' },
+            { id: 'd10i8',  prompt: 'So seltsam es klingen mag, strengere Regulierung könnte die Debatte tatsächlich beruhigen.',        key: 'strange as it may seem', solution: 'Strange as it may seem, stricter regulation could actually calm the debate.' },
+            { id: 'd10i9',  prompt: 'Das Unternehmen sperrte das Konto unter dem Vorwand, die Richtlinien durchzusetzen.',               key: 'under the pretext of',   solution: 'The company suspended the account under the pretext of enforcing its guidelines.' },
+            { id: 'd10i10', prompt: 'Die Maßnahme blieb weit hinter den Erwartungen der Kritiker zurück.',                               key: 'fall short of',          solution: 'The measure fell well short of the critics’ expectations.' }
+          ]
+        },
+        {
+          id: 'd10-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Should governments regulate algorithmic content curation, or should platforms be left to regulate themselves?',
+          ruleTitle: 'Neuer Themenwortschatz: regulation, accountability, self-regulation, oversight, transparency.',
+          ruleBody: 'Mindestens zwei dieser Wörter müssen tatsächlich fallen, nicht umschrieben. An Tag 9 ist keines der fünf Themenwörter korrekt gefallen — heute bewusst langsamer sprechen, besonders bei mehrsilbigen Wörtern. Position halten, mit Hedge-Wörtern statt absolut formulieren, Abbrüche mit „or rather / what I mean is” reparieren statt neu anfangen.',
+          phrases: [
+            'regulation · accountability · self-regulation · oversight · transparency',
+            'tend to · arguably · in most cases',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden, aber ab heute mit einer vorgegebenen Gegenposition, auf die du reagieren musst: „Some would argue that government regulation always lags behind technological change and therefore does more harm than good — how would you respond?” Baue eine erkennbare Reaktion auf genau diesen Einwand ein (zustimmen, einschränken oder widersprechen), nicht nur eine Wiederholung deiner ersten Position. Dazu weiterhin: mindestens zwei Themenwörter, mindestens ein Hedge-Wort, unter fünf Füllwörtern.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd10-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Ab heute 200–250 Wörter statt 160–180 · neu Pflicht: eine echte Konzession vor dem Gegenargument · Grad der Zustimmung weiterhin offen · Sprachrichtigkeit zuletzt zweimal in Folge der limitierende Faktor (datas, more as)',
+          prompt: '“Governments should regulate algorithmic content curation.” To what extent do you agree?',
+          min: 200, max: 250,
+          checklist: [
+            'Erster Satz: deine These, in eigenen Worten — nicht die Aufgabenstellung umformuliert wiederholen.',
+            '„To what extent" verlangt ein Maß: largely · only in part · rarely — und diese Position bis zum Schluss durchhalten.',
+            'Neu ab heute: eine echte Konzession vor dem Gegenargument („It is true that … / Admittedly, …“), erst danach die eigene Position verteidigen — nicht nur eine Gegenposition benennen, sondern ihr zunächst recht geben.',
+            'Hedging statt Absolutheit: tend to · in most cases · arguably.',
+            '200–250 Wörter — die Zählung unten läuft mit.',
+            'Rechtschreibung bewusst prüfen: different · development · business · statement · academic · generally — und diesmal auf „datas" (Plural von data, unzählbar) und deutsche Interferenzen wie „more as" statt „more than" achten.'
+          ]
+        },
+        {
+          id: 'd10-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Die falschen Sätze von heute Morgen neu — aus dem Kopf, nicht abgeschrieben. Repair wurde die letzten acht Tage in Folge übersprungen — heute reicht ein einziger ehrlicher Versuch bei r1, das ist mehr wert als die restlichen Felder mit „weiß nicht" abzuhaken.',
+          fields: [
+            { id: 'r1', label: 'Falscher Drill-Satz 1 → neu, mit der Regel dahinter in drei Wörtern' },
+            { id: 'r2', label: 'Falscher Drill-Satz 2 → neu, mit der Regel dahinter' },
+            { id: 'r3', label: 'Falscher Drill-Satz 3 → neu, mit der Regel dahinter' },
+            { id: 'r4', label: 'Die Reading-Frage, bei der du am unsichersten warst — Antwort neu, in eigenen Worten, ohne ein einziges Zitat' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd10-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (to entrench · outrage-driven · to dismantle · to reframe · complementary). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
         }
       ]
     }
