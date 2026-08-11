@@ -1563,5 +1563,129 @@ export const DAYS = [
         }
       ]
     }
+  },
+  {
+    day: 12,
+    date: '2026-08-12',
+    phase: 2,
+    focus: 'Sicherung zu Tag 11 fehlt — dieselben Grammatikziele bleiben unverändert offen (is thought to, is known to have, under the pretext of, taken aback by, strange as it may seem, would rather, Not only-Inversion) · Schreiben: lexikalische Variation und Zustimmungsgrad hart prüfen, Aufgabenstellung diesmal nicht zitieren · Speaking-Gegenposition mit expliziter Reaktionsformel',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd12-read',
+          type: 'read',
+          name: 'Reading',
+          minutes: 12,
+          title: 'The Meritocracy Myth',
+          kicker: 'Text 12 · Phase 2',
+          intro: 'Neue Wortgenauigkeits-Falle: ein Wort mit derselben Wortwurzel wie „envy“ (Neid), das heute aber nicht „neidisch“ bedeutet, sondern „ungerecht und geeignet, Unmut zu erzeugen“. Ziel für Text + Fragen bleibt bei 8 Minuten.',
+          paragraphs: [
+            'The claim that modern societies reward talent and effort roughly in proportion to their worth has long served as one of liberal democracy’s foundational assumptions, yet a growing body of scholarship suggests that meritocracy functions less as an accurate description of how advancement occurs than as a story societies tell themselves to legitimise existing hierarchies. Its defenders concede certain imperfections while insisting that any alternative grounded explicitly in birth or connections would be worse. Critics counter that this framing performs an invidious manoeuvre: by attributing success overwhelmingly to individual merit, it quietly obscures how far starting positions—inherited wealth, parental education, access to influential networks—continue to shape outcomes long before effort ever enters the equation.',
+            'What renders the debate particularly intractable is that meritocratic rhetoric, once internalised, tends to entrench rather than dissolve social divisions. Those who succeed are inclined to regard their achievements as evidence of superior ability rather than of favourable circumstance, whereas those who do not are left without any explanation beyond personal inadequacy—a verdict considerably harsher than one a frankly hereditary system would have offered, since the latter at least spared the unsuccessful the further indignity of self-blame. Whether meritocracy should be abandoned or merely reformed remains open to argument; that the system as currently practised bears little resemblance to its own self-image does not.'
+          ],
+          rule: 'Auf Englisch, ganze Sätze. Höchstens drei Wörter am Stück aus dem Text. Ziel für Lesen + Fragen: 8 Minuten.',
+          questions: [
+            { id: 'q1', text: 'The writer calls a rhetorical move “an invidious manoeuvre”. What does “invidious” mean here, and what wrong meaning would a reader get if they connected it only to “envy”?', hint: 'Neue Wortgenauigkeits-Falle — dieselbe Wortwurzel wie envy, aber heute „ungerecht/unmutserzeugend“, nicht „neidisch“.' },
+            { id: 'q2', text: 'Explain in your own words why the writer says meritocratic rhetoric tends to “entrench rather than dissolve social divisions”.' },
+            { id: 'q3', text: 'Does the writer conclude that meritocracy should be abandoned? Answer yes or no, then quote the exact words that justify your answer.', hint: 'Präzisionsfalle — der Text hält die Frage ausdrücklich offen, statt eine Seite zu wählen.' },
+            { id: 'q4', text: '“The system as currently practised bears little resemblance to its own self-image.” What does this mean in practice? One sentence, in your own words.' },
+            { id: 'q5', text: 'What advantage does the writer say a “frankly hereditary system” has over a meritocracy that fails to admit its own limits?' },
+            { id: 'q6', text: 'Fünf Ausdrücke aus dem Text für die Vokabelbank — mit eigenem Beispielsatz, nicht mit Übersetzung.' }
+          ]
+        },
+        {
+          id: 'd12-use',
+          type: 'drill',
+          name: 'Use of English',
+          minutes: 10,
+          kicker: 'Sicherung zu Tag 11 fehlt — dieselben Zielsätze wie gestern bleiben offen: is thought to, is known to have, under the pretext of, taken aback by, strange as it may seem, would rather, Not only-Inversion · zusätzlich datas/more as/-ing-/-ed-Adjektiv am neuen Thema Meritokratie',
+          rules: [
+            { title: 'Passiv der Meinung — <i>is thought to</i> + Grundform, weiterhin zweiter sauberer Tag gesucht', body: 'An Tag 9 fehlerfrei, an Tag 10 die Struktur richtig, aber mit falschem Objekt (reduction statt editorial team). Tag 11 blieb ohne Auswertung — der Zielpunkt bleibt unverändert offen.', example: 'Wealthy families <b>are thought to</b> favour access to good schools.' },
+            { title: 'Passiv der Meinung — <i>is known to have</i> + Partizip, weiterhin dritter sauberer Tag gesucht', body: 'An Tag 7 und Tag 10 sauber, an Tag 8 falsch. Noch ein sauberer Tag bis zum Erledigt-Kriterium.', example: 'The system <b>is known to have</b> reinforced inequality across generations.' },
+            { title: '<i>under the pretext of</i>, weiterhin dritter sauberer Tag gesucht · <i>taken aback</i> <u>by</u> und <i>strange as it may seem</i>, jeweils zweiter sauberer Tag gesucht', body: 'Alle drei standen an Tag 8/9/10 zum ersten Mal richtig, Tag 11 blieb ohne Auswertung — heute erneut bestätigen.', example: 'The government cut the funding <b>under the pretext of</b> reducing spending. · Many voters were completely <b>taken aback by</b> the sudden change of course. · <b>Strange as it may seem</b>, a hereditary system at least spares the unsuccessful from self-blame.' },
+            { title: '<i>would rather</i> + Vergangenheitsform, weiterhin dritter sauberer Tag gesucht · Inversion — <i>Not only … but also</i>, Grundform nach <i>did</i>', body: 'An Tag 10 zwei neue Fehlervarianten in beiden Punkten. Nach <i>did</i> steht die Grundform, nicht die Vergangenheitsform — „did … reinforce“, nicht „did … reinforced“.', example: 'I<b>’d rather</b> the study <b>took</b> each person’s starting point into account. · <b>Not only did</b> the system <b>reinforce</b> inequality, <b>but</b> it <b>also</b> concealed it.' },
+            { title: '<i>data</i> ist unzählbar (kein „datas“, Verb im Plural) · <i>more than</i> (nicht <i>more as</i>) · <u>-ing</u>-Adjektiv für die Ursache, <u>-ed</u> für die Person, die es erlebt', body: 'Drei Fehler aus dem Schreibblock der letzten Tage direkt im Drill üben, bevor sie im freien Text wieder auftauchen.', example: 'The <b>data show</b> that starting position determines success <b>more than</b> effort does. · <b>Frustrating</b> inequality produces <b>frustrated</b> citizens.' }
+          ],
+          instruction: 'Vollständige Sätze, aus dem Kopf, ohne oben nachzusehen. Erst nach allen zehn die Lösungen aufdecken.',
+          items: [
+            { id: 'd12i1',  prompt: 'Reiche Familien sollen angeblich den Zugang zu guten Schulen begünstigen.',                        key: 'is thought to',          solution: 'Wealthy families are thought to favour access to good schools.' },
+            { id: 'd12i2',  prompt: 'Es ist bekannt, dass das System die Ungleichheit über Generationen hinweg verstärkt hat.',           key: 'is known to have',       solution: 'The system is known to have reinforced inequality across generations.' },
+            { id: 'd12i3',  prompt: 'Die Regierung kürzte die Förderung unter dem Vorwand, die Ausgaben zu senken.',                     key: 'under the pretext of',   solution: 'The government cut the funding under the pretext of reducing spending.' },
+            { id: 'd12i4',  prompt: 'Viele Wähler waren von dem plötzlichen Kurswechsel völlig überrumpelt.',                            key: 'taken aback by',         solution: 'Many voters were completely taken aback by the sudden change of course.' },
+            { id: 'd12i5',  prompt: 'So seltsam es klingen mag, ein ererbtes System verschont wenigstens die Erfolglosen vor Selbstvorwürfen.', key: 'strange as it may seem', solution: 'Strange as it may seem, a hereditary system at least spares the unsuccessful from self-blame.' },
+            { id: 'd12i6',  prompt: 'Ich würde es vorziehen, wenn die Studie den Ausgangspunkt jedes Einzelnen berücksichtigte.',        key: 'would rather + past',    solution: 'I’d rather the study took each person’s starting point into account.' },
+            { id: 'd12i7',  prompt: 'Nicht nur verstärkte das System die Ungleichheit, es verschleierte sie auch.',                      key: 'Not only … but',         solution: 'Not only did the system reinforce inequality, but it also concealed it.' },
+            { id: 'd12i8',  prompt: 'Die Daten zeigen, dass der Ausgangspunkt den Erfolg stärker bestimmt als die Anstrengung.',         key: 'data + Plural',          solution: 'The data show that starting position determines success more than effort does.' },
+            { id: 'd12i9',  prompt: 'Erfolgreiche Menschen vertrauen der eigenen Leistung mehr als dem Zufall.',                         key: 'more than',              solution: 'Successful people trust their own achievement more than chance.' },
+            { id: 'd12i10', prompt: 'Frustrierende Ungleichheit erzeugt frustrierte Bürger.',                                            key: '-ing-Adjektiv',         solution: 'Frustrating inequality produces frustrated citizens.' }
+          ]
+        },
+        {
+          id: 'd12-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Is meritocracy — the idea that success should depend only on talent and effort — a fair basis for organising society, or is it a myth that conceals unequal starting points?',
+          ruleTitle: 'Neuer Themenwortschatz: meritocracy, privilege, social mobility, inequality, entitlement.',
+          ruleBody: 'Mindestens zwei dieser Wörter müssen tatsächlich fallen, nicht umschrieben. Tag 11 ist nicht ausgewertet — ob die Gegenposition dort aufgegriffen wurde, ist unbekannt. Heute erneut bewusst mit „That said, …“ oder „One could object that …“ in den zweiten Durchgang einsteigen, bevor die eigene Position weitergeführt wird. Abbrüche mit „or rather / what I mean is” reparieren statt neu anfangen.',
+          phrases: [
+            'meritocracy · privilege · social mobility · inequality · entitlement',
+            'tend to · arguably · in most cases',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden, mit einer vorgegebenen Gegenposition, auf die du reagieren musst: „Some would argue that meritocracy, whatever its flaws, still gives people far more control over their lives than any hereditary system ever did — how would you respond?“ Beginne den zweiten Durchgang ausdrücklich mit einer Reaktion auf genau diesen Satz, bevor du weiterredest. Dazu weiterhin: mindestens zwei Themenwörter, mindestens ein Hedge-Wort, unter fünf Füllwörtern.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd12-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Weiterhin Nutzerpriorität: kein inhaltstragendes Wort im Fließtext zweimal · Erster Satz: eigene These, keine zitierte Aufgabenstellung — an Tag 10 der bisher deutlichste Rückfall, Tag 11 ohne Auswertung · Grad der Zustimmung seit drei Schreibtagen ohne klares Maß · Konzession vor dem Gegenargument · datas/more as/the looser weiterhin vermeiden',
+          prompt: '“Because success under meritocracy is earned rather than inherited, it is inherently fairer than any alternative.” To what extent do you agree?',
+          min: 200, max: 250,
+          checklist: [
+            'Weiterhin Pflicht bei jedem Schreibblock: kein inhaltstragendes Wort (Nomen, Verb, Adjektiv, Adverb) im ganzen Text zweimal verwenden — für Wiederholungen ein Synonym, eine Umschreibung, ein Pronomen oder einen Oberbegriff nutzen. Funktionswörter (the, a, is, and …) zählen nicht. Vor dem Abgeben den Text noch einmal gezielt nach Wiederholungen absuchen.',
+            'Erster Satz: deine These in eigenen Worten. Die Aufgabenstellung darf nicht zitiert werden, auch nicht in Anführungszeichen.',
+            '„To what extent“ verlangt ein Maß (largely · only in part · rarely) — das fehlt seit drei Schreibtagen komplett. Heute im ersten oder zweiten Satz ein klares Maß nennen und bis zum Schluss durchhalten.',
+            'Eine echte Konzession vor dem Gegenargument („It is true that … / Admittedly, …“), erst danach die eigene Position verteidigen.',
+            'Hedging statt Absolutheit: tend to · in most cases · arguably.',
+            '200–250 Wörter — die Zählung läuft mit.',
+            'Rechtschreibung gezielt: „data“ ist unzählbar (the data show, nicht „datas“), „more than“ nicht „more as“, „the loser“ nicht „the looser“.'
+          ]
+        },
+        {
+          id: 'd12-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Die falschen Sätze von heute Morgen neu — aus dem Kopf, nicht abgeschrieben. Repair stand zuletzt bei neun ausgelassenen Tagen in Folge (Stand Tag 10) — ob Tag 11 das fortsetzt, ist mangels Sicherung unbekannt. Heute zählt ein ehrlicher Versuch bei r1.',
+          fields: [
+            { id: 'r1', label: 'Falscher Drill-Satz 1 → neu, mit der Regel dahinter in drei Wörtern' },
+            { id: 'r2', label: 'Falscher Drill-Satz 2 → neu, mit der Regel dahinter' },
+            { id: 'r3', label: 'Falscher Drill-Satz 3 → neu, mit der Regel dahinter' },
+            { id: 'r4', label: 'Die Reading-Frage, bei der du am unsichersten warst — Antwort neu, in eigenen Worten, ohne ein einziges Zitat' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd12-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (to legitimise · inherited wealth · to entrench · self-blame · hereditary system). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
   }
 ];
