@@ -45,9 +45,9 @@ export const ERRORS = [
 
 /* Aktueller Gesamtstand aus der letzten Auswertung der Sicherungsdateien (siehe REVIEWS unten). */
 export const REVIEW_LEVEL = {
-  date: '2026-08-09',
-  overall: 'B1+',
-  skills: { reading: 'B1+', use: 'B1+/B2−', writing: 'B1+/B2−', speaking: 'B1+/B2−' }
+  date: '2026-08-11',
+  overall: 'B1+/B2−',
+  skills: { reading: 'B1+/B2−', use: 'B2−', writing: 'B1+/B2−', speaking: 'B1+/B2−' }
 };
 
 /* An wie vielen verschiedenen Tagen ein Fehlerprofil-Punkt beim Auswerten der Sicherungen
@@ -55,7 +55,7 @@ export const REVIEW_LEVEL = {
 export const REVIEW_ERRORS = {
   precision: 0, inference: 0, paraphr: 0, speed: 0,
   wrather: 2, inversion: 3, wish: 4, saidto: 1, cond2: 5,
-  preps: 0,
+  preps: 1,
   spelling: 0, length: 5, counter: 3, degree: 2, noCopy: 5,
   repair: 3, topicvoc: 2, filler: 0
 };
@@ -150,6 +150,16 @@ export const REVIEWS = [
       { label: 'Writing', text: '160 Wörter, knapp im Zielrahmen. Nach dem NRW-Raster erneut <b>Sprachrichtigkeit</b> limitierend, diesmal deutsche Interferenz: „our“ statt „their“, „more as“ statt „more than“ (mehr als). Positiv: der erste Satz ist diesmal eine eigene These, keine abgeschriebene Aufgabenstellung — Erholung nach dem Rückfall von Tag 8. Ein echtes, differenziertes Gegenargument ist vorhanden — fünfter Beleg für „Gegenposition behandeln“, damit an mindestens drei Tagen sicher belegt. Der Grad der Zustimmung fehlt aber ganz.' },
       { label: 'Repair', text: 'Achter Tag in Folge ohne echten Versuch bei r1–r4. r5 weiterhin zuverlässig.' },
       { label: 'Speaking', text: 'Die Position wird gehalten, aber der Beitrag ist auffällig repetitiv — derselbe Gedanke wird dreimal fast wortgleich wiederholt statt weiterentwickelt. Keines der fünf Themenwörter (<i>consensus, groupthink, dissent, conformity, deference</i>) kommt korrekt vor — <i>consensus</i> wird zweimal versucht, aber missverständlich transkribiert, was auf eine Aussprache-Unsicherheit hindeutet. Positiv: „Or rather, don’t agree to them…“ nutzt die Reparatur-Formel zur Präzisierung — dritter belegter Fall nach Tag 1 und 4, „Reparieren statt neu anfangen“ damit erfüllt.' }
+    ]
+  },
+  {
+    day: 10, date: '2026-08-10',
+    blocks: [
+      { label: 'Use of English', text: '<b>7 von 10 sicher, dazu ein Fast-Treffer — bester Drill-Tag seit Beginn.</b> Drei Fehlerprofil-Punkte werden an einem Tag zum dritten Mal sauber und damit erledigt: <i>a tendency to</i>, <i>agree with</i> + <i>development for</i> im selben Satz, und <i>fall short of</i>. Zwei weitere sitzen zum ersten Mal überhaupt fehlerfrei: <i>taken aback by</i> (nach falscher Präposition an Tag 9) und <i>strange as it may seem</i> (nach vier Fehlversuchen). <i>is known to have</i> sitzt zum zweiten Mal. Fast-Treffer bei <i>is thought to</i>: die Struktur sitzt, aber „reduction“ statt „editorial team“ (vermutlich eine Verwechslung mit „Redaktion“) und „mislead“ mit falschem Objekt ergeben keinen sinnvollen Satz — dieselbe Verwechslung taucht im selben Drill noch einmal auf. Falsch: <i>Not only</i>-Inversion (diesmal vorhanden, aber „did … related“ statt „did … relate“) und <i>would rather</i> (neue dritte Fehlervariante).' },
+      { label: 'Reading', text: 'Die neue Wortgenauigkeits-Falle (q1, <i>specious</i>) wird als Falle erkannt, aber falsch aufgelöst. <b>Die Ja-Nein-Falle (q3) sitzt wieder</b> — nach der Auslassung an Tag 9 das vierte richtige Ergebnis in fünf Versuchen. q2, q4 und q5 bleiben inhaltlich vage bis am Thema vorbei.' },
+      { label: 'Writing', text: '200 Wörter, genau an der neuen Untergrenze. Nach dem NRW-Raster bleibt <b>Sprachrichtigkeit</b> zum dritten Tag in Folge limitierend (datas, „the looser“, „Chine“). Bei der Textkompetenz der bisher deutlichste Rückfall: die Aufgabenstellung wird wörtlich zitiert statt mit einer eigenen These zu beginnen. Positiv und neu: ein erster, grammatisch instabiler Versuch einer echten Konzession vor dem Gegenargument — genau das, was Phase 2 verlangt.' },
+      { label: 'Repair', text: 'Neunter Tag in Folge ohne echten Versuch bei r1–r4. r5 weiterhin zuverlässig.' },
+      { label: 'Speaking', text: 'Die neue Gegenpositions-Vorgabe wird nicht erkennbar aufgegriffen — der Beitrag wechselt stattdessen unkommentiert die eigene Position, ohne auf den vorgegebenen Einwand einzugehen. Nur <i>transparency</i> aus dem Themenwortschatz fällt eindeutig — das Minimum von zwei wird zum zweiten Mal in Folge verfehlt.' }
     ]
   }
 ];
@@ -1393,6 +1403,129 @@ export const DAYS = [
           name: 'Vokabelbank',
           minutes: 5,
           instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (to entrench · outrage-driven · to dismantle · to reframe · complementary). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
+  },
+  {
+    day: 11,
+    date: '2026-08-11',
+    phase: 2,
+    focus: 'Bester Drill-Tag bisher (7/10) — jetzt is thought to, is known to have und under the pretext of auf den jeweils entscheidenden Tag bringen · reduction/editorial-team-Verwechslung auflösen · datas und more as gezielt korrigieren · Aufgabenstellung nicht abschreiben nach dem deutlichsten Rückfall wieder herstellen · Speaking-Gegenposition zum zweiten Mal',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd11-read',
+          type: 'read',
+          name: 'Reading',
+          minutes: 12,
+          title: 'The Ethics of the Nudge',
+          kicker: 'Text 11 · Phase 2',
+          intro: 'Neue Wortgenauigkeits-Falle: ein Wort, das nach „offensichtlich, garantiert wahr" klingt, aber tatsächlich „nur dem Anschein nach, ohne Garantie" bedeutet — das genaue Gegenteil von Sicherheit. Ziel für Text + Fragen bleibt bei 8 Minuten.',
+          paragraphs: [
+            'Governments increasingly rely on so-called nudges—subtle changes to the way choices are presented—to steer citizens toward outcomes deemed beneficial, from retirement savings to organ donation. Defenders insist that nudging preserves freedom of choice: opting out remains ostensibly available to anyone who wishes it, which is meant to distinguish nudging from outright coercion. Critics counter that this distinction collapses in practice, since defaults are rarely neutral; the very fact that inertia keeps most people enrolled in whatever option was pre-selected means that the choice architect, not the citizen, is doing most of the deciding.',
+            'What complicates the debate further is that nudging’s effectiveness depends precisely on the asymmetry it claims not to exploit: a nudge that citizens could effortlessly resist would achieve nothing, yet a nudge robust enough to work reliably is, by the same token, difficult to describe as fully voluntary. This need not settle the argument in favour of banning nudges outright, but it does mean that policymakers who invoke choice architecture cannot simultaneously claim the practice is ethically costless. Whether the benefits justify the cost is a separate question from whether there is a cost to justify at all.'
+          ],
+          rule: 'Auf Englisch, ganze Sätze. Höchstens drei Wörter am Stück aus dem Text. Ziel für Lesen + Fragen: 8 Minuten.',
+          questions: [
+            { id: 'q1', text: 'The writer says opting out of a nudge remains “ostensibly” available. What does “ostensibly” mean here, and what meaning would a reader wrongly assume if they read it as “obviously” or “guaranteed”?', hint: 'Neue Wortgenauigkeits-Falle — klingt nach Sicherheit, bedeutet aber „dem Anschein nach", ohne Garantie.' },
+            { id: 'q2', text: 'Explain in your own words why the writer says that a nudge which citizens could “effortlessly resist” would “achieve nothing”.' },
+            { id: 'q3', text: 'Does the writer argue that nudges should be banned? Answer yes or no, then quote the exact words that justify your answer.', hint: 'Präzisionsfalle — der Text trennt zwei verschiedene Fragen, statt eine Antwort zu geben.' },
+            { id: 'q4', text: '“Policymakers who invoke choice architecture cannot simultaneously claim the practice is ethically costless.” What does this mean in practice? One sentence, in your own words.' },
+            { id: 'q5', text: 'What connection does the writer draw between how effective a nudge is and how voluntary it can honestly be called?' },
+            { id: 'q6', text: 'Fünf Ausdrücke aus dem Text für die Vokabelbank — mit eigenem Beispielsatz, nicht mit Übersetzung.' }
+          ]
+        },
+        {
+          id: 'd11-use',
+          type: 'drill',
+          name: 'Use of English',
+          minutes: 10,
+          kicker: 'Nach dem bisher besten Drill-Tag: is thought to, is known to have und under the pretext of auf den jeweils entscheidenden dritten Tag · reduction/editorial-team-Verwechslung auflösen · datas und more as gezielt korrigieren',
+          rules: [
+            { title: 'Passiv der Meinung — <i>is thought to</i> + Grundform, zweiter sauberer Tag gesucht', body: 'An Tag 9 fehlerfrei, an Tag 10 die Struktur richtig, aber „reduction“ statt „editorial team“ (Verwechslung mit „Redaktion“) ergab keinen sinnvollen Satz. Heute mit „editors“ als einfacherer Übersetzung.', example: 'The editors <b>are thought to</b> overlook important context.' },
+            { title: 'Passiv der Meinung — <i>is known to have</i> + Partizip, dritter sauberer Tag gesucht', body: 'An Tag 7 und Tag 10 sauber, an Tag 8 falsch. Noch ein sauberer Tag bis zum Erledigt-Kriterium.', example: 'The authority <b>is known to have</b> changed the default setting several times.' },
+            { title: '<i>under the pretext of</i>, dritter sauberer Tag gesucht · <i>taken aback</i> <u>by</u> und <i>strange as it may seem</i>, jeweils zweiter sauberer Tag', body: 'Alle drei standen an Tag 8/9/10 zum ersten Mal richtig — heute bestätigen.', example: 'The authority changed the rule <b>under the pretext of</b> protecting citizens. · Many citizens were completely <b>taken aback by</b> the silent change. · <b>Strange as it may seem</b>, most people never object to the default setting.' },
+            { title: '<i>would rather</i> + Vergangenheitsform, dritter sauberer Tag gesucht · Inversion — <i>Not only … but also</i>, Grundform nach <i>did</i>', body: 'An Tag 10 zwei neue Fehlervarianten in beiden Punkten. Bei <i>Not only</i> nach <i>did</i> steht die Grundform, nicht die Vergangenheitsform — „did … change“, nicht „did … changed“.', example: 'I<b>’d rather</b> the government <b>explained</b> the default more clearly. · <b>Not only did</b> the authority <b>change</b> the default, <b>but</b> it <b>also</b> concealed the reasons.' },
+            { title: '<i>data</i> ist unzählbar (kein „datas“, Verb im Plural) · <i>more than</i> (nicht <i>more as</i>) · <u>-ing</u>-Adjektiv für die Ursache, <u>-ed</u> für die Person, die es erlebt', body: 'Drei Fehler aus dem Schreibblock der letzten Tage direkt im Drill üben, bevor sie im freien Text wieder auftauchen.', example: 'The <b>data show</b> that most people never change the default. · Citizens trust the government <b>more than</b> individual companies. · <b>Shocking</b> revelations spread faster than <b>boring</b> facts.' }
+          ],
+          instruction: 'Vollständige Sätze, aus dem Kopf, ohne oben nachzusehen. Erst nach allen zehn die Lösungen aufdecken.',
+          items: [
+            { id: 'd11i1',  prompt: 'Man geht davon aus, dass die Herausgeber wichtigen Kontext übersehen.',                          key: 'is thought to',          solution: 'The editors are thought to overlook important context.' },
+            { id: 'd11i2',  prompt: 'Es ist bekannt, dass die Behörde die Voreinstellung mehrfach geändert hat.',                    key: 'is known to have',       solution: 'The authority is known to have changed the default setting several times.' },
+            { id: 'd11i3',  prompt: 'Die Behörde änderte die Regel unter dem Vorwand, die Bürger zu schützen.',                      key: 'under the pretext of',   solution: 'The authority changed the rule under the pretext of protecting citizens.' },
+            { id: 'd11i4',  prompt: 'Viele Bürger waren von der stillschweigenden Änderung völlig überrumpelt.',                     key: 'taken aback by',         solution: 'Many citizens were completely taken aback by the silent change.' },
+            { id: 'd11i5',  prompt: 'So seltsam es klingen mag, die meisten Menschen widersprechen der Standardeinstellung nie.',     key: 'strange as it may seem', solution: 'Strange as it may seem, most people never object to the default setting.' },
+            { id: 'd11i6',  prompt: 'Ich würde es vorziehen, wenn die Regierung die Voreinstellung klarer erklärte.',                key: 'would rather + past',    solution: 'I’d rather the government explained the default more clearly.' },
+            { id: 'd11i7',  prompt: 'Nicht nur änderte die Behörde die Voreinstellung, sie verschwieg auch die Gründe.',             key: 'Not only … but',         solution: 'Not only did the authority change the default, but it also concealed the reasons.' },
+            { id: 'd11i8',  prompt: 'Die Daten zeigen, dass die meisten Menschen die Voreinstellung nie ändern.',                    key: 'data + Plural',          solution: 'The data show that most people never change the default.' },
+            { id: 'd11i9',  prompt: 'Die Bürger vertrauen der Regierung mehr als den einzelnen Unternehmen.',                        key: 'more than',              solution: 'Citizens trust the government more than individual companies.' },
+            { id: 'd11i10', prompt: 'Schockierende Enthüllungen verbreiten sich schneller als langweilige Fakten.',                  key: '-ing-Adjektiv',          solution: 'Shocking revelations spread faster than boring facts.' }
+          ]
+        },
+        {
+          id: 'd11-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Should governments use “nudges” to steer citizens toward better choices, or does this cross into manipulation?',
+          ruleTitle: 'Neuer Themenwortschatz: autonomy, paternalism, manipulation, consent, coercion.',
+          ruleBody: 'Mindestens zwei dieser Wörter müssen tatsächlich fallen, nicht umschrieben. An Tag 10 wurde die vorgegebene Gegenposition im zweiten Durchgang gar nicht aufgegriffen — heute bewusst eine Formulierung aus den Phrasen unten benutzen, um explizit auf den Einwand einzugehen, nicht nur die eigene Position zu wiederholen. Abbrüche mit „or rather / what I mean is” reparieren statt neu anfangen.',
+          phrases: [
+            'autonomy · paternalism · manipulation · consent · coercion',
+            'tend to · arguably · in most cases',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden, mit einer vorgegebenen Gegenposition, auf die du reagieren musst: „Some would argue that if a nudge is easy to reject, it isn’t really manipulation at all — how would you respond?” Beginne den zweiten Durchgang ausdrücklich mit einer Reaktion auf genau diesen Satz („That said, …“ oder „One could object that …“), bevor du weiterredest — an Tag 10 fehlte diese explizite Anknüpfung ganz. Dazu weiterhin: mindestens zwei Themenwörter, mindestens ein Hedge-Wort, unter fünf Füllwörtern.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd11-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Erster Satz: eigene These, keine zitierte Aufgabenstellung — an Tag 10 der bisher deutlichste Rückfall · Grad der Zustimmung seit drei Tagen ohne klares Maß · Konzession vor dem Gegenargument zum zweiten Mal · datas/more as/the looser gezielt vermeiden',
+          prompt: '“Governments should be allowed to use ‘nudges’ to influence citizens’ choices without asking for their explicit consent.” To what extent do you agree?',
+          min: 200, max: 250,
+          checklist: [
+            'Erster Satz: deine These in eigenen Worten. Die Aufgabenstellung darf nicht zitiert werden, auch nicht in Anführungszeichen — genau das ist an Tag 10 passiert.',
+            '„To what extent" verlangt ein Maß (largely · only in part · rarely) — das fehlt seit drei Schreibtagen komplett. Heute im ersten oder zweiten Satz ein klares Maß nennen und bis zum Schluss durchhalten.',
+            'Eine echte Konzession vor dem Gegenargument („It is true that … / Admittedly, …"), erst danach die eigene Position verteidigen.',
+            'Hedging statt Absolutheit: tend to · in most cases · arguably.',
+            '200–250 Wörter — die Zählung läuft mit.',
+            'Rechtschreibung gezielt: „data" ist unzählbar (the data show, nicht „datas"), „more than" nicht „more as", „the loser" nicht „the looser" — alle drei sind in den letzten Tagen tatsächlich passiert.'
+          ]
+        },
+        {
+          id: 'd11-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Die falschen Sätze von heute Morgen neu — aus dem Kopf, nicht abgeschrieben. Repair wurde die letzten neun Tage in Folge übersprungen — heute reicht ein einziger ehrlicher Versuch bei r1.',
+          fields: [
+            { id: 'r1', label: 'Falscher Drill-Satz 1 → neu, mit der Regel dahinter in drei Wörtern' },
+            { id: 'r2', label: 'Falscher Drill-Satz 2 → neu, mit der Regel dahinter' },
+            { id: 'r3', label: 'Falscher Drill-Satz 3 → neu, mit der Regel dahinter' },
+            { id: 'r4', label: 'Die Reading-Frage, bei der du am unsichersten warst — Antwort neu, in eigenen Worten, ohne ein einziges Zitat' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd11-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (to steer · to opt out · inertia · choice architect · costless). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
         }
       ]
     }
