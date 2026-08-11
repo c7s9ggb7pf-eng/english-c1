@@ -72,7 +72,8 @@ export const ERRORS = [
   { id: 'repair',    group: 'Sprechen',  text: 'Reparieren statt neu anfangen' },
   { id: 'topicvoc',  group: 'Sprechen',  text: 'Themenwortschatz statt Umschreibung' },
   { id: 'noCopy',    group: 'Schreiben', text: 'Aufgabenstellung nicht abschreiben — mit der These beginnen' },
-  { id: 'filler',    group: 'Sprechen',  text: 'Füllwortdichte senken' }
+  { id: 'filler',    group: 'Sprechen',  text: 'Füllwortdichte senken' },
+  { id: 'lexvar',    group: 'Schreiben', text: 'Lexikalische Variation — kein Wort im Fließtext zweimal' }
 ];
 
 /* Aktueller Gesamtstand aus der letzten Auswertung der Sicherungsdateien (siehe REVIEWS unten). */
@@ -89,7 +90,7 @@ export const REVIEW_ERRORS = {
   wrather: 2, inversion: 3, wish: 4, saidto: 1, cond2: 5,
   preps: 1,
   spelling: 0, length: 5, counter: 3, degree: 2, noCopy: 5,
-  repair: 3, topicvoc: 2, filler: 0
+  repair: 3, topicvoc: 2, filler: 0, lexvar: 0
 };
 
 /* Auswertung jeder Sicherung, Tag für Tag — dieselbe Rückmeldung wie in FORTSCHRITT.md.
@@ -1526,10 +1527,11 @@ export const DAYS = [
           type: 'write',
           name: 'Writing',
           minutes: 15,
-          kicker: 'Erster Satz: eigene These, keine zitierte Aufgabenstellung — an Tag 10 der bisher deutlichste Rückfall · Grad der Zustimmung seit drei Tagen ohne klares Maß · Konzession vor dem Gegenargument zum zweiten Mal · datas/more as/the looser gezielt vermeiden',
+          kicker: 'Neu ab heute, Nutzerpriorität: kein inhaltstragendes Wort im Fließtext zweimal · Erster Satz: eigene These, keine zitierte Aufgabenstellung — an Tag 10 der bisher deutlichste Rückfall · Grad der Zustimmung seit drei Tagen ohne klares Maß · Konzession vor dem Gegenargument zum zweiten Mal · datas/more as/the looser gezielt vermeiden',
           prompt: '“Governments should be allowed to use ‘nudges’ to influence citizens’ choices without asking for their explicit consent.” To what extent do you agree?',
           min: 200, max: 250,
           checklist: [
+            'Neu und ab jetzt bei jedem Schreibblock Pflicht: kein inhaltstragendes Wort (Nomen, Verb, Adjektiv, Adverb) im ganzen Text zweimal verwenden — für Wiederholungen ein Synonym, eine Umschreibung, ein Pronomen oder einen Oberbegriff nutzen. Funktionswörter (the, a, is, and …) zählen nicht. Vor dem Abgeben den Text noch einmal gezielt nach Wiederholungen absuchen.',
             'Erster Satz: deine These in eigenen Worten. Die Aufgabenstellung darf nicht zitiert werden, auch nicht in Anführungszeichen — genau das ist an Tag 10 passiert.',
             '„To what extent" verlangt ein Maß (largely · only in part · rarely) — das fehlt seit drei Schreibtagen komplett. Heute im ersten oder zweiten Satz ein klares Maß nennen und bis zum Schluss durchhalten.',
             'Eine echte Konzession vor dem Gegenargument („It is true that … / Admittedly, …"), erst danach die eigene Position verteidigen.',
