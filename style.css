@@ -427,9 +427,10 @@ audio { width: 100%; margin-bottom: 18px; }
 /* ---------- Vokabeln ---------- */
 
 .vocab-add { display: grid; gap: 8px; margin-bottom: 24px; }
-.vlist { list-style: none; padding: 0; margin: 0; }
+.vlist { list-style: none; padding: 0; margin: 0; margin-bottom: 8px; }
 .vitem { padding: 14px 0; border-bottom: 1px solid var(--rule-soft); }
 .vterm { font-family: var(--serif); font-size: 18px; color: var(--ink); font-weight: 600; }
+.vmean { font-size: 14px; color: var(--ink-mid); margin-top: 3px; }
 .vex { font-family: var(--serif); font-size: 15.5px; color: var(--ink-dim); margin-top: 4px; font-style: italic; }
 .vmeta { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
 .vmeta small { font-family: var(--mono); font-size: 11px; color: var(--ink-dim); }
@@ -437,6 +438,20 @@ audio { width: 100%; margin-bottom: 18px; }
             cursor: pointer; padding: 2px 0; text-decoration: underline;
             text-decoration-color: var(--rule); text-underline-offset: 3px; }
 .link-btn:hover { color: var(--danger); }
+
+/* ---------- Karteikarten ---------- */
+
+.flashcard {
+  border: 1px solid var(--rule); border-radius: var(--radius);
+  background: var(--surface); padding: 36px 24px; margin: 22px 0 18px;
+  text-align: center; display: grid; gap: 18px; justify-items: center;
+  min-height: 180px; align-content: center;
+}
+.flashcard.is-revealed { border-color: var(--brass-line); background: var(--brass-soft); }
+.flashcard-term { font-family: var(--serif); font-size: 26px; font-weight: 600; color: var(--ink); }
+.flashcard-meaning { font-size: 15.5px; color: var(--ink-mid); max-width: 30em; }
+.flashcard-example { font-family: var(--serif); font-size: 15px; color: var(--ink-dim);
+                      font-style: italic; max-width: 30em; }
 
 /* ---------- Einstellungen ---------- */
 

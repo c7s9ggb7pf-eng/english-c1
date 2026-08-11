@@ -1,6 +1,38 @@
 /* Inhalte des Trainings.
    Neue Tage werden unten an DAYS angehängt — die App findet den heutigen Tag über das Datum. */
 
+/* Startvorschläge für die Vokabelbank: Wörter aus den bisherigen Lesetexten, mit kurzer
+   englischer Bedeutung (zum Nachschlagen erlaubt) und dem Originalsatz als Beispiel. Wer noch
+   nicht genug Wortschatz hat, um eigene Beispielsätze zu schreiben, übernimmt diese zuerst und
+   ersetzt sie später durch eigene. Wird ergänzt, wenn neue Tage schwierige Wörter einführen. */
+export const VOCAB_STARTER = [
+  { term: 'setback', meaning: 'a temporary difficulty that delays progress', example: 'Every setback is a lesson in disguise.', day: 1 },
+  { term: 'venture', meaning: 'a risky or ambitious undertaking, especially in business', example: 'Where a failed venture ends a career, the rational response is to attempt nothing that might fail.', day: 1 },
+  { term: 'verdict', meaning: 'a decision or judgement, especially a final one', example: 'The first invites a verdict; the second gives you the reasoning.', day: 2 },
+  { term: 'reckless', meaning: 'acting without thinking about the consequences or danger', example: 'A choice made in March may look reckless by June.', day: 3 },
+  { term: 'dissolve', meaning: '(figurative) to make a feeling or problem disappear gradually', example: 'No amount of confidence dissolves it.', day: 3 },
+  { term: 'stigma', meaning: 'a mark of shame or disgrace attached to something', example: 'The stigma, when it appears, rarely attaches to the mistake as such.', day: 4 },
+  { term: 'asymmetry', meaning: 'a lack of balance or equality between two things', example: 'The result is an asymmetry that no policy document mentions.', day: 4 },
+  { term: 'resilience', meaning: 'the capacity to recover from difficulties; not the same as toughness', example: 'Resilience uses the blow to revise something.', day: 4 },
+  { term: 'forecaster', meaning: 'someone who predicts future events, e.g. weather or markets', example: 'The analysts whose predictions were wildest were also the ones most often invited back.', day: 5 },
+  { term: 'calibration', meaning: 'checking or adjusting something against a known standard', example: 'Confidence earned through calibration, tracking one’s own past accuracy.', day: 5 },
+  { term: 'depletion', meaning: 'the reduction of a resource to a low level', example: 'The more accurate account is one of resource depletion.', day: 6 },
+  { term: 'discrete', meaning: 'separate and distinct, not connected to others — NOT the same word as “discreet” (careful/secretive)', example: 'Decisions are not discrete events that reset the mind between one and the next.', day: 6 },
+  { term: 'parole', meaning: 'the early, conditional release of a prisoner', example: 'Judges reviewing parole applications granted release far more often early in the morning.', day: 6 },
+  { term: 'sunk cost', meaning: 'money or time already spent that cannot be recovered', example: 'Behavioural economists call this the sunk cost fallacy.', day: 7 },
+  { term: 'enormity', meaning: 'the extreme seriousness of something bad — NOT the same as “enormous” (great size)', example: 'Its enormity lies not in any single bad decision but in how reliably it compounds one mistake into several.', day: 7 },
+  { term: 'compound', meaning: '(verb) to make a problem worse by adding to it', example: 'It compounds one mistake into several.', day: 7 },
+  { term: 'fluent', meaning: 'able to speak or express something smoothly and easily', example: 'A fluent, quickly delivered answer feels more trustworthy than a hesitant one.', day: 8 },
+  { term: 'invaluable', meaning: 'extremely useful, of great value — the “in-” does NOT negate here, unlike in “invisible”', example: 'Dissenting views tend to disappear precisely when they would be most invaluable.', day: 9 },
+  { term: 'dissent', meaning: 'disagreement with a widely held opinion', example: 'None of this means dissent should be manufactured for its own sake.', day: 9 },
+  { term: 'entrench', meaning: 'to establish something so firmly that it becomes hard to change', example: 'Algorithmic curation is routinely blamed for entrenching political polarisation.', day: 10 },
+  { term: 'specious', meaning: 'seeming reasonable or true but actually wrong or misleading', example: 'The argument is, on closer inspection, rather specious.', day: 10 },
+  { term: 'complementary', meaning: 'combining well with something else so as to improve it', example: 'The two are complementary rather than substitutable.', day: 10 },
+  { term: 'inertia', meaning: 'a tendency to remain unchanged or do nothing', example: 'The very fact that inertia keeps most people enrolled in whatever option was pre-selected.', day: 11 },
+  { term: 'ostensibly', meaning: 'apparently or seemingly true, but perhaps not actually true — NOT the same as “obviously” or “guaranteed”', example: 'Opting out remains ostensibly available to anyone who wishes it.', day: 11 },
+  { term: 'coercion', meaning: 'the use of force or threats to make someone do something', example: 'This is meant to distinguish nudging from outright coercion.', day: 11 }
+];
+
 export const PLAN = {
   start: '2026-08-01',
   end:   '2026-09-01',

@@ -1,4 +1,4 @@
-import { PLAN, BASELINE, ERRORS, DAYS, REVIEW_LEVEL, REVIEW_ERRORS, REVIEWS } from './content.js';
+import { PLAN, BASELINE, ERRORS, DAYS, REVIEW_LEVEL, REVIEW_ERRORS, REVIEWS, VOCAB_STARTER } from './content.js';
 
 /* ============================================================
    Zustand
@@ -11,7 +11,7 @@ const defaults = () => ({
   revealed:  {},        // drillItemId -> true
   done:      {},        // "1:morning" -> ISO-Zeitstempel
   errors:    {},        // errorId -> Anzahl fehlerfreier Tage
-  vocab:     [],        // { id, term, example, added, seen }
+  vocab:     [],        // { id, term, meaning, example, added, box, due }
   levels:    [{ date: BASELINE.date, ...BASELINE.skills, overall: BASELINE.overall }],
   settings:  { morning: '08:00', evening: '19:00', theme: 'auto', sound: true }
 });
@@ -43,6 +43,11 @@ const esc = s => String(s ?? '').replace(/[&<>"']/g, c =>
 
 const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 const today = () => iso(new Date());
+const addDays = (isoStr, n) => {
+  const [y, m, d] = isoStr.split('-').map(Number);
+  const dt = new Date(y, m - 1, d + n);
+  return iso(dt);
+};
 
 const DE_DAYS = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
 const DE_MON  = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
@@ -167,6 +172,16 @@ let session = null;   // { day, part, index }
 let activeTab = 'today';
 let shownDate = today();   // das Datum, für das die Ansicht gerade gebaut ist
 
+let vocabMode = 'list';   // 'list' | 'learn'
+let learnQueue = [];
+let learnRevealed = false;
+
+/* Leitner-artig, drei Boxen: je höher die Box, desto seltener kommt die Karte wieder dran. */
+const BOX_INTERVAL = { 1: 1, 2: 3, 3: 7 };
+const dueVocab = () => S.vocab
+  .filter(v => (v.due || v.added) <= today())
+  .sort((a, b) => (a.box || 1) - (b.box || 1) || (a.due || a.added).localeCompare(b.due || b.added));
+
 function setTop(kicker, title, back) {
   $('#topKicker').textContent = kicker || '';
   $('#topTitle').textContent  = title;
@@ -175,6 +190,7 @@ function setTop(kicker, title, back) {
 
 function go(tab) {
   session = null;
+  if (tab !== 'vocab') vocabMode = 'list';
   activeTab = tab;
   shownDate = today();
   Timer.stop();
@@ -603,39 +619,160 @@ function viewProgress() {
    ============================================================ */
 
 function viewVocab() {
+  if (vocabMode === 'learn') return viewVocabLearn();
+
   setTop('', 'Vokabelbank', false);
+  const known = new Set(S.vocab.map(v => v.term.trim().toLowerCase()));
+  const suggestions = VOCAB_STARTER.filter(s => !known.has(s.term.toLowerCase()));
+  const due = dueVocab().length;
+
   $('#view').innerHTML = `
     <h1>Vokabelbank</h1>
-    <p class="lede">Ausdruck plus <b>eigener</b> Beispielsatz — keine Übersetzung. Übersetzungen
-    bleiben passiv, eigene Sätze werden aktiv.</p>
+    <p class="lede">Ausdruck plus <b>eigener</b> Beispielsatz — keine Übersetzung im Beispiel.
+    Die Bedeutung darfst du nachschlagen, der Satz danach ist deiner.</p>
+
+    ${S.vocab.length ? `
+      <button class="btn wide" id="vLearnBtn">Karteikarten lernen${due ? ` · ${due} fällig` : ''}</button>
+    ` : ''}
+
     <div class="vocab-add">
       <input type="text" id="vTerm" placeholder="Ausdruck, z. B. „to fall short of“">
+      <input type="text" id="vMean" placeholder="Bedeutung, kurz auf Englisch (darf nachgeschlagen sein)">
       <textarea id="vEx" placeholder="Eigener Beispielsatz auf Englisch …"></textarea>
       <button class="btn" id="vAdd">Aufnehmen</button>
     </div>
+
+    ${suggestions.length ? `
+      <h3>Vorschläge aus den Lesetexten</h3>
+      <p class="lede" style="margin-top:-8px">Noch keinen eigenen Wortschatz für einen eigenen Satz?
+      Diese Wörter stammen aus den bisherigen Texten, mit Bedeutung und dem Originalsatz als
+      Beispiel — später durch eigene Sätze ersetzen.</p>
+      <ul class="vlist">
+        ${suggestions.map(s => `
+          <li class="vitem">
+            <div class="vterm">${esc(s.term)}</div>
+            <div class="vmean">${esc(s.meaning)}</div>
+            <div class="vex">${esc(s.example)}</div>
+            <div class="vmeta">
+              <small>Tag ${s.day}</small>
+              <button class="link-btn" data-add-suggestion="${esc(s.term)}">übernehmen</button>
+            </div>
+          </li>`).join('')}
+      </ul>` : ''}
+
     <h3>${S.vocab.length} ${S.vocab.length === 1 ? 'Eintrag' : 'Einträge'}</h3>
     <ul class="vlist">
       ${[...S.vocab].reverse().map(v => `
         <li class="vitem">
           <div class="vterm">${esc(v.term)}</div>
+          ${v.meaning ? `<div class="vmean">${esc(v.meaning)}</div>` : ''}
           ${v.example ? `<div class="vex">${esc(v.example)}</div>` : ''}
           <div class="vmeta">
-            <small>${esc(v.added)}</small>
+            <small>${esc(v.added)} · Box ${v.box || 1}</small>
             <button class="link-btn" data-del="${esc(v.id)}">entfernen</button>
           </div>
         </li>`).join('') || '<li class="vitem" style="color:var(--ink-dim)">Noch leer.</li>'}
     </ul>`;
 
+  const learnBtn = $('#vLearnBtn');
+  if (learnBtn) learnBtn.onclick = () => startLearn();
+
   $('#vAdd').onclick = () => {
     const term = $('#vTerm').value.trim();
     if (!term) { toast('Ausdruck fehlt.'); return; }
-    S.vocab.push({ id: 'v' + Date.now(), term, example: $('#vEx').value.trim(), added: today() });
+    S.vocab.push({
+      id: 'v' + Date.now(), term,
+      meaning: $('#vMean').value.trim(),
+      example: $('#vEx').value.trim(),
+      added: today(), box: 1, due: today()
+    });
     save(); viewVocab(); toast('Aufgenommen.');
   };
   $$('[data-del]').forEach(b => b.onclick = () => {
     S.vocab = S.vocab.filter(v => v.id !== b.dataset.del);
     save(); viewVocab();
   });
+  $$('[data-add-suggestion]').forEach(b => b.onclick = () => {
+    const s = VOCAB_STARTER.find(x => x.term === b.dataset.addSuggestion);
+    if (!s) return;
+    S.vocab.push({
+      id: 'v' + Date.now(), term: s.term, meaning: s.meaning, example: s.example,
+      added: today(), box: 1, due: today()
+    });
+    save(); viewVocab(); toast('Übernommen.');
+  });
+}
+
+/* ============================================================
+   Ansicht: Vokabeln — Karteikarten lernen
+   ============================================================ */
+
+function startLearn() {
+  learnQueue = dueVocab().length ? dueVocab() : [...S.vocab];
+  learnRevealed = false;
+  vocabMode = 'learn';
+  viewVocabLearn();
+}
+
+function viewVocabLearn() {
+  setTop('', 'Karteikarten', false);
+  const card = learnQueue[0];
+
+  if (!card) {
+    $('#view').innerHTML = `
+      <h1>Karteikarten</h1>
+      <p class="callout"><strong>Für heute nichts mehr fällig.</strong>
+      ${S.vocab.length} ${S.vocab.length === 1 ? 'Wort' : 'Wörter'} insgesamt in der Bank.</p>
+      <div class="actions">
+        <button class="btn ghost" id="vAllBtn">Trotzdem alle wiederholen</button>
+        <button class="btn" id="vBackBtn">Zurück zur Liste</button>
+      </div>`;
+    $('#vBackBtn').onclick = () => { vocabMode = 'list'; viewVocab(); };
+    $('#vAllBtn').onclick = () => {
+      learnQueue = [...S.vocab]; learnRevealed = false; viewVocabLearn();
+    };
+    return;
+  }
+
+  $('#view').innerHTML = `
+    <h1>Karteikarten</h1>
+    <p class="lede">${learnQueue.length} ${learnQueue.length === 1 ? 'Karte' : 'Karten'} in dieser Runde</p>
+    <div class="flashcard ${learnRevealed ? 'is-revealed' : ''}">
+      <div class="flashcard-term">${esc(card.term)}</div>
+      ${learnRevealed ? `
+        ${card.meaning ? `<div class="flashcard-meaning">${esc(card.meaning)}</div>` : ''}
+        ${card.example ? `<div class="flashcard-example">${esc(card.example)}</div>` : ''}
+      ` : `<button class="btn ghost wide" id="vReveal">Bedeutung zeigen</button>`}
+    </div>
+    ${learnRevealed ? `
+      <div class="actions">
+        <button class="btn ghost" id="vAgain">Nochmal</button>
+        <button class="btn" id="vGotIt">Sitzt</button>
+      </div>` : ''}
+    <button class="link-btn" id="vBackBtn2" style="margin-top:18px">Zurück zur Liste</button>`;
+
+  $('#vBackBtn2').onclick = () => { vocabMode = 'list'; viewVocab(); };
+
+  const reveal = $('#vReveal');
+  if (reveal) reveal.onclick = () => { learnRevealed = true; viewVocabLearn(); };
+
+  const again = $('#vAgain');
+  if (again) again.onclick = () => {
+    card.box = 1; card.due = today();
+    save();
+    learnQueue.push(learnQueue.shift());
+    learnRevealed = false;
+    viewVocabLearn();
+  };
+  const gotIt = $('#vGotIt');
+  if (gotIt) gotIt.onclick = () => {
+    card.box = Math.min((card.box || 1) + 1, 3);
+    card.due = addDays(today(), BOX_INTERVAL[card.box]);
+    save();
+    learnQueue.shift();
+    learnRevealed = false;
+    viewVocabLearn();
+  };
 }
 
 /* ============================================================
