@@ -1687,5 +1687,129 @@ export const DAYS = [
         }
       ]
     }
+  },
+  {
+    day: 13,
+    date: '2026-08-13',
+    phase: 2,
+    focus: 'Sicherung zu Tag 11 und Tag 12 fehlt weiterhin — dieselben Grammatikziele bleiben unverändert offen (is thought to, is known to have, under the pretext of, taken aback by, strange as it may seem, would rather, Not only-Inversion) · Schreiben: lexikalische Variation und Zustimmungsgrad weiterhin hart prüfen, Aufgabenstellung nicht zitieren · neue Wortgenauigkeits-Falle: sensible ≠ sensibel',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd13-read',
+          type: 'read',
+          name: 'Reading',
+          minutes: 12,
+          title: 'Whose Footprint Is It Anyway?',
+          kicker: 'Text 13 · Phase 2',
+          intro: 'Neue Wortgenauigkeits-Falle: ein Wort, das im Deutschen fast identisch aussieht wie „sensibel“, im Englischen aber „vernünftig, praktisch“ bedeutet — nicht „feinfühlig, empfindsam“ (das wäre sensitive). Ziel für Text + Fragen bleibt bei 8 Minuten.',
+          paragraphs: [
+            'The term “carbon footprint”, now so pervasive in public discourse that its origins are seldom questioned, was in fact popularised by a multinational oil corporation as part of an advertising campaign in the early 2000s — a sensible fact to bear in mind before accepting the concept at face value. By encouraging individuals to calculate and reduce their personal emissions, the campaign quietly relocated responsibility for a systemic crisis onto the shoulders of consumers, while leaving the far larger contributions of a handful of fossil fuel producers comparatively unexamined. Critics of this framing do not deny that private choices carry some weight; what they dispute is the implicit suggestion that aggregated individual restraint could ever substitute for binding regulation, carbon pricing, or the phasing-out of fossil infrastructure.',
+            'Defenders of the personal-responsibility narrative counter that political change is itself downstream of public opinion, and that a population unwilling to alter its own habits is unlikely to sustain the will required for structural reform. Both camps, however, converge on a point rarely voiced explicitly: focusing exclusively on either level — the individual or the systemic — while dismissing the other all but guarantees inertia. Whether the term’s origins are judged cynical or merely opportunistic, its rhetorical effect has been, empirically, to narrow what is fundamentally a collective problem into a private one.'
+          ],
+          rule: 'Auf Englisch, ganze Sätze. Höchstens drei Wörter am Stück aus dem Text. Ziel für Lesen + Fragen: 8 Minuten.',
+          questions: [
+            { id: 'q1', text: 'The writer calls the corporation’s origin story “a sensible fact to bear in mind”. What does “sensible” mean here, and what wrong meaning would a German-speaking reader get if they connected it to “sensibel”?', hint: 'Neue Wortgenauigkeits-Falle — falscher Freund: sensible heißt „vernünftig/praktisch“, nicht „empfindsam/feinfühlig“ (das wäre sensitive).' },
+            { id: 'q2', text: 'Explain in your own words why critics say the concept of a “carbon footprint” relocates responsibility.' },
+            { id: 'q3', text: 'Does the writer conclude that individual behaviour is entirely irrelevant to climate change? Answer yes or no, then quote the exact words that justify your answer.', hint: 'Präzisionsfalle — der Text sagt, dass das Ignorieren einer der beiden Ebenen Stillstand garantiert, nicht dass eine Ebene bedeutungslos ist.' },
+            { id: 'q4', text: '“Its rhetorical effect has been to narrow what is fundamentally a collective problem into a private one.” What does this mean in practice? One sentence, in your own words.' },
+            { id: 'q5', text: 'What do defenders of the personal-responsibility narrative say is the connection between private habits and political change?' },
+            { id: 'q6', text: 'Fünf Ausdrücke aus dem Text für die Vokabelbank — mit eigenem Beispielsatz, nicht mit Übersetzung.' }
+          ]
+        },
+        {
+          id: 'd13-use',
+          type: 'drill',
+          name: 'Use of English',
+          minutes: 10,
+          kicker: 'Sicherung zu Tag 11 und Tag 12 fehlt weiterhin — dieselben Zielsätze bleiben offen: is thought to, is known to have, under the pretext of, taken aback by, strange as it may seem, would rather, Not only-Inversion · zusätzlich datas/more as/-ing-/-ed-Adjektiv am neuen Thema Klimaverantwortung',
+          rules: [
+            { title: 'Passiv der Meinung — <i>is thought to</i> + Grundform, weiterhin zweiter sauberer Tag gesucht', body: 'An Tag 9 fehlerfrei, an Tag 10 die Struktur richtig, aber mit falschem Objekt. Tag 11 und Tag 12 blieben ohne Auswertung — der Zielpunkt bleibt unverändert offen.', example: 'The industry <b>is thought to</b> favour individual blame over regulation.' },
+            { title: 'Passiv der Meinung — <i>is known to have</i> + Partizip, weiterhin dritter sauberer Tag gesucht', body: 'An Tag 7 und Tag 10 sauber, an Tag 8 falsch. Noch ein sauberer Tag bis zum Erledigt-Kriterium.', example: 'The corporation <b>is known to have</b> been responsible for the original campaign.' },
+            { title: '<i>under the pretext of</i>, weiterhin dritter sauberer Tag gesucht · <i>taken aback</i> <u>by</u> und <i>strange as it may seem</i>, jeweils zweiter sauberer Tag gesucht', body: 'Alle drei standen an Tag 8/9/10 zum ersten Mal richtig, Tag 11 und Tag 12 blieben ohne Auswertung — heute erneut bestätigen.', example: 'The company launched the campaign <b>under the pretext of</b> helping consumers. · Many scientists were completely <b>taken aback by</b> the term’s origin. · <b>Strange as it may seem</b>, the term originated with an oil company.' },
+            { title: '<i>would rather</i> + Vergangenheitsform, weiterhin dritter sauberer Tag gesucht · Inversion — <i>Not only … but also</i>, Grundform nach <i>did</i>', body: 'An Tag 10 zwei neue Fehlervarianten in beiden Punkten. Nach <i>did</i> steht die Grundform, nicht die Vergangenheitsform — „did … distract“, nicht „did … distracted“.', example: 'I<b>’d rather</b> the government <b>regulated</b> the producers directly instead of the consumers. · <b>Not only did</b> the campaign <b>distract</b> from the producers, <b>but</b> it <b>also</b> slowed down regulation.' },
+            { title: '<i>data</i> ist unzählbar (kein „datas“, Verb im Plural) · <i>more than</i> (nicht <i>more as</i>) · <u>-ing</u>-Adjektiv für die Ursache, <u>-ed</u> für die Person, die es erlebt', body: 'Drei Fehler aus dem Schreibblock der letzten Tage direkt im Drill üben, bevor sie im freien Text wieder auftauchen.', example: 'The <b>data show</b> that corporations produce <b>more</b> emissions <b>than</b> individual households. · <b>Alarming</b> statistics produce <b>alarmed</b> citizens.' }
+          ],
+          instruction: 'Vollständige Sätze, aus dem Kopf, ohne oben nachzusehen. Erst nach allen zehn die Lösungen aufdecken.',
+          items: [
+            { id: 'd13i1',  prompt: 'Die Industrie soll angeblich individuelle Schuldzuweisung der Regulierung vorziehen.',              key: 'is thought to',          solution: 'The industry is thought to favour individual blame over regulation.' },
+            { id: 'd13i2',  prompt: 'Der Konzern ist bekanntermaßen für die ursprüngliche Kampagne verantwortlich gewesen.',              key: 'is known to have',       solution: 'The corporation is known to have been responsible for the original campaign.' },
+            { id: 'd13i3',  prompt: 'Das Unternehmen startete die Kampagne unter dem Vorwand, Verbrauchern zu helfen.',                    key: 'under the pretext of',   solution: 'The company launched the campaign under the pretext of helping consumers.' },
+            { id: 'd13i4',  prompt: 'Viele Wissenschaftler waren von der Herkunft des Begriffs völlig überrascht.',                        key: 'taken aback by',         solution: 'Many scientists were completely taken aback by the term’s origin.' },
+            { id: 'd13i5',  prompt: 'So seltsam es klingen mag, der Begriff stammt von einem Ölkonzern.',                                  key: 'strange as it may seem', solution: 'Strange as it may seem, the term originated with an oil company.' },
+            { id: 'd13i6',  prompt: 'Ich würde es vorziehen, wenn die Regierung die Erzeuger direkt regulierte statt die Verbraucher.',    key: 'would rather + past',    solution: 'I’d rather the government regulated the producers directly instead of the consumers.' },
+            { id: 'd13i7',  prompt: 'Nicht nur lenkte die Kampagne von den Erzeugern ab, sie verlangsamte auch die Regulierung.',          key: 'Not only … but',         solution: 'Not only did the campaign distract from the producers, but it also slowed down regulation.' },
+            { id: 'd13i8',  prompt: 'Die Daten zeigen, dass Konzerne mehr Emissionen verursachen als einzelne Haushalte.',                 key: 'data + Plural',          solution: 'The data show that corporations produce more emissions than individual households.' },
+            { id: 'd13i9',  prompt: 'Die Öffentlichkeit vertraut der Wissenschaft mehr als der Werbung.',                                  key: 'more than',              solution: 'The public trusts science more than advertising.' },
+            { id: 'd13i10', prompt: 'Beunruhigende Statistiken erzeugen besorgte Bürger.',                                                 key: '-ing-Adjektiv',         solution: 'Alarming statistics produce alarmed citizens.' }
+          ]
+        },
+        {
+          id: 'd13-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Is it fair to focus climate action mainly on individual behaviour, such as flying less or eating less meat, or should the main responsibility lie with governments and corporations?',
+          ruleTitle: 'Neuer Themenwortschatz: responsibility, regulation, footprint, systemic, complicity.',
+          ruleBody: 'Mindestens zwei dieser Wörter müssen tatsächlich fallen, nicht umschrieben. Tag 11 und Tag 12 sind nicht ausgewertet — ob die Gegenposition dort aufgegriffen wurde, ist unbekannt. Heute erneut bewusst mit „That said, …“ oder „One could object that …“ in den zweiten Durchgang einsteigen, bevor die eigene Position weitergeführt wird. Abbrüche mit „or rather / what I mean is” reparieren statt neu anfangen.',
+          phrases: [
+            'responsibility · regulation · footprint · systemic · complicity',
+            'tend to · arguably · in most cases',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden, mit einer vorgegebenen Gegenposition, auf die du reagieren musst: „Some would argue that without individual behavioural change, the political will for real climate policy will never materialise — how would you respond?“ Beginne den zweiten Durchgang ausdrücklich mit einer Reaktion auf genau diesen Satz, bevor du weiterredest. Dazu weiterhin: mindestens zwei Themenwörter, mindestens ein Hedge-Wort, unter fünf Füllwörtern.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd13-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Weiterhin Nutzerpriorität: kein inhaltstragendes Wort im Fließtext zweimal · Erster Satz: eigene These, keine zitierte Aufgabenstellung — an Tag 10 der bisher deutlichste Rückfall, Tag 11 und Tag 12 ohne Auswertung · Grad der Zustimmung seit mehreren Schreibtagen ohne klares Maß · Konzession vor dem Gegenargument · datas/more as/the looser weiterhin vermeiden',
+          prompt: '“Because climate change is fundamentally a systemic problem, individual lifestyle choices make little real difference, and governments and corporations should bear nearly all the responsibility.” To what extent do you agree?',
+          min: 200, max: 250,
+          checklist: [
+            'Weiterhin Pflicht bei jedem Schreibblock: kein inhaltstragendes Wort (Nomen, Verb, Adjektiv, Adverb) im ganzen Text zweimal verwenden — für Wiederholungen ein Synonym, eine Umschreibung, ein Pronomen oder einen Oberbegriff nutzen. Funktionswörter (the, a, is, and …) zählen nicht. Vor dem Abgeben den Text noch einmal gezielt nach Wiederholungen absuchen.',
+            'Erster Satz: deine These in eigenen Worten. Die Aufgabenstellung darf nicht zitiert werden, auch nicht in Anführungszeichen.',
+            '„To what extent“ verlangt ein Maß (largely · only in part · rarely) — das fehlt seit mehreren Schreibtagen komplett. Heute im ersten oder zweiten Satz ein klares Maß nennen und bis zum Schluss durchhalten.',
+            'Eine echte Konzession vor dem Gegenargument („It is true that … / Admittedly, …“), erst danach die eigene Position verteidigen.',
+            'Hedging statt Absolutheit: tend to · in most cases · arguably.',
+            '200–250 Wörter — die Zählung läuft mit.',
+            'Rechtschreibung gezielt: „data“ ist unzählbar (the data show, nicht „datas“), „more than“ nicht „more as“, „the loser“ nicht „the looser“.'
+          ]
+        },
+        {
+          id: 'd13-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Die falschen Sätze von heute Morgen neu — aus dem Kopf, nicht abgeschrieben. Repair stand zuletzt bei neun ausgelassenen Tagen in Folge (Stand Tag 10) — ob Tag 11 und Tag 12 das fortsetzen, ist mangels Sicherung unbekannt. Heute zählt ein ehrlicher Versuch bei r1.',
+          fields: [
+            { id: 'r1', label: 'Falscher Drill-Satz 1 → neu, mit der Regel dahinter in drei Wörtern' },
+            { id: 'r2', label: 'Falscher Drill-Satz 2 → neu, mit der Regel dahinter' },
+            { id: 'r3', label: 'Falscher Drill-Satz 3 → neu, mit der Regel dahinter' },
+            { id: 'r4', label: 'Die Reading-Frage, bei der du am unsichersten warst — Antwort neu, in eigenen Worten, ohne ein einziges Zitat' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd13-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (to relocate responsibility · systemic crisis · to phase out · to converge on a point · empirically). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
   }
 ];
