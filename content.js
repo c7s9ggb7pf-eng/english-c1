@@ -1811,5 +1811,129 @@ export const DAYS = [
         }
       ]
     }
+  },
+  {
+    day: 14,
+    date: '2026-08-14',
+    phase: 2,
+    focus: 'Sicherung zu Tag 11, 12 und 13 fehlt weiterhin — dieselben Grammatikziele bleiben unverändert offen (is thought to, is known to have, under the pretext of, taken aback by, strange as it may seem, would rather, Not only-Inversion) · Schreiben: lexikalische Variation und Zustimmungsgrad weiterhin hart prüfen, Aufgabenstellung nicht zitieren · neue Wortgenauigkeits-Falle: eventually ≠ eventuell',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd14-read',
+          type: 'read',
+          name: 'Reading',
+          minutes: 12,
+          title: 'The Hyphen That Would Not Disappear',
+          kicker: 'Text 14 · Phase 2',
+          intro: 'Neue Wortgenauigkeits-Falle: ein Wort, das im Deutschen fast identisch aussieht wie „eventuell" (möglicherweise), im Englischen aber „schließlich, mit der Zeit" bedeutet — eine Aussage über den Ausgang, keine Unsicherheit. Ziel für Text + Fragen bleibt bei 8 Minuten.',
+          paragraphs: [
+            'For much of the twentieth century, immigration policy across Western Europe rested on the tacit assumption that assimilation was not merely desirable but, eventually, unavoidable: that the children and grandchildren of migrants would gradually shed whatever distinguished them from the majority until no meaningful difference remained. This expectation has proved considerably less robust than its architects supposed. Longitudinal surveys conducted across several countries now indicate that so-called second-generation migrants frequently report a stronger, not weaker, sense of ethnic or religious belonging than their parents did upon arrival — a finding that straightforwardly linear models of integration struggle to accommodate.',
+            'Sociologists increasingly favour the term hyphenated identity to describe this pattern: rather than replacing one affiliation with another, individuals appear to hold both simultaneously, moving between cultural registers as context demands, a practice sometimes labelled code-switching, borrowed from linguistics but now applied more broadly to behaviour and self-presentation. Critics of the assimilationist paradigm argue that its persistence in political rhetoric owes less to empirical support than to an underlying anxiety about social cohesion; defenders counter that some shared civic identity remains indispensable if a diverse society is to function at all. What both camps tend to overlook is that hyphenation itself may not be a stage on the way to somewhere else, but the destination.'
+          ],
+          rule: 'Auf Englisch, ganze Sätze. Höchstens drei Wörter am Stück aus dem Text. Ziel für Lesen + Fragen: 8 Minuten.',
+          questions: [
+            { id: 'q1', text: 'The writer says assimilation was thought not merely desirable but, “eventually, unavoidable”. What does “eventually” mean here, and what wrong meaning would a German-speaking reader get if they connected it to “eventuell”?', hint: 'Neue Wortgenauigkeits-Falle — falscher Freund: eventually heißt „schließlich/mit der Zeit", nicht „eventuell/möglicherweise" (das wäre possibly/perhaps).' },
+            { id: 'q2', text: 'Explain in your own words why the writer says second-generation migrants challenge “straightforwardly linear models of integration”.' },
+            { id: 'q3', text: 'Does the writer conclude that the assimilationist model of integration has been proven broadly correct? Answer yes or no, then quote the exact words that justify your answer.', hint: 'Präzisionsfalle — der Text sagt ausdrücklich, dass sich die Erwartung als „considerably less robust than its architects supposed" erwiesen hat.' },
+            { id: 'q4', text: '“Hyphenation itself may not be a stage on the way to somewhere else, but the destination.” What does this mean in practice? One sentence, in your own words.' },
+            { id: 'q5', text: 'What do defenders of a shared civic identity say is necessary for a diverse society to function, according to the text?' },
+            { id: 'q6', text: 'Fünf Ausdrücke aus dem Text für die Vokabelbank — mit eigenem Beispielsatz, nicht mit Übersetzung.' }
+          ]
+        },
+        {
+          id: 'd14-use',
+          type: 'drill',
+          name: 'Use of English',
+          minutes: 10,
+          kicker: 'Sicherung zu Tag 11, 12 und 13 fehlt weiterhin — dieselben Zielsätze bleiben offen: is thought to, is known to have, under the pretext of, taken aback by, strange as it may seem, would rather, Not only-Inversion · zusätzlich datas/more as/-ing-/-ed-Adjektiv am neuen Thema Migration und Identität',
+          rules: [
+            { title: 'Passiv der Meinung — <i>is thought to</i> + Grundform, weiterhin zweiter sauberer Tag gesucht', body: 'An Tag 9 fehlerfrei, an Tag 10 die Struktur richtig, aber mit falschem Objekt. Tag 11 bis Tag 13 blieben ohne Auswertung — der Zielpunkt bleibt unverändert offen.', example: 'Second-generation migrants <b>are thought to</b> favour a hybrid identity over full assimilation.' },
+            { title: 'Passiv der Meinung — <i>is known to have</i> + Partizip, weiterhin dritter sauberer Tag gesucht', body: 'An Tag 7 und Tag 10 sauber, an Tag 8 falsch. Noch ein sauberer Tag bis zum Erledigt-Kriterium.', example: 'The policy <b>is known to have</b> discouraged cultural expression in schools.' },
+            { title: '<i>under the pretext of</i>, weiterhin dritter sauberer Tag gesucht · <i>taken aback</i> <u>by</u> und <i>strange as it may seem</i>, jeweils zweiter sauberer Tag gesucht', body: 'Alle drei standen an Tag 8/9/10 zum ersten Mal richtig, Tag 11 bis Tag 13 blieben ohne Auswertung — heute erneut bestätigen.', example: 'The school banned the language <b>under the pretext of</b> promoting integration. · Many teachers were completely <b>taken aback by</b> the students’ fluent code-switching. · <b>Strange as it may seem</b>, a stronger sense of heritage often emerges in the second generation, not the first.' },
+            { title: '<i>would rather</i> + Vergangenheitsform, weiterhin dritter sauberer Tag gesucht · Inversion — <i>Not only … but also</i>, Grundform nach <i>did</i>', body: 'An Tag 10 zwei neue Fehlervarianten in beiden Punkten. Nach <i>did</i> steht die Grundform, nicht die Vergangenheitsform — „did … ignore", nicht „did … ignored".', example: 'I<b>’d rather</b> the curriculum <b>reflected</b> more than one cultural perspective. · <b>Not only did</b> the policy <b>ignore</b> bilingual pupils, <b>but</b> it <b>also</b> discouraged their parents.' },
+            { title: '<i>data</i> ist unzählbar (kein „datas", Verb im Plural) · <i>more than</i> (nicht <i>more as</i>) · <u>-ing</u>-Adjektiv für die Ursache, <u>-ed</u> für die Person, die es erlebt', body: 'Drei Fehler aus dem Schreibblock der letzten Tage direkt im Drill üben, bevor sie im freien Text wieder auftauchen.', example: 'The <b>data suggest</b> that hyphenated identities are becoming <b>more</b> common <b>than</b> official statistics assume. · <b>Alienating</b> policies produce <b>alienated</b> communities.' }
+          ],
+          instruction: 'Vollständige Sätze, aus dem Kopf, ohne oben nachzusehen. Erst nach allen zehn die Lösungen aufdecken.',
+          items: [
+            { id: 'd14i1',  prompt: 'Migranten der zweiten Generation sollen angeblich eine hybride Identität einer vollständigen Assimilation vorziehen.', key: 'is thought to',          solution: 'Second-generation migrants are thought to favour a hybrid identity over full assimilation.' },
+            { id: 'd14i2',  prompt: 'Die Politik hat bekanntermaßen den kulturellen Ausdruck in Schulen entmutigt.',                                       key: 'is known to have',       solution: 'The policy is known to have discouraged cultural expression in schools.' },
+            { id: 'd14i3',  prompt: 'Die Schule verbot die Sprache unter dem Vorwand, die Integration zu fördern.',                                       key: 'under the pretext of',   solution: 'The school banned the language under the pretext of promoting integration.' },
+            { id: 'd14i4',  prompt: 'Viele Lehrer waren von dem fließenden Code-Switching der Schüler völlig überrascht.',                                key: 'taken aback by',         solution: 'Many teachers were completely taken aback by the students’ fluent code-switching.' },
+            { id: 'd14i5',  prompt: 'So seltsam es klingen mag, ein stärkeres Zugehörigkeitsgefühl entsteht oft erst in der zweiten Generation, nicht in der ersten.', key: 'strange as it may seem', solution: 'Strange as it may seem, a stronger sense of heritage often emerges in the second generation, not the first.' },
+            { id: 'd14i6',  prompt: 'Ich würde es vorziehen, wenn der Lehrplan mehr als eine kulturelle Perspektive widerspiegelte.',                      key: 'would rather + past',    solution: 'I’d rather the curriculum reflected more than one cultural perspective.' },
+            { id: 'd14i7',  prompt: 'Nicht nur ignorierte die Politik zweisprachige Schüler, sie entmutigte auch deren Eltern.',                          key: 'Not only … but',         solution: 'Not only did the policy ignore bilingual pupils, but it also discouraged their parents.' },
+            { id: 'd14i8',  prompt: 'Die Daten deuten darauf hin, dass hybride Identitäten häufiger werden, nicht seltener.',                             key: 'data + Plural',          solution: 'The data suggest that hyphenated identities are becoming more common, not less.' },
+            { id: 'd14i9',  prompt: 'Junge Migranten vertrauen oft der eigenen Erfahrung mehr als offiziellen Statistiken.',                              key: 'more than',              solution: 'Young migrants often trust their own experience more than official statistics.' },
+            { id: 'd14i10', prompt: 'Entfremdende Politik erzeugt entfremdete Gemeinschaften.',                                                           key: '-ing-Adjektiv',         solution: 'Alienating policies produce alienated communities.' }
+          ]
+        },
+        {
+          id: 'd14-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Should societies expect immigrants to assimilate into a single national culture, or should identity be allowed to remain plural and hyphenated?',
+          ruleTitle: 'Neuer Themenwortschatz: identity, assimilation, belonging, heritage, hybridity.',
+          ruleBody: 'Mindestens zwei dieser Wörter müssen tatsächlich fallen, nicht umschrieben. Tag 11 bis Tag 13 sind nicht ausgewertet — ob die Gegenposition dort aufgegriffen wurde, ist unbekannt. Heute erneut bewusst mit „That said, …" oder „One could object that …" in den zweiten Durchgang einsteigen, bevor die eigene Position weitergeführt wird. Abbrüche mit „or rather / what I mean is” reparieren statt neu anfangen.',
+          phrases: [
+            'identity · assimilation · belonging · heritage · hybridity',
+            'tend to · arguably · in most cases',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden, mit einer vorgegebenen Gegenposition, auf die du reagieren musst: „Some would argue that without a shared national culture, social cohesion breaks down entirely — how would you respond?“ Beginne den zweiten Durchgang ausdrücklich mit einer Reaktion auf genau diesen Satz, bevor du weiterredest. Dazu weiterhin: mindestens zwei Themenwörter, mindestens ein Hedge-Wort, unter fünf Füllwörtern.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd14-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Weiterhin Nutzerpriorität: kein inhaltstragendes Wort im Fließtext zweimal · Erster Satz: eigene These, keine zitierte Aufgabenstellung — an Tag 10 der bisher deutlichste Rückfall, Tag 11 bis Tag 13 ohne Auswertung · Grad der Zustimmung seit mehreren Schreibtagen ohne klares Maß · Konzession vor dem Gegenargument · datas/more as/the looser weiterhin vermeiden',
+          prompt: '“Because a shared national culture is necessary for social cohesion, immigrants should be expected to assimilate rather than maintain a separate, hyphenated identity.” To what extent do you agree?',
+          min: 200, max: 250,
+          checklist: [
+            'Weiterhin Pflicht bei jedem Schreibblock: kein inhaltstragendes Wort (Nomen, Verb, Adjektiv, Adverb) im ganzen Text zweimal verwenden — für Wiederholungen ein Synonym, eine Umschreibung, ein Pronomen oder einen Oberbegriff nutzen. Funktionswörter (the, a, is, and …) zählen nicht. Vor dem Abgeben den Text noch einmal gezielt nach Wiederholungen absuchen.',
+            'Erster Satz: deine These in eigenen Worten. Die Aufgabenstellung darf nicht zitiert werden, auch nicht in Anführungszeichen.',
+            '„To what extent“ verlangt ein Maß (largely · only in part · rarely) — das fehlt seit mehreren Schreibtagen komplett. Heute im ersten oder zweiten Satz ein klares Maß nennen und bis zum Schluss durchhalten.',
+            'Eine echte Konzession vor dem Gegenargument („It is true that … / Admittedly, …“), erst danach die eigene Position verteidigen.',
+            'Hedging statt Absolutheit: tend to · in most cases · arguably.',
+            '200–250 Wörter — die Zählung läuft mit.',
+            'Rechtschreibung gezielt: „data“ ist unzählbar (the data show, nicht „datas“), „more than“ nicht „more as“, „the loser“ nicht „the looser“.'
+          ]
+        },
+        {
+          id: 'd14-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Die falschen Sätze von heute Morgen neu — aus dem Kopf, nicht abgeschrieben. Repair stand zuletzt bei neun ausgelassenen Tagen in Folge (Stand Tag 10) — ob Tag 11 bis Tag 13 das fortsetzen, ist mangels Sicherung unbekannt. Heute zählt ein ehrlicher Versuch bei r1.',
+          fields: [
+            { id: 'r1', label: 'Falscher Drill-Satz 1 → neu, mit der Regel dahinter in drei Wörtern' },
+            { id: 'r2', label: 'Falscher Drill-Satz 2 → neu, mit der Regel dahinter' },
+            { id: 'r3', label: 'Falscher Drill-Satz 3 → neu, mit der Regel dahinter' },
+            { id: 'r4', label: 'Die Reading-Frage, bei der du am unsichersten warst — Antwort neu, in eigenen Worten, ohne ein einziges Zitat' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd14-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (hyphenated identity · to shed (a distinction) · longitudinal survey · code-switching · indispensable). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
   }
 ];
