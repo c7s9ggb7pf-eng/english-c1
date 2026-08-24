@@ -73,7 +73,12 @@ export const ERRORS = [
   { id: 'topicvoc',  group: 'Sprechen',  text: 'Themenwortschatz statt Umschreibung' },
   { id: 'noCopy',    group: 'Schreiben', text: 'Aufgabenstellung nicht abschreiben — mit der These beginnen' },
   { id: 'filler',    group: 'Sprechen',  text: 'Füllwortdichte senken' },
-  { id: 'lexvar',    group: 'Schreiben', text: 'Lexikalische Variation — kein Wort im Fließtext zweimal' }
+  { id: 'lexvar',    group: 'Schreiben', text: 'Lexikalische Variation — kein Wort im Fließtext zweimal' },
+  { id: 'transfer',  group: 'Schreiben', text: 'Transferversagen — im Drill richtig, im Aufsatz nicht angewendet' },
+  { id: 'nominal',   group: 'Schreiben', text: 'Deutsche Substantivketten (Nominalisierung) — Verb statt Nomen prüfen' },
+  { id: 'ingEd',     group: 'Grammatik', text: '-ing vs. -ed beim Partizip' },
+  { id: 'synStack',  group: 'Schreiben', text: 'Synonyme gestapelt statt variiert — erst beim zweiten Vorkommen wechseln' },
+  { id: 'register',  group: 'Schreiben', text: 'Gesprochenes Register im Aufsatz vermeiden' }
 ];
 
 /* Aktueller Gesamtstand aus der letzten Auswertung der Sicherungsdateien (siehe REVIEWS unten). */
@@ -90,7 +95,8 @@ export const REVIEW_ERRORS = {
   wrather: 2, inversion: 3, wish: 4, saidto: 1, cond2: 5,
   preps: 1,
   spelling: 0, length: 5, counter: 3, degree: 2, noCopy: 5,
-  repair: 3, topicvoc: 2, filler: 0, lexvar: 0
+  repair: 3, topicvoc: 2, filler: 0, lexvar: 0,
+  transfer: 0, nominal: 0, ingEd: 0, synStack: 0, register: 0
 };
 
 /* Auswertung jeder Sicherung, Tag für Tag — dieselbe Rückmeldung wie in FORTSCHRITT.md.
@@ -1932,6 +1938,127 @@ export const DAYS = [
           name: 'Vokabelbank',
           minutes: 5,
           instruction: 'Fünf Ausdrücke aus dem Morgentext aufnehmen (hyphenated identity · to shed (a distinction) · longitudinal survey · code-switching · indispensable). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
+  },
+  {
+    day: 25,
+    date: '2026-08-25',
+    phase: 3,
+    focus: 'Rückkehr nach zehn Tagen ohne Einheit (Tag 15–24 nicht erzeugt) — offene Fehlerprofilpunkte aus der letzten Auswertung vom 18.08. unverändert: Nominalisierung, -ing/-ed-Partizip, Transferversagen (Drill richtig, Aufsatz nicht), Synonyme gestapelt statt variiert · erstmals im neuen Format aus PLAN.md (Mustertext klauen, Satzveredelung, Kollokationen) · Thema Phase 3: algorithmische Personalauswahl, weiterhin Abitur-LK-Register statt vereinfachtem Business-Englisch',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd25-read',
+          type: 'read',
+          name: 'Mustertext',
+          minutes: 8,
+          title: 'The Algorithm That Screens You Before a Human Does',
+          kicker: 'Mustertext 25 · Phase 3 — klauen, nicht Verständnis beweisen',
+          intro: 'Kurzer Text, ohne Wörterbuch lesbar, ein Niveau über deinem eigenen Schreiben. Keine Verständnisfragen — gesucht sind die sechs wiederverwendbaren Gerüste, die in jedem argumentativen Text funktionieren, unabhängig vom Thema.',
+          paragraphs: [
+            'At first glance, the case for algorithmic hiring seems compelling. Software can screen thousands of applications in seconds, applying the same criteria to every candidate and, in principle, removing the biases that creep into a tired recruiter’s judgement. Firms that have adopted such systems report shorter hiring cycles and, in some studies, a more diverse shortlist.',
+            'Yet closer scrutiny reveals a flaw few employers are willing to name. An algorithm trained on past hiring decisions does not escape bias; it merely launders it, learning to repeat whichever pattern the historical data happens to contain. The real issue lies not in the technology itself, but in the assumption that past success predicts future success in the same narrow way.',
+            'A more balanced reading suggests that the truth lies somewhere between these extremes. Algorithms should narrow the field, not decide it outright — not merely because human judgement remains necessary at the margins, but because accountability for a rejected candidate cannot be outsourced to a system nobody can fully explain.'
+          ],
+          rule: 'Kein Nachschlagen. Ziel für Text + Aufgabe: 8 Minuten. Nachschlagen erst in der Repair-Phase am Abend.',
+          questions: [
+            { id: 'q1', text: 'Schreib die sechs Gerüste heraus, die du in jedem beliebigen Klausur-Essay wiederverwenden kannst — unabhängig vom Thema. Sie stecken alle im Text (z. B. der Einstieg „At first glance, the case for X seems compelling“, das Scharnier „Yet closer scrutiny reveals …“, die Ursache-statt-Symptom-Wendung, die Synthese am Ende).' },
+            { id: 'q2', text: 'Wähl zwei der sechs Gerüste aus und schreib je einen eigenen Satz zu einem KOMPLETT ANDEREN Thema (z. B. Klimapolitik oder Notenbewertung an Schulen). Das ist der eigentliche Test — an Tag 18 saß dieselbe Struktur im Drill, tauchte zwanzig Minuten später im Aufsatz aber an keiner einzigen Stelle mehr auf.' }
+          ]
+        },
+        {
+          id: 'd25-use',
+          type: 'drill',
+          name: 'Satzveredelung & Kollokationen',
+          minutes: 14,
+          kicker: 'Sicherung zu Tag 15–24 fehlt komplett (keine Einheiten erzeugt) — dieselben Ziele wie in der Auswertung vom 18.08.: is thought to, under the pretext of, would rather, Not only-Inversion weiterhin offen, dazu neu Nominalisierung und -ing/-ed',
+          rules: [
+            { title: 'Nominalisierung vermeiden — Verb statt Verb-abgeleitetem Nomen', body: 'Deutsch bevorzugt Substantivketten (<i>die Verwendung von X ermöglicht eine Beschleunigung von Y</i>), Englisch bevorzugt Verben. Faustregel: taucht ein Nomen wie <i>usage, reduction, implementation, knowledge</i> auf, prüfen, ob das zugrunde liegende Verb selbst geht.', example: '<b>Using</b> algorithms <b>speeds up</b> how candidates are pre-selected. — nicht: The use of algorithms enables an acceleration of pre-selection.' },
+            { title: '-ing vs. -ed beim Partizip', body: '-ing beschreibt, was die Sache tut oder bewirkt; -ed beschreibt, was die Person dabei fühlt. Zweiter dokumentierter Fehler nach Tag 10 und Tag 18 — heute gezielt in einem neuen Satz.', example: 'The process is <b>discouraging</b>; many applicants feel <b>discouraged</b> by it.' },
+            { title: 'Synonyme variieren, nicht stapeln', body: 'Variation heißt: beim ZWEITEN Vorkommen ein anderes Wort, nicht drei Synonyme direkt nebeneinander in einem Satz (an Tag 18 „a drawback and shortcoming“ in einem Atemzug).', example: 'This raises a genuine <b>concern</b> — and, further down the text, a separate <b>objection</b> worth taking seriously (nicht: a concern, drawback and shortcoming all at once).' },
+            { title: 'Acht Kollokationen für argumentative Texte', body: 'to make a compelling case for sth · to raise legitimate concerns · to strike a balance between X and Y · a sweeping change · a widely held assumption · to gain traction · to fall into the trap of doing sth · to bear the brunt of sth — dieselben acht wie an Tag 18, heute mit neuem Thema neu produziert.', example: 'Critics <b>raise legitimate concerns</b> about how the training data was collected.' }
+          ],
+          instruction: 'i1–i6: Satzveredelung — den vorgegebenen Satz mit dem genannten Werkzeug auf Oberstufenniveau heben. i7–i10: vier der acht Kollokationen oben, je ein eigener Satz zum Thema algorithmische Personalauswahl. Vollständige Sätze, aus dem Kopf. Erst danach die Lösungen aufdecken.',
+          items: [
+            { id: 'd25i1',  prompt: 'Die Verwendung von Algorithmen ermöglicht eine Beschleunigung der Vorauswahl.', key: 'Verb statt Nomen', solution: 'Using algorithms speeds up how candidates are pre-selected.' },
+            { id: 'd25i2',  prompt: 'Für viele Bewerber ist der automatisierte Auswahlprozess entmutigend, weil sie sich davon entmutigt fühlen.', key: '-ing vs. -ed', solution: 'For many applicants, the automated selection process is discouraging, because they feel discouraged by it.' },
+            { id: 'd25i3',  prompt: 'Der Algorithmus wird für neutral gehalten, obwohl er die historischen Vorurteile vermutlich reproduziert.', key: 'is thought to + Grundform', solution: 'The algorithm is thought to be neutral, although it probably reproduces historical bias.' },
+            { id: 'd25i4',  prompt: 'Das Unternehmen lehnte den Bewerber unter dem Vorwand mangelnder Erfahrung ab.', key: 'under the pretext of', solution: 'The company rejected the applicant under the pretext of insufficient experience.' },
+            { id: 'd25i5',  prompt: 'Ich würde es vorziehen, wenn ein Mensch die endgültige Entscheidung träfe.', key: 'would rather + Vergangenheit', solution: 'I’d rather a human made the final decision.' },
+            { id: 'd25i6',  prompt: 'Nicht nur ignorierte der Algorithmus ungewöhnliche Lebensläufe, er benachteiligte auch ältere Bewerber.', key: 'Not only … but also + Grundform', solution: 'Not only did the algorithm ignore unconventional résumés, but it also disadvantaged older applicants.' },
+            { id: 'd25i7',  prompt: 'Eigener Satz zum Thema mit „to raise legitimate concerns“.', key: 'to raise legitimate concerns', solution: 'Critics of automated hiring raise legitimate concerns about how the training data was collected.' },
+            { id: 'd25i8',  prompt: 'Eigener Satz zum Thema mit „to strike a balance between X and Y“.', key: 'to strike a balance between X and Y', solution: 'Recruiters must strike a balance between efficiency and fairness.' },
+            { id: 'd25i9',  prompt: 'Eigener Satz zum Thema mit „to fall into the trap of doing sth“.', key: 'to fall into the trap of doing sth', solution: 'Companies fall into the trap of assuming that a faster process is automatically a fairer one.' },
+            { id: 'd25i10', prompt: 'Eigener Satz zum Thema mit „to bear the brunt of sth“.', key: 'to bear the brunt of sth', solution: 'Older applicants often bear the brunt of algorithmic filtering that favours recent graduates.' }
+          ]
+        },
+        {
+          id: 'd25-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Should companies be allowed to let AI systems make hiring decisions without human review?',
+          ruleTitle: 'Themenwortschatz: bias, accountability, transparency, discretion, oversight.',
+          ruleBody: 'Mindestens zwei dieser Wörter müssen tatsächlich fallen, nicht umschrieben. Reagier im zweiten Durchgang wirklich auf den vorgegebenen Einwand — an Tag 10 wurde die eigene Position stattdessen unkommentiert gewechselt, ohne auf das Gegenargument einzugehen. Abbrüche mit „or rather / what I mean is“ reparieren statt neu anfangen.',
+          phrases: [
+            'bias · accountability · transparency · discretion · oversight',
+            'tend to · arguably · in most cases',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden, mit einer vorgegebenen Gegenposition, auf die du reagieren musst: „Some would argue that human interviewers are just as biased as algorithms, so removing them changes nothing — how would you respond?“ Beginne den zweiten Durchgang ausdrücklich mit einer Reaktion auf genau diesen Satz. Dazu weiterhin: mindestens zwei Themenwörter, mindestens ein Hedge-Wort, unter fünf Füllwörtern.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd25-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Dasselbe Thema wie morgens, mit Absicht — der Inhalt steht schon, volle Aufmerksamkeit auf die Sprache · Pflicht: mindestens zwei Gerüste aus dem Mustertext und zwei Kollokationen aus dem Drill tatsächlich einbauen (Gegenmittel gegen das Transferversagen von Tag 18) · kein inhaltstragendes Wort zweimal · Nominalisierung und gesprochenes Register vermeiden',
+          prompt: '“Because algorithmic hiring removes human bias from recruitment, companies should let AI systems make hiring decisions without human review.” To what extent do you agree?',
+          min: 200, max: 250,
+          checklist: [
+            'Mindestens drei Gerüste aus dem Mustertext und zwei Kollokationen aus dem Drill eingebaut — nicht nur im Kopf behalten, tatsächlich in den Text schreiben.',
+            'Kein inhaltstragendes Wort (Nomen, Verb, Adjektiv, Adverb) im ganzen Text zweimal — Synonym, Umschreibung, Pro-Form oder Oberbegriff statt Wiederholung. Beim zweiten Vorkommen wechseln, nicht mehrere Synonyme auf einmal stapeln.',
+            'Erster Satz: deine These in eigenen Worten. Die Aufgabenstellung wird nicht zitiert, auch nicht in Anführungszeichen — an Tag 10 der bisher deutlichste Rückfall genau hier.',
+            'Der Grad der Zustimmung steht im ersten oder zweiten Satz (largely · only in part · to a limited extent) und bleibt bis zum Schluss konsistent.',
+            'Eine echte Konzession, bevor du deine Position verteidigst (Admittedly, … / It is true that …).',
+            'Verb statt Nomen, wo möglich (keine Substantivketten wie „the reduction of the objectivity of the evaluation“).',
+            'Kein gesprochenes Register wie „or something like this“ — das kostet im NRW-Raster Ausdrucksvermögen.',
+            'Rechtschreibung: data ist unzählbar (the data suggest, nie „datas“), more than nie more as, the loser nie the looser.'
+          ]
+        },
+        {
+          id: 'd25-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Ohne aktuelle Sicherung stützt sich Repair heute auf die am längsten offenen Punkte aus dem Fehlerprofil statt auf einen konkreten Fehler von gestern — Repair stand zuletzt (Tag 14) bei neun ausgelassenen Tagen in Folge. Ein ehrlicher Versuch bei r1 reicht.',
+          fields: [
+            { id: 'r1', label: 'Schreib den would-rather-Satz aus dem Drill (d25i5) aus dem Kopf neu, ohne hinzusehen — mit der Regel in drei Wörtern dahinter' },
+            { id: 'r2', label: 'Schreib den Not-only-Satz aus dem Drill (d25i6) aus dem Kopf neu, ohne hinzusehen' },
+            { id: 'r3', label: 'Ein Satz aus deinem heutigen Writing, in dem du ein Nomen durch ein Verb ersetzt — die Vorher- und die Nachher-Version' },
+            { id: 'r4', label: 'Die Reading-Frage (q2, Transfer auf ein anderes Thema), bei der du am unsichersten warst — Antwort neu, in eigenen Worten' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd25-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem heutigen Mustertext oder Drill aufnehmen (to launder bias · to outsource accountability · at the margins · to narrow the field · discretion). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
         }
       ]
     }
