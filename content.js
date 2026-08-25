@@ -2062,5 +2062,126 @@ export const DAYS = [
         }
       ]
     }
+  },
+  {
+    day: 26,
+    date: '2026-08-26',
+    phase: 3,
+    focus: 'Keine neue Sicherung seit Tag 10 (11.08.) — Tag 11 bis 24 bleiben unausgewertet, dieselben Ziele aus der letzten Auswertung unverändert offen: is thought to, under the pretext of, would rather, Not only-Inversion, dazu weiterhin Nominalisierung und -ing/-ed seit Tag 18/25 · letzter Tag der Phase 3 (Business & Bewerbung), Thema Verzerrungen im Bewerbungsgespräch, weiterhin Abitur-LK-Register · ab morgen Phase 4 (Simulation)',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd26-read',
+          type: 'read',
+          name: 'Mustertext',
+          minutes: 8,
+          title: 'The Ninety Seconds That Decide a Career',
+          kicker: 'Mustertext 26 · Phase 3 — klauen, nicht Verständnis beweisen',
+          intro: 'Letzter Tag der Phase 3, neues Thema: Verzerrungen im Bewerbungsgespräch. Weiterhin keine Verständnisfragen — gesucht sind sechs neue, wiederverwendbare Gerüste, die sich von den sechs aus Tag 25 unterscheiden.',
+          paragraphs: [
+            'It would be tempting to conclude that a good candidate reveals themselves within the first few minutes of an interview: the firm handshake, the composed opening sentence, the easy eye contact. Recruiters certainly behave as though this were true, reporting that they form a lasting judgement of a candidate’s competence well before the substantive questions even begin.',
+            'What is often overlooked, however, is how little that early judgement has to do with the skills the job actually requires. Psychologists studying interview outcomes have repeatedly found that impressions formed in the opening moments correlate more closely with confidence and physical appearance than with subsequent job performance. This is not to deny that certain traits genuinely surface early; it is only to insist that fluency under pressure is not the same thing as competence.',
+            'Few would dispute that a more structured format improves an interview; fewer still would concede that structure alone eliminates bias, since even a scripted question can be marked more generously once a favourable impression has already taken hold. If anything, the persistence of this effect illustrates that good intentions are no substitute for a process designed, from the outset, to make first impressions irrelevant.'
+          ],
+          rule: 'Kein Nachschlagen. Ziel für Text + Aufgabe: 8 Minuten. Nachschlagen erst in der Repair-Phase am Abend.',
+          questions: [
+            { id: 'q1', text: 'Schreib die sechs Gerüste heraus, die du in jedem beliebigen Klausur-Essay wiederverwenden kannst — unabhängig vom Thema. Sie stecken alle im Text: der Einstieg „It would be tempting to conclude that X“, das Scharnier „What is often overlooked, however, is …“, die Präzisierung „This is not to deny that X; it is only to insist that Y“, die doppelte Einschränkung „Few would dispute that X; fewer still would concede that Y“, der Verstärker „If anything, …“, und der Beleg-Rahmen „[Fachleute] studying X have repeatedly found that …“.' },
+            { id: 'q2', text: 'Wähl zwei der sechs Gerüste aus und schreib je einen eigenen Satz zu einem KOMPLETT ANDEREN Thema (z. B. Notenbewertung an Schulen oder Klimapolitik). Das ist der eigentliche Test — an Tag 18 saß dieselbe Struktur im Drill, tauchte im Aufsatz zwanzig Minuten später aber an keiner einzigen Stelle mehr auf.' }
+          ]
+        },
+        {
+          id: 'd26-use',
+          type: 'drill',
+          name: 'Satzveredelung & Kollokationen',
+          minutes: 14,
+          kicker: 'Weiterhin keine neue Sicherung (letzte ausgewertete: Tag 10, 11.08.) — dieselben Ziele bleiben offen: is thought to, under the pretext of, would rather, Not only-Inversion, dazu Nominalisierung und -ing/-ed seit Tag 18/25',
+          rules: [
+            { title: 'Nominalisierung vermeiden — Verb statt Verb-abgeleitetem Nomen', body: 'Faustregel bleibt: taucht ein Nomen wie Durchführung, Verringerung, Bewertung auf, prüfen, ob das zugrunde liegende Verb selbst geht.', example: '<b>Interviewing</b> candidates in a structured way <b>reduces</b> how strongly unconscious bias influences the decision. — nicht: The structured conduct of interviews enables a reduction of the influence of unconscious bias.' },
+            { title: '-ing vs. -ed beim Partizip', body: '-ing beschreibt, was die Sache bewirkt; -ed beschreibt, was die Person dabei fühlt. Dritter dokumentierter Anlauf nach Tag 10 und Tag 18/25 — heute mit neuem Adjektivpaar.', example: 'The assessment centre is <b>intimidating</b>; many candidates feel <b>intimidated</b> by it.' },
+            { title: 'Synonyme variieren, nicht stapeln', body: 'Variation heißt: beim ZWEITEN Vorkommen ein anderes Wort, nicht mehrere Synonyme in einem Atemzug nebeneinanderstellen.', example: 'This raises a genuine <b>concern</b> — and, further down the text, a separate <b>objection</b> worth taking seriously (nicht: a concern, drawback and shortcoming all at once).' },
+            { title: 'Acht Kollokationen für argumentative Texte', body: 'to make a compelling case for sth · to raise legitimate concerns · to strike a balance between X and Y · a sweeping change · a widely held assumption · to gain traction · to fall into the trap of doing sth · to bear the brunt of sth — dieselben acht wie an Tag 18 und 25, heute zum Thema Bewerbungsgespräch neu produziert.', example: 'It is a <b>widely held assumption</b> that confident candidates are automatically the most competent ones.' }
+          ],
+          instruction: 'i1–i6: Satzveredelung — den vorgegebenen Satz mit dem genannten Werkzeug auf Oberstufenniveau heben. i7–i10: vier der acht Kollokationen oben, je ein eigener Satz zum Thema Bewerbungsgespräch. Vollständige Sätze, aus dem Kopf. Erst danach die Lösungen aufdecken.',
+          items: [
+            { id: 'd26i1',  prompt: 'Strukturiertes Interviewen verringert, wie stark unbewusste Vorurteile die Entscheidung beeinflussen.', key: 'Verb statt Nomen', solution: 'Interviewing candidates in a structured way reduces how strongly unconscious bias influences the decision.' },
+            { id: 'd26i2',  prompt: 'Für viele Bewerber ist das Assessment-Center einschüchternd, weil sie sich davon eingeschüchtert fühlen.', key: '-ing vs. -ed', solution: 'For many candidates, the assessment centre is intimidating, because they feel intimidated by it.' },
+            { id: 'd26i3',  prompt: 'Der erste Eindruck gilt als zuverlässig, obwohl er hauptsächlich unbewusste Vorurteile widerspiegelt.', key: 'is thought to + Grundform', solution: 'The first impression is thought to be reliable, although it mainly reflects unconscious bias.' },
+            { id: 'd26i4',  prompt: 'Der Personalchef lehnte die Bewerberin unter dem Vorwand mangelnder Berufserfahrung ab.', key: 'under the pretext of', solution: 'The hiring manager rejected the candidate under the pretext of insufficient work experience.' },
+            { id: 'd26i5',  prompt: 'Ich würde es vorziehen, wenn der Interviewer offene statt geschlossener Fragen stellte.', key: 'would rather + Vergangenheit', solution: 'I’d rather the interviewer asked open questions instead of closed ones.' },
+            { id: 'd26i6',  prompt: 'Nicht nur unterschätzte der Interviewer ihre Erfahrung, er ignorierte auch ihre Erfolge.', key: 'Not only … but also + Grundform', solution: 'Not only did the interviewer underestimate her experience, but he also ignored her achievements.' },
+            { id: 'd26i7',  prompt: 'Eigener Satz zum Thema mit „to make a compelling case for sth“.', key: 'to make a compelling case for sth', solution: 'Candidates who prepare concrete examples make a more compelling case for their own suitability.' },
+            { id: 'd26i8',  prompt: 'Eigener Satz zum Thema mit „to raise legitimate concerns“.', key: 'to raise legitimate concerns', solution: 'Psychologists raise legitimate concerns about how much a single interview really predicts job performance.' },
+            { id: 'd26i9',  prompt: 'Eigener Satz zum Thema mit „a widely held assumption“.', key: 'a widely held assumption', solution: 'It is a widely held assumption that confident candidates are automatically the most competent ones.' },
+            { id: 'd26i10', prompt: 'Eigener Satz zum Thema mit „to fall into the trap of doing sth“.', key: 'to fall into the trap of doing sth', solution: 'Interviewers often fall into the trap of hiring candidates who simply resemble themselves.' }
+          ]
+        },
+        {
+          id: 'd26-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Should companies rely on unstructured job interviews to decide who gets hired, or should first impressions be deliberately removed from the process?',
+          ruleTitle: 'Themenwortschatz: credibility, competence, rapport, authenticity, scrutiny.',
+          ruleBody: 'Mindestens zwei dieser Wörter müssen tatsächlich fallen, nicht umschrieben. Reagier im zweiten Durchgang wirklich auf den vorgegebenen Einwand — an Tag 10 wurde die eigene Position stattdessen unkommentiert gewechselt, ohne auf das Gegenargument einzugehen. Abbrüche mit „or rather / what I mean is“ reparieren statt neu anfangen.',
+          phrases: [
+            'credibility · competence · rapport · authenticity · scrutiny',
+            'tend to · arguably · in most cases',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden, mit einer vorgegebenen Gegenposition, auf die du reagieren musst: „Some would argue that a good first impression is itself evidence of the social skills the job requires, so removing it throws away useful information — how would you respond?“ Beginne den zweiten Durchgang ausdrücklich mit einer Reaktion auf genau diesen Satz. Dazu weiterhin: mindestens zwei Themenwörter, mindestens ein Hedge-Wort, unter fünf Füllwörtern.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd26-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Dasselbe Thema wie morgens, mit Absicht — volle Aufmerksamkeit auf die Sprache · Pflicht: mindestens drei Gerüste aus dem Mustertext und zwei Kollokationen aus dem Drill tatsächlich einbauen (Gegenmittel gegen das Transferversagen von Tag 18) · kein inhaltstragendes Wort zweimal · Nominalisierung und gesprochenes Register vermeiden · letzter Schreibtag der Phase 3',
+          prompt: '“Because first impressions in job interviews mostly reflect unconscious bias rather than real competence, companies should replace them with fully structured, script-based interviews.” To what extent do you agree?',
+          min: 200, max: 250,
+          checklist: [
+            'Mindestens drei Gerüste aus dem Mustertext und zwei Kollokationen aus dem Drill eingebaut — nicht nur im Kopf behalten, tatsächlich in den Text schreiben.',
+            'Kein inhaltstragendes Wort (Nomen, Verb, Adjektiv, Adverb) im ganzen Text zweimal — Synonym, Umschreibung, Pro-Form oder Oberbegriff statt Wiederholung. Beim zweiten Vorkommen wechseln, nicht mehrere Synonyme auf einmal stapeln.',
+            'Erster Satz: deine These in eigenen Worten. Die Aufgabenstellung wird nicht zitiert, auch nicht in Anführungszeichen.',
+            'Der Grad der Zustimmung steht im ersten oder zweiten Satz (largely · only in part · to a limited extent) und bleibt bis zum Schluss konsistent.',
+            'Eine echte Konzession, bevor du deine Position verteidigst (Admittedly, … / It is true that …).',
+            'Verb statt Nomen, wo möglich (keine Substantivketten wie „the reduction of the objectivity of the evaluation“).',
+            'Kein gesprochenes Register wie „or something like this“ — das kostet im NRW-Raster Ausdrucksvermögen.',
+            'Rechtschreibung: data ist unzählbar (the data suggest, nie „datas“), more than nie more as, the loser nie the looser.'
+          ]
+        },
+        {
+          id: 'd26-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Ohne aktuelle Sicherung stützt sich Repair weiterhin auf die am längsten offenen Punkte aus dem Fehlerprofil statt auf einen konkreten Fehler von gestern. Ein ehrlicher Versuch bei r1 reicht.',
+          fields: [
+            { id: 'r1', label: 'Schreib den would-rather-Satz aus dem Drill (d26i5) aus dem Kopf neu, ohne hinzusehen — mit der Regel in drei Wörtern dahinter' },
+            { id: 'r2', label: 'Schreib den Not-only-Satz aus dem Drill (d26i6) aus dem Kopf neu, ohne hinzusehen' },
+            { id: 'r3', label: 'Ein Satz aus deinem heutigen Writing, in dem du ein Nomen durch ein Verb ersetzt — die Vorher- und die Nachher-Version' },
+            { id: 'r4', label: 'Die Transfer-Frage (q2, zwei Gerüste auf ein anderes Thema übertragen), bei der du am unsichersten warst — Antwort neu, in eigenen Worten' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd26-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem heutigen Mustertext oder Drill aufnehmen (to form a lasting judgement · fluency under pressure · to take hold · a favourable impression · from the outset). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
   }
 ];
