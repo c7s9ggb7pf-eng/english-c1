@@ -2183,5 +2183,126 @@ export const DAYS = [
         }
       ]
     }
+  },
+  {
+    day: 27,
+    date: '2026-08-27',
+    phase: 4,
+    focus: 'Phase 4 beginnt (Simulation & Zwischenstand, Tag 27–32) — Aufgabenformate im Cambridge-CAE-Stil unter Originalzeit, Thema Nudges in der Politik · weiterhin keine neue Sicherung seit Tag 10 (11.08.), jetzt 17 Tage unausgewertet, offene Ziele unverändert: is thought to, under the pretext of, would rather, Not only-Inversion, dazu Nominalisierung und -ing/-ed seit Tag 18 · Abitur-LK-Register bleibt bindend, kein vereinfachtes Englisch',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd27-read',
+          type: 'read',
+          name: 'Mustertext',
+          minutes: 8,
+          title: 'The Invisible Architecture of Choice',
+          kicker: 'Mustertext 27 · Phase 4 — klauen, nicht Verständnis beweisen',
+          intro: 'Erster Tag der Phase 4 (Simulation), neues Thema: Nudges in der Politik. Weiterhin keine Verständnisfragen — gesucht sind sechs neue, wiederverwendbare Gerüste, die sich von denen aus Tag 25 und 26 unterscheiden.',
+          paragraphs: [
+            'It is often assumed that governments can only shape behaviour through prohibition or financial incentive; in practice, however, an expanding branch of policy relies on far subtler means — altering a default option on a form, rearranging the layout of a cafeteria, or timing a reminder to arrive at the very moment a decision is made. Central to this debate is the question of whether such interventions respect individual autonomy or merely disguise coercion as choice.',
+            'Proponents argue that these so-called nudges preserve freedom of choice while correcting for the cognitive shortcuts that lead people astray, whereas critics contend that any deliberate manipulation of context, however well intentioned, treats citizens as incapable of reasoning for themselves. Advocates further insist that the officials designing such interventions remain disinterested, guided by evidence rather than ideology — a claim considerably harder to verify than to make.',
+            'Whatever the merits of this argument, it fails to account for the asymmetry of information between the architect of a nudge and its intended subject, who rarely even perceives that a choice has been engineered. Far from resolving the tension between paternalism and liberty, the nudge merely relocates it, replacing a visible rule with an invisible one. The extent to which this constitutes genuine progress in policy design remains, at best, an open question.'
+          ],
+          rule: 'Kein Nachschlagen. Ziel für Text + Aufgabe: 8 Minuten. Nachschlagen erst in der Repair-Phase am Abend.',
+          questions: [
+            { id: 'q1', text: 'Schreib die sechs Gerüste heraus, die du in jedem beliebigen Klausur-Essay wiederverwenden kannst — unabhängig vom Thema. Sie stecken alle im Text: die Kippfigur „It is often assumed that X; in practice, however, Y“, das Scharnier „Central to this debate is the question of whether X or Y“, die Pro-Contra-Gegenüberstellung „Proponents argue that X, whereas critics contend that Y“, die Einwand-Abwehr „Whatever the merits of this argument, it fails to account for Z“, die Umkehrung „Far from resolving the tension between X and Y, Z merely relocates it“, und der gehedgte Schluss „The extent to which X holds true remains, at best, an open question“.' },
+            { id: 'q2', text: 'Wähl zwei der sechs Gerüste aus und schreib je einen eigenen Satz zu einem KOMPLETT ANDEREN Thema (z. B. Notenbewertung an Schulen oder Klimapolitik). Das ist der eigentliche Test — an Tag 18 saß dieselbe Struktur im Drill, tauchte im Aufsatz zwanzig Minuten später aber an keiner einzigen Stelle mehr auf.' }
+          ]
+        },
+        {
+          id: 'd27-use',
+          type: 'drill',
+          name: 'Satzveredelung & Kollokationen',
+          minutes: 14,
+          kicker: 'Weiterhin keine neue Sicherung (letzte ausgewertete: Tag 10, 11.08., jetzt 17 Tage her) — dieselben Ziele bleiben offen: is thought to, under the pretext of, would rather, Not only-Inversion, dazu Nominalisierung und -ing/-ed seit Tag 18',
+          rules: [
+            { title: 'Nominalisierung vermeiden — Verb statt Verb-abgeleitetem Nomen', body: 'Faustregel bleibt: taucht ein Nomen wie Durchführung, Verringerung, Bewertung auf, prüfen, ob das zugrunde liegende Verb selbst geht.', example: '<b>Changing</b> the default option <b>increases</b> how many people register as organ donors. — nicht: The change of the default option enables an increase of the number of registrations.' },
+            { title: '-ing vs. -ed beim Partizip', body: '-ing beschreibt, was die Sache bewirkt; -ed beschreibt, was die Person dabei fühlt. Vierter dokumentierter Anlauf nach Tag 10, 18/25 und 26 — heute mit neuem Adjektivpaar.', example: 'The constant monitoring of decisions is <b>unsettling</b>; many citizens feel <b>unsettled</b> by it.' },
+            { title: 'Synonyme variieren, nicht stapeln', body: 'Variation heißt: beim ZWEITEN Vorkommen ein anderes Wort, nicht mehrere Synonyme in einem Atemzug nebeneinanderstellen.', example: 'This raises a genuine <b>concern</b> — and, further down the text, a separate <b>objection</b> worth taking seriously (nicht: a concern, drawback and shortcoming all at once).' },
+            { title: 'Acht Kollokationen für argumentative Texte', body: 'to make a compelling case for sth · to raise legitimate concerns · to strike a balance between X and Y · a sweeping change · a widely held assumption · to gain traction · to fall into the trap of doing sth · to bear the brunt of sth — dieselben acht wie an Tag 18, 25 und 26, heute zum Thema Nudges in der Politik neu produziert.', example: 'Policymakers must <b>strike a balance between</b> protecting citizens and preserving their autonomy.' }
+          ],
+          instruction: 'i1–i6: Satzveredelung — den vorgegebenen Satz mit dem genannten Werkzeug auf Oberstufenniveau heben. i7–i10: vier der acht Kollokationen oben, je ein eigener Satz zum Thema Nudges in der Politik. Vollständige Sätze, aus dem Kopf. Erst danach die Lösungen aufdecken.',
+          items: [
+            { id: 'd27i1',  prompt: 'Die Umstellung der Voreinstellung ermöglicht eine Erhöhung der Zahl der Organspender.', key: 'Verb statt Nomen', solution: 'Changing the default option increases how many people register as organ donors.' },
+            { id: 'd27i2',  prompt: 'Für viele Bürger ist die ständige Überwachung ihrer Entscheidungen beunruhigend, weil sie sich davon beunruhigt fühlen.', key: '-ing vs. -ed', solution: 'For many citizens, the constant monitoring of their decisions is unsettling, because they feel unsettled by it.' },
+            { id: 'd27i3',  prompt: 'Der Nudge gilt als wirkungsvoll, obwohl er die eigentliche Ursache des Problems vermutlich nicht behebt.', key: 'is thought to + Grundform', solution: 'The nudge is thought to be effective, although it probably fails to address the underlying cause of the problem.' },
+            { id: 'd27i4',  prompt: 'Die Regierung rechtfertigte den Eingriff unter dem Vorwand des Gemeinwohls.', key: 'under the pretext of', solution: 'The government justified the intervention under the pretext of the common good.' },
+            { id: 'd27i5',  prompt: 'Ich würde es vorziehen, wenn die Bürger selbst über die Voreinstellung entschieden.', key: 'would rather + Vergangenheit', solution: 'I’d rather citizens decided on the default setting themselves.' },
+            { id: 'd27i6',  prompt: 'Nicht nur schränkte die Maßnahme die Wahlfreiheit ein, sie untergrub auch das Vertrauen in die Behörde.', key: 'Not only … but also + Grundform', solution: 'Not only did the measure restrict freedom of choice, but it also undermined trust in the authority.' },
+            { id: 'd27i7',  prompt: 'Eigener Satz zum Thema mit „to strike a balance between X and Y“.', key: 'to strike a balance between X and Y', solution: 'Policymakers must strike a balance between protecting citizens and preserving their autonomy.' },
+            { id: 'd27i8',  prompt: 'Eigener Satz zum Thema mit „a sweeping change“.', key: 'a sweeping change', solution: 'Making organ donation opt-out by default would be a sweeping change to public health policy.' },
+            { id: 'd27i9',  prompt: 'Eigener Satz zum Thema mit „to gain traction“.', key: 'to gain traction', solution: 'The idea of nudging citizens towards healthier habits has gained traction among policymakers in recent years.' },
+            { id: 'd27i10', prompt: 'Eigener Satz zum Thema mit „to bear the brunt of sth“.', key: 'to bear the brunt of sth', solution: 'Those least able to question a default setting often bear the brunt of a poorly designed nudge.' }
+          ]
+        },
+        {
+          id: 'd27-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Should governments use nudges to steer citizens toward better choices, or does this cross an ethical line by manipulating decisions without genuine consent?',
+          ruleTitle: 'Themenwortschatz: autonomy, paternalism, manipulation, transparency, accountability.',
+          ruleBody: 'Mindestens zwei dieser Wörter müssen tatsächlich fallen, nicht umschrieben. Reagier im zweiten Durchgang wirklich auf den vorgegebenen Einwand — an Tag 10 wurde die eigene Position stattdessen unkommentiert gewechselt, ohne auf das Gegenargument einzugehen. Abbrüche mit „or rather / what I mean is“ reparieren statt neu anfangen.',
+          phrases: [
+            'autonomy · paternalism · manipulation · transparency · accountability',
+            'tend to · arguably · in most cases',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden, mit einer vorgegebenen Gegenposition, auf die du reagieren musst: „Some would argue that nudges are harmless because citizens remain free to opt out at any time, so there is nothing manipulative about them — how would you respond?“ Beginne den zweiten Durchgang ausdrücklich mit einer Reaktion auf genau diesen Satz. Dazu weiterhin: mindestens zwei Themenwörter, mindestens ein Hedge-Wort, unter fünf Füllwörtern.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd27-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Dasselbe Thema wie morgens, mit Absicht — volle Aufmerksamkeit auf die Sprache · Pflicht: mindestens drei Gerüste aus dem Mustertext und zwei Kollokationen aus dem Drill tatsächlich einbauen (Gegenmittel gegen das Transferversagen von Tag 18) · kein inhaltstragendes Wort zweimal · Nominalisierung und gesprochenes Register vermeiden · erster Schreibtag der Phase 4, unter Originalzeit',
+          prompt: '“Because nudges influence behaviour without citizens’ full awareness, governments should be required to disclose every such intervention publicly before using it.” To what extent do you agree?',
+          min: 200, max: 250,
+          checklist: [
+            'Mindestens drei Gerüste aus dem Mustertext und zwei Kollokationen aus dem Drill eingebaut — nicht nur im Kopf behalten, tatsächlich in den Text schreiben.',
+            'Kein inhaltstragendes Wort (Nomen, Verb, Adjektiv, Adverb) im ganzen Text zweimal — Synonym, Umschreibung, Pro-Form oder Oberbegriff statt Wiederholung. Beim zweiten Vorkommen wechseln, nicht mehrere Synonyme auf einmal stapeln.',
+            'Erster Satz: deine These in eigenen Worten. Die Aufgabenstellung wird nicht zitiert, auch nicht in Anführungszeichen.',
+            'Der Grad der Zustimmung steht im ersten oder zweiten Satz (largely · only in part · to a limited extent) und bleibt bis zum Schluss konsistent.',
+            'Eine echte Konzession, bevor du deine Position verteidigst (Admittedly, … / It is true that …).',
+            'Verb statt Nomen, wo möglich (keine Substantivketten wie „the reduction of the objectivity of the evaluation“).',
+            'Kein gesprochenes Register wie „or something like this“ — das kostet im NRW-Raster Ausdrucksvermögen.',
+            'Rechtschreibung: data ist unzählbar (the data suggest, nie „datas“), more than nie more as, the loser nie the looser.'
+          ]
+        },
+        {
+          id: 'd27-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Ohne aktuelle Sicherung stützt sich Repair weiterhin auf die am längsten offenen Punkte aus dem Fehlerprofil statt auf einen konkreten Fehler von gestern. Ein ehrlicher Versuch bei r1 reicht.',
+          fields: [
+            { id: 'r1', label: 'Schreib den would-rather-Satz aus dem Drill (d27i5) aus dem Kopf neu, ohne hinzusehen — mit der Regel in drei Wörtern dahinter' },
+            { id: 'r2', label: 'Schreib den Not-only-Satz aus dem Drill (d27i6) aus dem Kopf neu, ohne hinzusehen' },
+            { id: 'r3', label: 'Ein Satz aus deinem heutigen Writing, in dem du ein Nomen durch ein Verb ersetzt — die Vorher- und die Nachher-Version' },
+            { id: 'r4', label: 'Die Transfer-Frage (q2, zwei Gerüste auf ein anderes Thema übertragen), bei der du am unsichersten warst — Antwort neu, in eigenen Worten' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd27-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem heutigen Mustertext oder Drill aufnehmen (far subtler means · to lead people astray · an asymmetry of information · to disguise coercion as choice · an open question). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
   }
 ];
