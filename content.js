@@ -2304,5 +2304,247 @@ export const DAYS = [
         }
       ]
     }
+  },
+  {
+    day: 28,
+    date: '2026-08-28',
+    phase: 4,
+    focus: 'Phase 4 (Simulation & Zwischenstand, Tag 27–32) — Aufgabenformate im Cambridge-CAE-Stil unter Originalzeit, Thema Migration und Identität · weiterhin keine neue Sicherung seit Tag 10 (11.08.), jetzt 18 Tage unausgewertet, offene Ziele unverändert: is thought to, under the pretext of, would rather, Not only-Inversion, dazu Nominalisierung und -ing/-ed seit Tag 18 · Schwerpunkt heute: Nominalisierung (größter Hebel Richtung natürlich klingendem Englisch) und lexikalische Variation · Abitur-LK-Register bleibt bindend, kein vereinfachtes Englisch',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd28-read',
+          type: 'read',
+          name: 'Mustertext',
+          minutes: 8,
+          title: 'The Arithmetic of Belonging',
+          kicker: 'Mustertext 28 · Phase 4 — klauen, nicht Verständnis beweisen',
+          intro: 'Zweiter Tag der Phase 4 (Simulation), neues Thema: Migration und Identität. Weiterhin keine Verständnisfragen — gesucht sind sechs neue, wiederverwendbare Gerüste, die sich von denen aus Tag 25, 26 und 27 unterscheiden.',
+          paragraphs: [
+            'It is frequently asserted that a nation can absorb newcomers only if they surrender the customs they bring with them; in practice, however, the societies that integrate most successfully are those that treat identity as an accretion rather than a substitution. Central to this controversy is the question of whether belonging is conferred by birth and bloodline or earned through participation in a shared civic life.',
+            'Champions of assimilation maintain that a common language and a single set of public values are the precondition of social trust, whereas their opponents counter that such demands fall disproportionately on the very people least equipped to meet them, and that a culture confident in itself has no need to insist. The politicians who frame migration as a threat are thought to be responding to public anxiety; more often they are manufacturing it.',
+            'Whatever the appeal of a tidy national story, it cannot accommodate the millions whose loyalties are genuinely plural, who are neither wholly of the country they left nor wholly of the one that received them. Far from diluting a collective identity, sustained immigration tends to force a more honest account of what that identity was always made of. Whether a polity can tell itself that more candid story remains, for now, unresolved.'
+          ],
+          rule: 'Kein Nachschlagen. Ziel für Text + Aufgabe: 8 Minuten. Nachschlagen erst in der Repair-Phase am Abend.',
+          questions: [
+            { id: 'q1', text: 'Schreib die sechs Gerüste heraus, die du in jedem beliebigen Klausur-Essay wiederverwenden kannst — unabhängig vom Thema. Sie stecken alle im Text: die Kippfigur „It is frequently asserted that X; in practice, however, Y“, das Scharnier „Central to this controversy is the question of whether X or Y“, die Pro-Contra-Gegenüberstellung „Champions of X maintain that A, whereas their opponents counter that B“, die Einwand-Abwehr „Whatever the appeal of X, it cannot accommodate Y“, die Umkehrung „Far from diluting X, Y tends to force Z“, und der gehedgte Schluss „Whether X remains, for now, unresolved“.' },
+            { id: 'q2', text: 'Wähl zwei der sechs Gerüste aus und schreib je einen eigenen Satz zu einem KOMPLETT ANDEREN Thema (z. B. Klimapolitik oder künstliche Intelligenz). Das ist der eigentliche Test — an Tag 18 saß dieselbe Struktur im Drill, tauchte im Aufsatz zwanzig Minuten später aber an keiner einzigen Stelle mehr auf.' }
+          ]
+        },
+        {
+          id: 'd28-use',
+          type: 'drill',
+          name: 'Satzveredelung & Kollokationen',
+          minutes: 14,
+          kicker: 'Weiterhin keine neue Sicherung (letzte ausgewertete: Tag 10, 11.08., jetzt 18 Tage her) — dieselben Ziele bleiben offen: is thought to, under the pretext of, would rather, Not only-Inversion, dazu Nominalisierung und -ing/-ed seit Tag 18. Heute besonders: Nominalisierung und lexikalische Variation.',
+          rules: [
+            { title: 'Nominalisierung vermeiden — Verb statt Verb-abgeleitetem Nomen', body: 'Faustregel bleibt: taucht ein Nomen wie Eingliederung, Anerkennung, Anpassung auf, prüfen, ob das zugrunde liegende Verb selbst geht. Größter einzelner Hebel Richtung natürlich klingendem Englisch.', example: '<b>Integrating</b> newcomers <b>requires recognising</b> the culture they bring with them. — nicht: The integration of newcomers requires the recognition of their brought culture.' },
+            { title: '-ing vs. -ed beim Partizip', body: '-ing beschreibt, was die Sache bewirkt; -ed beschreibt, was die Person dabei fühlt. Fünfter dokumentierter Anlauf nach Tag 10, 18, 25, 26 und 27 — heute mit neuem Adjektivpaar.', example: 'The constant question about their origins is <b>alienating</b>; many feel <b>alienated</b> by it.' },
+            { title: 'Synonyme variieren, nicht stapeln', body: 'Variation heißt: beim ZWEITEN Vorkommen ein anderes Wort, nicht mehrere Synonyme in einem Atemzug nebeneinanderstellen.', example: 'This provokes a real <b>objection</b> — and, later in the argument, a distinct <b>reservation</b> worth weighing (nicht: an objection, a reservation and a misgiving all at once).' },
+            { title: 'Acht Kollokationen für argumentative Texte', body: 'to make a compelling case for sth · to raise legitimate concerns · to strike a balance between X and Y · a sweeping change · a widely held assumption · to gain traction · to fall into the trap of doing sth · to bear the brunt of sth — dieselben acht wie an Tag 18, 25, 26 und 27, heute zum Thema Migration und Identität neu produziert.', example: 'A liberal state must <b>strike a balance between</b> a shared civic culture and respect for difference.' }
+          ],
+          instruction: 'i1–i6: Satzveredelung — den vorgegebenen Satz mit dem genannten Werkzeug auf Oberstufenniveau heben. i7–i10: vier der acht Kollokationen oben, je ein eigener Satz zum Thema Migration und Identität. Vollständige Sätze, aus dem Kopf. Erst danach die Lösungen aufdecken.',
+          items: [
+            { id: 'd28i1',  prompt: 'Die Eingliederung von Zuwanderern erfordert die Anerkennung ihrer mitgebrachten Kultur.', key: 'Verb statt Nomen', solution: 'Integrating newcomers requires recognising the culture they bring with them.' },
+            { id: 'd28i2',  prompt: 'Für viele Zuwanderer der zweiten Generation ist die ständige Frage nach der Herkunft ausgrenzend, weil sie sich davon ausgegrenzt fühlen.', key: '-ing vs. -ed', solution: 'For many second-generation immigrants, the constant question about their origins is alienating, because they feel alienated by it.' },
+            { id: 'd28i3',  prompt: 'Migration gilt als Bedrohung für den nationalen Zusammenhalt, obwohl die Belege dafür schwach sind.', key: 'is thought to + Grundform', solution: 'Migration is thought to be a threat to national cohesion, although the evidence for this is weak.' },
+            { id: 'd28i4',  prompt: 'Ich würde es vorziehen, wenn der Staat Zugehörigkeit an Teilhabe statt an Abstammung knüpfte.', key: 'would rather + Vergangenheit', solution: 'I’d rather the state tied belonging to participation rather than to descent.' },
+            { id: 'd28i5',  prompt: 'Die Regierung verschärfte die Einbürgerungsregeln unter dem Vorwand der Integration.', key: 'under the pretext of', solution: 'The government tightened the naturalisation rules under the pretext of integration.' },
+            { id: 'd28i6',  prompt: 'Nicht nur verlangte die Politik sprachliche Anpassung, sie stellte auch die Loyalität ganzer Gemeinschaften infrage.', key: 'Not only … but also + Grundform', solution: 'Not only did the policy demand linguistic conformity, but it also called the loyalty of entire communities into question.' },
+            { id: 'd28i7',  prompt: 'Eigener Satz zum Thema mit „a widely held assumption“.', key: 'a widely held assumption', solution: 'It is a widely held assumption that newcomers must abandon their first language in order to get on.' },
+            { id: 'd28i8',  prompt: 'Eigener Satz zum Thema mit „to bear the brunt of sth“.', key: 'to bear the brunt of sth', solution: 'Recent arrivals often bear the brunt of an economic downturn they did nothing to bring about.' },
+            { id: 'd28i9',  prompt: 'Eigener Satz zum Thema mit „to strike a balance between X and Y“.', key: 'to strike a balance between X and Y', solution: 'A liberal state must strike a balance between a shared civic culture and respect for difference.' },
+            { id: 'd28i10', prompt: 'Eigener Satz zum Thema mit „to gain traction“.', key: 'to gain traction', solution: 'The idea that identity can be plural rather than singular has gained traction among younger citizens.' }
+          ]
+        },
+        {
+          id: 'd28-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Should immigrants be expected to adopt the culture of their new country, or is a society stronger when it allows several identities to coexist?',
+          ruleTitle: 'Themenwortschatz: assimilation, integration, pluralism, cohesion, belonging.',
+          ruleBody: 'Mindestens zwei dieser Wörter müssen tatsächlich fallen, nicht umschrieben. Reagier im zweiten Durchgang wirklich auf den vorgegebenen Einwand — an Tag 10 wurde die eigene Position stattdessen unkommentiert gewechselt, ohne auf das Gegenargument einzugehen. Abbrüche mit „or rather / what I mean is“ reparieren statt neu anfangen.',
+          phrases: [
+            'assimilation · integration · pluralism · cohesion · belonging',
+            'tend to · arguably · by and large',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden, mit einer vorgegebenen Gegenposition, auf die du reagieren musst: „Some would argue that a country can only function if its members share one language and one set of values, so expecting newcomers to assimilate is simply realistic — how would you respond?“ Beginne den zweiten Durchgang ausdrücklich mit einer Reaktion auf genau diesen Satz. Dazu weiterhin: mindestens zwei Themenwörter, mindestens ein Hedge-Wort, unter fünf Füllwörtern.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd28-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Dasselbe Thema wie morgens, mit Absicht — volle Aufmerksamkeit auf die Sprache · Pflicht: mindestens drei Gerüste aus dem Mustertext und zwei Kollokationen aus dem Drill tatsächlich einbauen (Gegenmittel gegen das Transferversagen von Tag 18) · kein inhaltstragendes Wort zweimal · Nominalisierung und gesprochenes Register vermeiden · zweiter Schreibtag der Phase 4, unter Originalzeit',
+          prompt: '“A country has the right to expect that those who settle in it will take on its language and its core values.” To what extent do you agree?',
+          min: 200, max: 250,
+          checklist: [
+            'Mindestens drei Gerüste aus dem Mustertext und zwei Kollokationen aus dem Drill eingebaut — nicht nur im Kopf behalten, tatsächlich in den Text schreiben.',
+            'Kein inhaltstragendes Wort (Nomen, Verb, Adjektiv, Adverb) im ganzen Text zweimal — Synonym, Umschreibung, Pro-Form oder Oberbegriff statt Wiederholung. Beim zweiten Vorkommen wechseln, nicht mehrere Synonyme auf einmal stapeln.',
+            'Erster Satz: deine These in eigenen Worten. Die Aufgabenstellung wird nicht zitiert, auch nicht in Anführungszeichen.',
+            'Der Grad der Zustimmung steht im ersten oder zweiten Satz (largely · only in part · to a limited extent) und bleibt bis zum Schluss konsistent.',
+            'Eine echte Konzession, bevor du deine Position verteidigst (Admittedly, … / It is true that …).',
+            'Verb statt Nomen, wo möglich (keine Substantivketten wie „the recognition of the culture of the newcomers“).',
+            'Kein gesprochenes Register wie „or something like this“ — das kostet im NRW-Raster Ausdrucksvermögen.',
+            'Rechtschreibung: different · development · business · statement · academic — je einmal fehlerfrei im Text unterbringen. Außerdem: more than nie more as, the loser nie the looser.'
+          ]
+        },
+        {
+          id: 'd28-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Ohne aktuelle Sicherung stützt sich Repair weiterhin auf die am längsten offenen Punkte aus dem Fehlerprofil statt auf einen konkreten Fehler von gestern. Ein ehrlicher Versuch bei r1 reicht.',
+          fields: [
+            { id: 'r1', label: 'Schreib den would-rather-Satz aus dem Drill (d28i4) aus dem Kopf neu, ohne hinzusehen — mit der Regel in drei Wörtern dahinter' },
+            { id: 'r2', label: 'Schreib den Not-only-Satz aus dem Drill (d28i6) aus dem Kopf neu, ohne hinzusehen' },
+            { id: 'r3', label: 'Ein Satz aus deinem heutigen Writing, in dem du ein Nomen durch ein Verb ersetzt — die Vorher- und die Nachher-Version' },
+            { id: 'r4', label: 'Die Transfer-Frage (q2, zwei Gerüste auf ein anderes Thema übertragen), bei der du am unsichersten warst — Antwort neu, in eigenen Worten' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd28-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem heutigen Mustertext oder Drill aufnehmen (to treat identity as an accretion rather than a substitution · to be conferred by birth · to fall disproportionately on sb · loyalties that are genuinely plural · a tidy national story). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
+  },
+  {
+    day: 29,
+    date: '2026-08-29',
+    phase: 4,
+    focus: 'Phase 4 (Simulation & Zwischenstand, Tag 27–32) — Aufgabenformate im Cambridge-CAE-Stil unter Originalzeit, Thema solares Geoengineering und Klima-Ethik (Wissenschaft und Ethik) · weiterhin keine neue Sicherung seit Tag 10 (11.08.), jetzt 19 Tage unausgewertet · Schwerpunkt heute: -ing/-ed, Not only-Inversion, wish + Past Perfect, Umformulieren statt Zitieren, Rechtschreibung · Abitur-LK-Register bleibt bindend, drei Tage vor dem Abschlusstest am 01.09.',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd29-read',
+          type: 'read',
+          name: 'Mustertext',
+          minutes: 8,
+          title: 'Engineering the Sky',
+          kicker: 'Mustertext 29 · Phase 4 — klauen, nicht Verständnis beweisen',
+          intro: 'Dritter Tag der Phase 4 (Simulation), neues Thema: solares Geoengineering und die Ethik technischer Klima-Lösungen. Weiterhin keine Verständnisfragen — gesucht sind sechs neue, wiederverwendbare Gerüste, die sich von denen aus Tag 27 und 28 unterscheiden.',
+          paragraphs: [
+            'For decades the response to a warming planet was framed as a straightforward choice between cutting emissions and accepting the consequences; in practice, however, a third option has quietly moved from the fringe of climate science to the edge of respectability. Solar geoengineering — the deliberate injection of reflective particles into the upper atmosphere to dim incoming sunlight — promises to lower global temperatures within months, at a cost trivial beside that of decarbonising an economy.',
+            'Its advocates are careful to present it not as a substitute for emissions cuts but as a supplement, a way of buying time. Critics regard this framing as dangerously naive. Once a government could point to a cheap technical fix, they argue, the political will to pursue the harder path would collapse; the remedy would become the pretext for inaction. Nor is the science reassuring: a programme once begun could not safely be stopped, since a sudden halt would unleash the suppressed warming all at once.',
+            'Had the world treated the problem seriously thirty years ago, no one would now be contemplating so desperate a measure. That it is discussed at all is a confession of failure. Whether humanity should hold such a lever remains one of the most consequential questions the century will pose.'
+          ],
+          rule: 'Kein Nachschlagen. Ziel für Text + Aufgabe: 8 Minuten. Nachschlagen erst in der Repair-Phase am Abend.',
+          questions: [
+            { id: 'q1', text: 'Schreib die sechs Gerüste heraus, die du in jedem beliebigen Klausur-Essay wiederverwenden kannst — unabhängig vom Thema. Sie stecken alle im Text: die Kippfigur „For decades X was framed as a straightforward choice between A and B; in practice, however, C“, die Präzisierung „Its advocates are careful to present it not as X but as Y“, die Zuspitzung „Critics regard this framing as X“, die Verstärkung durch Inversion „Nor is the science reassuring: …“, das kontrafaktische „Had the world treated X seriously, no one would now be contemplating Y“, und der gehedgte Schluss „Whether X remains one of the most consequential questions the century will pose“.' },
+            { id: 'q2', text: 'Wähl zwei der sechs Gerüste aus und schreib je einen eigenen Satz zu einem KOMPLETT ANDEREN Thema (z. B. Überwachung im Internet oder Migration). Das ist der eigentliche Test — an Tag 18 saß dieselbe Struktur im Drill, tauchte im Aufsatz zwanzig Minuten später aber an keiner einzigen Stelle mehr auf.' }
+          ]
+        },
+        {
+          id: 'd29-use',
+          type: 'drill',
+          name: 'Satzveredelung & Kollokationen',
+          minutes: 14,
+          kicker: 'Weiterhin keine neue Sicherung (letzte ausgewertete: Tag 10, 11.08., jetzt 19 Tage her) — dieselben Ziele bleiben offen: is thought to, under the pretext of, Not only-Inversion, dazu Nominalisierung und -ing/-ed seit Tag 18. Heute zusätzlich: wish + Past Perfect und Rechtschreibung.',
+          rules: [
+            { title: 'Nominalisierung vermeiden — Verb statt Verb-abgeleitetem Nomen', body: 'Faustregel bleibt: taucht ein Nomen wie Einbringung, Senkung, Umsetzung auf, prüfen, ob das zugrunde liegende Verb selbst geht.', example: '<b>Injecting</b> reflective particles into the atmosphere <b>lowers</b> global temperatures. — nicht: The injection of reflective particles enables a lowering of global temperatures.' },
+            { title: '-ing vs. -ed beim Partizip', body: '-ing beschreibt, was die Sache bewirkt; -ed beschreibt, was die Person dabei fühlt. Sechster dokumentierter Anlauf nach Tag 10, 18, 25, 26, 27 und 28 — heute mit neuem Adjektivpaar.', example: 'The prospect of a cheap fix is <b>reassuring</b>, and so many governments sit back, <b>reassured</b>.' },
+            { title: 'wish + Past Perfect für eine verpasste Vergangenheit', body: 'Bedauern über etwas Vergangenes: wish + Subjekt + had + Partizip. Nicht wish + would für Vergangenes, nicht wish + simple past.', example: 'Many scientists <b>wish</b> governments <b>had acted</b> thirty years ago — nicht: wish governments would act / acted.' },
+            { title: 'Acht Kollokationen für argumentative Texte', body: 'to make a compelling case for sth · to raise legitimate concerns · to strike a balance between X and Y · a sweeping change · a widely held assumption · to gain traction · to fall into the trap of doing sth · to bear the brunt of sth — dieselben acht wie an Tag 18, 25, 26, 27 und 28, heute zum Thema Geoengineering neu produziert.', example: 'Ethicists <b>raise legitimate concerns</b> about a measure no future government could easily abandon.' }
+          ],
+          instruction: 'i1–i6: Satzveredelung — den vorgegebenen Satz mit dem genannten Werkzeug auf Oberstufenniveau heben. i7–i10: vier der acht Kollokationen oben, je ein eigener Satz zum Thema Geoengineering und Klima-Ethik. Vollständige Sätze, aus dem Kopf. Erst danach die Lösungen aufdecken.',
+          items: [
+            { id: 'd29i1',  prompt: 'Die Einbringung reflektierender Partikel in die Atmosphäre bewirkt eine Senkung der globalen Temperatur.', key: 'Verb statt Nomen', solution: 'Injecting reflective particles into the atmosphere lowers global temperatures.' },
+            { id: 'd29i2',  prompt: 'Die Aussicht auf einen billigen technischen Ausweg wirkt beruhigend, sodass sich viele Regierungen beruhigt zurücklehnen.', key: '-ing vs. -ed', solution: 'The prospect of a cheap technical fix is reassuring, so that many governments sit back, reassured.' },
+            { id: 'd29i3',  prompt: 'Viele Klimaforscher wünschten, die Politik hätte vor dreißig Jahren gehandelt.', key: 'wish + Past Perfect', solution: 'Many climate scientists wish policymakers had acted thirty years ago.' },
+            { id: 'd29i4',  prompt: 'Regierungen könnten die Emissionsminderung unter dem Vorwand eines technischen Auswegs aufschieben.', key: 'under the pretext of', solution: 'Governments could postpone cutting emissions under the pretext of a technical fix.' },
+            { id: 'd29i5',  prompt: 'Solares Geoengineering gilt als technisch machbar, obwohl seine Folgen kaum absehbar sind.', key: 'is thought to + Grundform', solution: 'Solar geoengineering is thought to be technically feasible, although its consequences are barely foreseeable.' },
+            { id: 'd29i6',  prompt: 'Nicht nur ließe sich ein einmal begonnenes Programm nicht gefahrlos beenden, es verschöbe auch die eigentliche Lösung.', key: 'Not only … but also', solution: 'Not only could a programme once begun not be halted safely, but it would also defer the real solution.' },
+            { id: 'd29i7',  prompt: 'Eigener Satz zum Thema mit „to make a compelling case for sth“.', key: 'to make a compelling case for sth', solution: 'No one has yet made a compelling case for deploying such a technology on a global scale.' },
+            { id: 'd29i8',  prompt: 'Eigener Satz zum Thema mit „to raise legitimate concerns“.', key: 'to raise legitimate concerns', solution: 'Ethicists raise legitimate concerns about a measure that no future government could easily abandon.' },
+            { id: 'd29i9',  prompt: 'Eigener Satz zum Thema mit „to fall into the trap of doing sth“.', key: 'to fall into the trap of doing sth', solution: 'Wealthy nations must not fall into the trap of treating geoengineering as a licence to keep polluting.' },
+            { id: 'd29i10', prompt: 'Eigener Satz zum Thema mit „a sweeping change“.', key: 'a sweeping change', solution: 'Averting the worst outcomes still demands a sweeping change in the way energy is produced.' }
+          ]
+        },
+        {
+          id: 'd29-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Is research into solar geoengineering a responsible insurance policy against climate catastrophe, or a dangerous distraction from cutting emissions?',
+          ruleTitle: 'Themenwortschatz: mitigation, moral hazard, unintended consequences, governance, accountability.',
+          ruleBody: 'Mindestens zwei dieser Wörter müssen tatsächlich fallen, nicht umschrieben. Reagier im zweiten Durchgang wirklich auf den vorgegebenen Einwand — an Tag 10 wurde die eigene Position stattdessen unkommentiert gewechselt, ohne auf das Gegenargument einzugehen. Abbrüche mit „or rather / what I mean is“ reparieren statt neu anfangen.',
+          phrases: [
+            'mitigation · moral hazard · unintended consequences · governance · accountability',
+            'tend to · conceivably · on balance',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden, mit einer vorgegebenen Gegenposition, auf die du reagieren musst: „Some would argue that refusing even to research geoengineering is itself reckless, because we may one day need it and will not know how to use it safely — how would you respond?“ Beginne den zweiten Durchgang ausdrücklich mit einer Reaktion auf genau diesen Satz. Dazu weiterhin: mindestens zwei Themenwörter, mindestens ein Hedge-Wort, unter fünf Füllwörtern.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd29-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Dasselbe Thema wie morgens, mit Absicht — volle Aufmerksamkeit auf die Sprache · Pflicht: mindestens drei Gerüste aus dem Mustertext und zwei Kollokationen aus dem Drill tatsächlich einbauen (Gegenmittel gegen das Transferversagen von Tag 18) · kein inhaltstragendes Wort zweimal · Nominalisierung und gesprochenes Register vermeiden · dritter Schreibtag der Phase 4, unter Originalzeit, drei Tage vor dem Abschlusstest',
+          prompt: '“Governments should fund research into solar geoengineering so that the option is ready if efforts to cut emissions come too late.” To what extent do you agree?',
+          min: 200, max: 250,
+          checklist: [
+            'Mindestens drei Gerüste aus dem Mustertext und zwei Kollokationen aus dem Drill eingebaut — nicht nur im Kopf behalten, tatsächlich in den Text schreiben.',
+            'Kein inhaltstragendes Wort (Nomen, Verb, Adjektiv, Adverb) im ganzen Text zweimal — Synonym, Umschreibung, Pro-Form oder Oberbegriff statt Wiederholung. Beim zweiten Vorkommen wechseln, nicht mehrere Synonyme auf einmal stapeln.',
+            'Erster Satz: deine These in eigenen Worten. Die Aufgabenstellung wird nicht zitiert, auch nicht in Anführungszeichen.',
+            'Der Grad der Zustimmung steht im ersten oder zweiten Satz (largely · only in part · to a limited extent) und bleibt bis zum Schluss konsistent.',
+            'Eine echte Konzession, bevor du deine Position verteidigst (Admittedly, … / It is true that …).',
+            'Verb statt Nomen, wo möglich (keine Substantivketten wie „the postponement of the reduction of emissions“).',
+            'Kein gesprochenes Register wie „or something like this“ — das kostet im NRW-Raster Ausdrucksvermögen.',
+            'Rechtschreibung: different · development · business · statement · academic — je einmal fehlerfrei im Text. Außerdem: the data suggest (nie datas), more than nie more as, the loser nie the looser.'
+          ]
+        },
+        {
+          id: 'd29-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Ohne aktuelle Sicherung stützt sich Repair weiterhin auf die am längsten offenen Punkte aus dem Fehlerprofil statt auf einen konkreten Fehler von gestern. Ein ehrlicher Versuch bei r1 reicht.',
+          fields: [
+            { id: 'r1', label: 'Schreib den wish-Satz aus dem Drill (d29i3) aus dem Kopf neu, ohne hinzusehen — mit der Regel in drei Wörtern dahinter' },
+            { id: 'r2', label: 'Schreib den Not-only-Satz aus dem Drill (d29i6) aus dem Kopf neu, ohne hinzusehen' },
+            { id: 'r3', label: 'Ein Satz aus deinem heutigen Writing, in dem du ein Nomen durch ein Verb ersetzt — die Vorher- und die Nachher-Version' },
+            { id: 'r4', label: 'Die Transfer-Frage (q2, zwei Gerüste auf ein anderes Thema übertragen), bei der du am unsichersten warst — Antwort neu, in eigenen Worten' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · generally' }
+          ]
+        },
+        {
+          id: 'd29-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem heutigen Mustertext oder Drill aufnehmen (to move from the fringe to the edge of respectability · to buy time · a cheap technical fix · the remedy becomes the pretext for inaction · a confession of failure). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
   }
 ];
