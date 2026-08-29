@@ -2546,5 +2546,127 @@ export const DAYS = [
         }
       ]
     }
+  },
+  {
+    day: 30,
+    date: '2026-08-30',
+    phase: 4,
+    focus: 'Phase 4 (Simulation & Zwischenstand, Tag 27–32) — CAE-Aufgabenformate unter Originalzeit, Thema Niedergang des Lokaljournalismus und die Zersplitterung des geteilten Wissens (Medien und gesellschaftliche Systeme) · weiterhin keine neue Sicherung seit Tag 10 (11.08.), jetzt 20 Tage unausgewertet · Schwerpunkt heute: is said to / is said to be, -ing/-ed, Nominalisierung → Verb, would rather + Vergangenheitsform, Umformulieren statt Zitieren, Rechtschreibung · Abitur-LK-Register bleibt bindend, zwei Tage vor dem Abschlusstest am 01.09.',
+    morning: {
+      label: 'Morgens',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd30-read',
+          type: 'read',
+          name: 'Mustertext',
+          minutes: 8,
+          title: 'When the Local Paper Goes Dark',
+          kicker: 'Mustertext 30 · Phase 4 — klauen, nicht Verständnis beweisen',
+          intro: 'Vierter Tag der Phase 4 (Simulation), zwei Tage vor dem Abschlusstest. Neues Thema: der Niedergang der Lokalzeitung und was passiert, wenn eine Gemeinde kein eigenes Nachrichtenorgan mehr hat. Keine Verständnisfragen — gesucht sind sechs neue, wiederverwendbare Gerüste, die sich von denen aus Tag 27, 28 und 29 unterscheiden.',
+          paragraphs: [
+            'For much of the twentieth century the local newspaper was so unremarkable a feature of civic life that its disappearance was scarcely imagined; today, across large tracts of the United States and increasingly of Europe, it has become an artefact. Where once a salaried reporter sat through municipal budget meetings and planning disputes, there is now, in thousands of communities, no one at all.',
+            'The consequences extend well beyond nostalgia. Research consistently associates the closure of a local title with measurable civic decay: lower turnout in municipal elections, fewer candidates willing to contest them, and a rise in the cost of public borrowing, as lenders price in the risk that misconduct will go unexamined. National outlets, however partisan, cannot fill the vacuum, since their incentives point towards conflict framed in ideological terms rather than the unglamorous scrutiny of a drainage contract.',
+            'What has replaced the reporter is not silence but noise. Community social-media groups circulate rumour with none of the verification a newsroom once imposed, and the resulting confusion is readily exploited. The paradox of an age awash in information is that reliable knowledge of one’s own town has, in many places, never been harder to come by.'
+          ],
+          rule: 'Kein Nachschlagen. Ziel für Text + Aufgabe: 8 Minuten. Nachschlagen erst in der Repair-Phase am Abend.',
+          questions: [
+            { id: 'q1', text: 'Schreib die sechs Gerüste heraus, die du in jedem beliebigen Klausur-Essay wiederverwenden kannst — unabhängig vom Thema, und verschieden von denen aus Tag 27–29. Sie stecken alle im Text: die Konzessivfigur „For much of the twentieth century X was so unremarkable that Y; today, Z“, die Abwehr einer schwächeren Lesart „The consequences extend well beyond X“, die Belegrahmung „Research consistently associates X with Y: [Aufzählung]“, das eingeschobene „however + Adjektiv“ mit Anschluss „National outlets, however partisan, cannot X, since their incentives point towards Y rather than Z“, die Antithese „What has replaced X is not silence but noise“, und die Paradoxfigur „The paradox of an age [awash in information] is that Z“.' },
+            { id: 'q2', text: 'Wähl zwei der sechs Gerüste aus und schreib je einen eigenen Satz zu einem KOMPLETT ANDEREN Thema (z. B. Klimapolitik oder Migration). Das ist der eigentliche Test — an Tag 18 saß dieselbe Struktur im Drill, tauchte im Aufsatz zwanzig Minuten später aber an keiner einzigen Stelle mehr auf. Umformulieren, nicht den Textsatz mit ausgetauschten Nomen abschreiben.' }
+          ]
+        },
+        {
+          id: 'd30-use',
+          type: 'drill',
+          name: 'Satzveredelung & Kollokationen',
+          minutes: 14,
+          kicker: 'Weiterhin keine neue Sicherung (letzte ausgewertete: Tag 10, 11.08., jetzt 20 Tage her) — die am längsten offenen Punkte bleiben: is said to / is said to be (an nur einem Tag sauber), -ing/-ed, Nominalisierung → Verb, would rather + Vergangenheitsform (an zwei Tagen sauber). Not-only-Inversion gilt seit Tag 7/8 als erledigt und kommt heute nur als ein Kontrollsatz.',
+          rules: [
+            { title: 'Nominalisierung vermeiden — Verb statt Verb-abgeleitetem Nomen', body: 'Faustregel bleibt: taucht ein Nomen wie Schließung, Rückgang, Überprüfung auf, prüfen, ob das zugrunde liegende Verb selbst geht. Substantivketten wie „the closure of a title leads to a decline in turnout“ auflösen.', example: 'When a local paper <b>closes</b>, fewer people <b>turn out</b> to vote. — nicht: The closure of a local paper leads to a decline in electoral turnout.' },
+            { title: '-ing vs. -ed beim Partizip', body: '-ing beschreibt, was die Sache bewirkt; -ed beschreibt, was die Person dabei fühlt. Siebter dokumentierter Anlauf nach Tag 10, 18, 25, 26, 27, 28 und 29 — heute mit neuem Adjektivpaar.', example: 'The findings of the study are <b>alarming</b>, and many residents are left <b>alarmed</b>.' },
+            { title: 'is said to / is said to be — Passiv der Meinung', body: 'Fremde Einschätzung ohne Subjekt: is said to / is thought to / is believed to + Grundform, oder + to be + Nomen/Adjektiv. Für Vergangenes: is said to have + Partizip. Nie „is said to that …“, nie „is said that it is“. An nur einem Tag bisher sauber (Tag 8, „under the pretext of“ war ein anderer Punkt) — heute der zweite ernsthafte Anlauf.', example: 'The decline of local reporting <b>is said to be</b> one of the main drivers of political disengagement. · Social media <b>is said to have</b> replaced the newsroom, though it has not.' },
+            { title: 'would rather + Subjekt + Vergangenheitsform', body: 'Wunsch an eine andere Person: would rather + Subjekt + simple past (Gegenwart/Zukunft) bzw. past perfect (Vergangenheit). Nicht „would rather to“, nicht „would rather prefer“, kein Doppelfehler wie an Tag 1, 2 und 9.', example: 'Many councillors <b>would rather</b> a reporter <b>sat</b> through their meetings than no one did.' },
+            { title: 'Acht Kollokationen für argumentative Texte', body: 'to make a compelling case for sth · to raise legitimate concerns · to strike a balance between X and Y · a sweeping change · a widely held assumption · to gain traction · to fall into the trap of doing sth · to bear the brunt of sth — dieselben acht wie an Tag 18 und 25–29, heute zum Thema Lokaljournalismus neu produziert.', example: 'Rural communities <b>bear the brunt of</b> these closures, since they had fewest alternatives to begin with.' }
+          ],
+          instruction: 'i1–i6: Satzveredelung — den vorgegebenen Satz mit dem genannten Werkzeug auf Oberstufenniveau heben. i7–i10: vier der acht Kollokationen oben, je ein eigener Satz zum Thema Lokaljournalismus und geteiltes Wissen. Vollständige Sätze, aus dem Kopf. Erst danach die Lösungen aufdecken.',
+          items: [
+            { id: 'd30i1',  prompt: 'Die Schließung einer Lokalzeitung führt zu einem Rückgang der Wahlbeteiligung bei Kommunalwahlen.', key: 'Verb statt Nomen', solution: 'When a local newspaper closes, fewer people turn out to vote in municipal elections.' },
+            { id: 'd30i2',  prompt: 'Die Ergebnisse der Untersuchung sind beunruhigend, und viele Anwohner bleiben beunruhigt zurück.', key: '-ing vs. -ed', solution: 'The findings of the study are alarming, and many residents are left alarmed.' },
+            { id: 'd30i3',  prompt: 'Der Niedergang des Lokaljournalismus gilt als eine der Hauptursachen politischer Entfremdung.', key: 'is said to be + Nomen', solution: 'The decline of local journalism is said to be one of the main causes of political disengagement.' },
+            { id: 'd30i4',  prompt: 'Angeblich haben soziale Netzwerke die Rolle der Zeitung übernommen, tatsächlich aber nicht.', key: 'is said to have + Partizip', solution: 'Social media is said to have taken over the role of the newspaper, but in reality it has not.' },
+            { id: 'd30i5',  prompt: 'Viele Kommunalpolitiker wären es lieber, dass ein Reporter ihre Sitzungen beobachtet, als dass es niemand tut.', key: 'would rather + Vergangenheitsform', solution: 'Many local politicians would rather a reporter watched their meetings than no one did.' },
+            { id: 'd30i6',  prompt: 'Nicht nur verschwindet die Kontrolle, es steigen auch die Kosten öffentlicher Kredite.', key: 'Not only … but also', solution: 'Not only does scrutiny disappear, but the cost of public borrowing also rises.' },
+            { id: 'd30i7',  prompt: 'Eigener Satz zum Thema mit „a widely held assumption“.', key: 'a widely held assumption', solution: 'It is a widely held assumption that the internet would democratise information, yet the collapse of local reporting suggests the opposite.' },
+            { id: 'd30i8',  prompt: 'Eigener Satz zum Thema mit „to strike a balance between X and Y“.', key: 'to strike a balance between X and Y', solution: 'Regulators must strike a balance between supporting struggling newsrooms and preserving their editorial independence.' },
+            { id: 'd30i9',  prompt: 'Eigener Satz zum Thema mit „to gain traction“.', key: 'to gain traction', solution: 'Proposals to fund public-interest journalism through a levy on technology firms have begun to gain traction.' },
+            { id: 'd30i10', prompt: 'Eigener Satz zum Thema mit „to fall into the trap of doing sth“.', key: 'to fall into the trap of doing sth', solution: 'Readers should not fall into the trap of mistaking the volume of online chatter for genuine local knowledge.' }
+          ]
+        },
+        {
+          id: 'd30-speak',
+          type: 'speak',
+          name: 'Speaking',
+          minutes: 8,
+          seconds: 90,
+          prompt: 'Does the decline of local journalism pose a genuine threat to democracy, or will new digital formats eventually fill the gap?',
+          ruleTitle: 'Themenwortschatz: accountability, disinformation, civic engagement, editorial independence, media literacy.',
+          ruleBody: 'Mindestens zwei dieser Wörter müssen tatsächlich fallen, nicht umschrieben. Reagier im zweiten Durchgang wirklich auf den vorgegebenen Einwand — an Tag 10 wurde die eigene Position stattdessen unkommentiert gewechselt, ohne auf das Gegenargument einzugehen. Abbrüche mit „or rather / what I mean is“ reparieren statt neu anfangen. Nicht denselben Gedanken dreimal wiederholen (Tag 9), sondern weiterführen.',
+          phrases: [
+            'accountability · disinformation · civic engagement · editorial independence · media literacy',
+            'tend to · arguably · on balance',
+            'Some would say that … / One could object that …',
+            'That said, …',
+            'or rather … · what I mean is …'
+          ],
+          after: 'Zweiter Durchgang, dieselben 90 Sekunden, mit einer vorgegebenen Gegenposition, auf die du reagieren musst: „Some would argue that the local newspaper is simply an outdated format, and that community groups, newsletters and independent creators already provide everything it once did — how would you respond?“ Beginne den zweiten Durchgang ausdrücklich mit einer Reaktion auf genau diesen Satz. Dazu weiterhin: mindestens zwei Themenwörter, mindestens ein Hedge-Wort, unter fünf Füllwörtern.'
+        }
+      ]
+    },
+    evening: {
+      label: 'Abends',
+      minutes: 30,
+      blocks: [
+        {
+          id: 'd30-write',
+          type: 'write',
+          name: 'Writing',
+          minutes: 15,
+          kicker: 'Dasselbe Thema wie morgens, mit Absicht — volle Aufmerksamkeit auf die Sprache · Pflicht: mindestens drei Gerüste aus dem Mustertext und zwei Kollokationen aus dem Drill tatsächlich einbauen (Gegenmittel gegen das Transferversagen von Tag 18) · kein inhaltstragendes Wort zweimal · Nominalisierung und gesprochenes Register vermeiden · vierter Schreibtag der Phase 4, unter Originalzeit, zwei Tage vor dem Abschlusstest',
+          prompt: '“The disappearance of local newspapers is a threat that governments must act to reverse.” To what extent do you agree?',
+          min: 200, max: 250,
+          checklist: [
+            'Mindestens drei Gerüste aus dem Mustertext und zwei Kollokationen aus dem Drill eingebaut — nicht nur im Kopf behalten, tatsächlich in den Text schreiben.',
+            'Kein inhaltstragendes Wort (Nomen, Verb, Adjektiv, Adverb) im ganzen Text zweimal — Synonym, Umschreibung, Pro-Form oder Oberbegriff statt Wiederholung. Beim zweiten Vorkommen wechseln, nicht mehrere Synonyme auf einmal stapeln.',
+            'Erster Satz: deine These in eigenen Worten. Die Aufgabenstellung wird nicht zitiert, auch nicht in Anführungszeichen.',
+            'Der Grad der Zustimmung steht im ersten oder zweiten Satz (largely · only in part · to a limited extent) und bleibt bis zum Schluss konsistent — an Tag 9 und 10 fehlte er ganz.',
+            'Eine echte Konzession, bevor du deine Position verteidigst (Admittedly, … / It is true that …).',
+            'Verb statt Nomen, wo möglich (keine Substantivketten wie „the closure of the paper causes a reduction in the scrutiny of the council“).',
+            'Kein gesprochenes Register wie „or something like this“ — das kostet im NRW-Raster Ausdrucksvermögen.',
+            'Rechtschreibung: different · development · business · statement · academic · government — je einmal fehlerfrei im Text. Außerdem: the data suggest (nie datas), more than nie more as, the loser nie the looser.'
+          ]
+        },
+        {
+          id: 'd30-repair',
+          type: 'repair',
+          name: 'Repair',
+          minutes: 10,
+          instruction: 'Erst jetzt darfst du nachschlagen. Ohne aktuelle Sicherung stützt sich Repair weiterhin auf die am längsten offenen Punkte aus dem Fehlerprofil statt auf einen konkreten Fehler von gestern. Ein ehrlicher Versuch bei r1 reicht.',
+          fields: [
+            { id: 'r1', label: 'Schreib den is-said-to-be-Satz aus dem Drill (d30i3) aus dem Kopf neu, ohne hinzusehen — mit der Regel in drei Wörtern dahinter' },
+            { id: 'r2', label: 'Schreib den -ing/-ed-Satz aus dem Drill (d30i2) aus dem Kopf neu, ohne hinzusehen' },
+            { id: 'r3', label: 'Ein Satz aus deinem heutigen Writing, in dem du ein Nomen durch ein Verb ersetzt — die Vorher- und die Nachher-Version' },
+            { id: 'r4', label: 'Die Transfer-Frage (q2, zwei Gerüste auf ein anderes Thema übertragen), bei der du am unsichersten warst — Antwort neu, in eigenen Worten' },
+            { id: 'r5', label: 'Je zweimal korrekt: different · development · business · statement · academic · government' }
+          ]
+        },
+        {
+          id: 'd30-vocab',
+          type: 'vocab',
+          name: 'Vokabelbank',
+          minutes: 5,
+          instruction: 'Fünf Ausdrücke aus dem heutigen Mustertext oder Drill aufnehmen (to become an artefact · measurable civic decay · to price in a risk · cannot fill the vacuum · an age awash in information · harder to come by). Drei alte in neuen Sätzen wiederverwenden — die Bank ist erst dann etwas wert, wenn du aus ihr sprichst.'
+        }
+      ]
+    }
   }
 ];
